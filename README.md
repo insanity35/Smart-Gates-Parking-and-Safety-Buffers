@@ -89,10 +89,11 @@ Version History & Changelog Evolution
         Range Bump: Expanded trigger distance baseline to 48.5m. Removed old alpha phase reset trigger comments from the active code base.
 
 Project Roadmap
-    v1.1 – v1.1.1 [Completed]: Expanded gate opening range to 48.5m, cleaned up old comments, and resolved edge-case depot clipping in newer map expansions (e.g., South Dakota).
+  
+	v1.1 – v1.1.1 [Completed]: Expanded gate opening range to 48.5m, cleaned up old comments, and resolved edge-case depot clipping in newer map expansions (e.g., South Dakota).
     v1.2 – v1.3 [Completed]: Increased gate triggers to 48.7m, optimized orientation to 60°–75°, and executed a complete overhaul of lane-specific toll booth logic.
     v1.5 – v1.6 [Completed]: Added missing asset sound profiles, implemented total trailer tracking protection, refined gate sensor cones, and fine-tuned lane offsets.
-    v1.7 [Current Release]: Re-integrated native automatic rest distances and standardized the structural pointer schema naming conventions across all sliding variants.
+   v1.7 [Current Release]: Re-integrated native automatic rest distances and standardized the structural pointer schema naming conventions across all sliding variants.
     Future Updates & Maintenance [In Progress]: Continuous tracking and integration of any new gate or toll structures added by SCS Software, ongoing .sii def file maintenance, and diving into Blender to learn asset-level gate speed adjustments.
     2.0 Standardization of Code. 1.7 is pretty much a test base.
     Cleaned up mod_description to clean up warnings in long. No code change. I will be working on a Github link for full changelogs in the coming days.
