@@ -60,7 +60,7 @@ Version History & Changelog Evolution
     General Performance: Minor backend cleanup to improve frame stability when passing through gate collision zones.
     Trigger Distance bumped 49m!
 
-   v1.7.1-71826R2 Hotfix "The House Thats Code Built" (Current Version)
+   v1.7.1-71826R2 Hotfix "The House Thats Code Built"
     No More Crushed Trailers: Fixed a bug where warehouse roll-up doors would accidentally close on your trailer while you were trying to back into tight docks.
     Better Sensors for Long-Nose Trucks: Fine-tuned the trigger zones at toll booths and left-side gates so long conventional trucks open them more reliably without having to scrape the mirrors.
     Cleaner Game Logs: Fixed some internal file names to clear out map-node warnings and keep your game.log.txt clean.
