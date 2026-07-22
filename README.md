@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v1.7.3-71826R4 (Couldnt Get it right) Hotfix
+Smart Gates & Safety Buffers (SGSB) — v2.0.0-72226(Evolution)
 "The House That Code Built"
 
 A Note from the Developer
@@ -12,14 +12,15 @@ SGSB is the definitive logic overhaul for gate operations. We have stripped away
 
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
 
-Quick Reference Specs
-    SGSB Trigger Distance: 49.0m for yard entries (Up from the vanilla 15m–25m. Values of 50m+ break the engine logic).
-    SGSB Orientation Tolerance: 45° – 47° (Up from vanilla 30°) to catch your approach angle early.
-    Accidental Trigger Prevention: Depot warehouse storage doors are kept tight at 30° to prevent nearby external lane traffic from accidentally opening them.
-    
+Quick Reference
+	Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
+  	Orientation Tolerance: Optimized to 60° to catch your approach angle early on tight compound turns.
+  	Toll Plazas (Precision Lanes): Tuned to 10.0m for a smoother, more forgiving clearance window.
+  	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
+  	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
+  	
 Official Release Information
-
-    Current Version: v1.7.3-71826R4 (Stable Hotfix 71926)
+    Current Version: v2.0.0-72226(Evolution)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -37,6 +38,15 @@ The Early Development Phase
     July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
+
+  v2.0.0-72226(Evolution)
+	Unified Architecture: New "Global Logic" groups make the mod faster and easier to maintain.
+	Engine-Native Cleanse: Removed legacy code to ensure zero-log-error performance.
+	Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
+  	Orientation Tolerance: Optimized to 60° to catch your approach angle early on tight compound turns.
+  	Toll Plazas (Precision Lanes): Tuned to 10.0m for a smoother, more forgiving clearance window.
+  	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
+  	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
 
   v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
     Deprecated trailer code causing some gates/tolls to not trigger at a distance.
@@ -89,11 +99,10 @@ Version History & Changelog Evolution
         Range Bump: Expanded trigger distance baseline to 48.5m. Removed old alpha phase reset trigger comments from the active code base.
 
 Project Roadmap
-  
-	v1.1 – v1.1.1 [Completed]: Expanded gate opening range to 48.5m, cleaned up old comments, and resolved edge-case depot clipping in newer map expansions (e.g., South Dakota).
+    v1.1 – v1.1.1 [Completed]: Expanded gate opening range to 48.5m, cleaned up old comments, and resolved edge-case depot clipping in newer map expansions (e.g., South Dakota).
     v1.2 – v1.3 [Completed]: Increased gate triggers to 48.7m, optimized orientation to 60°–75°, and executed a complete overhaul of lane-specific toll booth logic.
     v1.5 – v1.6 [Completed]: Added missing asset sound profiles, implemented total trailer tracking protection, refined gate sensor cones, and fine-tuned lane offsets.
-   v1.7 [Current Release]: Re-integrated native automatic rest distances and standardized the structural pointer schema naming conventions across all sliding variants.
+    v1.7 [Current Release]: Re-integrated native automatic rest distances and standardized the structural pointer schema naming conventions across all sliding variants.
     Future Updates & Maintenance [In Progress]: Continuous tracking and integration of any new gate or toll structures added by SCS Software, ongoing .sii def file maintenance, and diving into Blender to learn asset-level gate speed adjustments.
     2.0 Standardization of Code. 1.7 is pretty much a test base.
     Cleaned up mod_description to clean up warnings in long. No code change. I will be working on a Github link for full changelogs in the coming days.
@@ -108,15 +117,15 @@ Recommended Load Order
 
 To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 
-    Smart Gates and Safety Buffers (SGSB) (Place Right Here)
+Top - SoundFixes
+    Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high)
     Global Traffic & AI Density Mods
-    Map Expansion Mods (ProMods, Reforma, etc.)
+Bottom - Map Expansion Mods (ProMods, Reforma, etc.)
 
 Support, Feedback & Conflict Notices
     Conflict Notice: This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (animated_gate blocks).
 
 Depot Reporting Protocol
-
 If you encounter a specific yard, toll plaza, or logistics depot anywhere on the map that still feels "off" or doesn't trigger correctly, please drop the City and Company Name in the comments section. Feedback will be logged and prioritized for our upcoming maintenance hotfixes.
 Credits & Technical Acknowledgments
 
