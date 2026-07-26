@@ -7,7 +7,7 @@ A Note from the Developer
 Full Release Log
 https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 
-**NOTICE Because it seems SOME DLC gates lack definition files, you cannot target them by adding code to a definition list. So i have to manually unpack state DLC files to look for gate codes. These will come in future updates like 2.1. But some gates at yards and areas are hard coded and there is nothing I can do. I am still working on Orientation_Triggers specifically at CEVA/Sellgoods they give me a fit.**
+**NOTICE Because it seems SOME DLC gates lack definition files, you cannot target them by adding code to a definition list. So i have to manually unpack state DLC files to look for gate codes. These will come in future updates like 3.0(Project Heavy Fruit). But some gates at yards and areas are hard coded and there is nothing I can do. I am still working on Orientation_Triggers specifically at CEVA/Sellgoods they give me a fit.**
 
 The Problem: "Gate Lag"
 	After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
@@ -20,12 +20,12 @@ Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tig
 Quick Reference
 	Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
   	Orientation Tolerance: Optimized to 60° to catch your approach angle early on tight compound turns.
-  	Toll Plazas (Precision Lanes): Tuned to 10.0m for a smoother, more forgiving clearance window.
+  	Toll Plazas (Precision Lanes): Tuned to 13.0m for a smoother, more forgiving clearance window.
   	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
   	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
   	
 Official Release Information
-    Current Version: v2.0.0-72226(Evolution)(Stable)
+    Current Version: v2.0.1-72626(Evolution)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -43,7 +43,9 @@ The Early Development Phase
     July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
-
+  V2.0.1-(72626)
+  	Precision_toll bump 10->13
+  
   v2.0.0-72226(Evolution)
 	Unified Architecture: New "Global Logic" groups make the mod faster and easier to maintain.
 	Engine-Native Cleanse: Removed legacy code to ensure zero-log-error performance.
@@ -65,7 +67,7 @@ Version History & Changelog Evolution
     General Performance: Minor backend cleanup to improve frame stability when passing through gate collision zones.
     Trigger Distance bumped 49m!
 
-   v1.7.1-71826R2 Hotfix "The House Thats Code Built"
+   v1.7.1-71826R2 Hotfix "The House Thats Code Built" (Current Version)
     No More Crushed Trailers: Fixed a bug where warehouse roll-up doors would accidentally close on your trailer while you were trying to back into tight docks.
     Better Sensors for Long-Nose Trucks: Fine-tuned the trigger zones at toll booths and left-side gates so long conventional trucks open them more reliably without having to scrape the mirrors.
     Cleaner Game Logs: Fixed some internal file names to clear out map-node warnings and keep your game.log.txt clean.
