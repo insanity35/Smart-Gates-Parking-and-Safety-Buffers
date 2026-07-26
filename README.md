@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v2.0.0-72226(Evolution)
+Smart Gates & Safety Buffers (SGSB) — v2.0.1-72626(Evolution)
 "The House That Code Built"
 
 A Note from the Developer
