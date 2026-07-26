@@ -2,7 +2,12 @@ Smart Gates & Safety Buffers (SGSB) — v2.0.0-72226(Evolution)
 "The House That Code Built"
 
 A Note from the Developer
-    This project is dedicated to the glory of God. Every mile driven and every line of code written is an expression of gratitude for the journey. May this mod bring a little more order, peace, and grace to the virtual highways we all travel. This is our first mod ever, so please extend us some grace!
+  This project is dedicated to the glory of God. Every mile driven and every line of code written is an expression of gratitude for the journey. May this mod bring a little more order, peace, and grace to the virtual highways we all travel. This is our first mod ever, so please extend us some grace!
+
+Full Release Log
+https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
+
+**NOTICE Some gates at yards and areas are hard coded and there is nothing i can do. I am still working on Orientation_Triggers specifically at CEVA/Sellgoods they give me a fit.**
 
 The Problem: "Gate Lag"
 	After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
