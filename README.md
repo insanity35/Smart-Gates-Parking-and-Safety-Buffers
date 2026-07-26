@@ -7,7 +7,7 @@ A Note from the Developer
 Full Release Log
 https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 
-**NOTICE Some gates at yards and areas are hard coded and there is nothing i can do. I am still working on Orientation_Triggers specifically at CEVA/Sellgoods they give me a fit.**
+**NOTICE Because it seems some DLC gates lack definition files, you cannot target them by adding code to a definition list. Some gates at yards and areas are hard coded and there is nothing I can do. I am still working on Orientation_Triggers specifically at CEVA/Sellgoods they give me a fit.**
 
 The Problem: "Gate Lag"
 	After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
