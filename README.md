@@ -16,13 +16,6 @@ The Solution: Smart Gates & Safety Buffers
 SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set.
 
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
-
-Quick Reference
-	Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
-  	Orientation Tolerance: Optimized to 60° to catch your approach angle early on tight compound turns.
-  	Toll Plazas (Precision Lanes): Tuned to 10.0m for a smoother, more forgiving clearance window.
-  	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
-  	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
   	
 Official Release Information
     Current Version: v3.0.0-72726(Heavy Fruit)(Stable)
@@ -43,12 +36,12 @@ The Early Development Phase
     July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
+
    v3.0.0-72726(PROJECT HEAVY FRUIT)
 	Everything from 2.1
 	Smart Gates & Safety Buffers (SGSB) — v3.0.0 [PROJECT HEAVY FRUIT]
 Master Change Manifest: Complete Record of All Additions & Adjustments
 The following is the exhaustive, definitive accounting of every single change, addition, and parameter optimization integrated into the v3.0 master build (animated_gate.sgsb.sii) for American Truck Simulator (ATS v1.60)
-
 Part 1: All Core Parameter Changes (The Smoothness & Long-Nose Calibration)
 To eliminate truck nose-clipping (such as with long-nose configurations like the Kenworth W900) and prevent raycasting lag at highway speeds, every existing parameter block was systematically scaled up:
 Trigger Distances (trigger_distance): Uniformly bumped across all tiers by +3m to +10m to grant the physics engine predictive lead time:
