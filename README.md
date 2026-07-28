@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v3.0.2-72826(Heavy Fruit Hotfix)
+Smart Gates & Safety Buffers (SGSB) — v3.0.3-72826(Heavy Fruit Hotfix)
 "The House That Code Built"
 
 A Note from the Developer
@@ -25,7 +25,7 @@ Quick Reference
   	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
   	
 Official Release Information
-    Current Version: v3.0.2-72826(Heavy Fruit Hotfix)(Stable)
+    Current Version: v3.0.3-72826(Heavy Fruit Hotfix)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -43,6 +43,14 @@ The Early Development Phase
     July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
+	v3.0.3-72826(Heavy Fruit)
+			Depot & Warehouse Doors: Tuned to 50m–60m for clean dock backing without highway false triggers.
+			Precision Tolls: Locked cash booths to 14m.
+			Parser Fix: Corrected Oregon Storage to gate.metal_01.
+			Heavy Yards & Map Mods: Maintained at 85m–100m for smooth momentum.
+			Dual-Path Ready: Verified for both def/world/ and unit/hookup/.
+			Clean Layout: Added high-visibility headers across all 50 groups.
+
 v3.0.2-72826(HEAVY FRUIT Hotfix)
     Dual-Directory Sync: This exact code serves as the unified blueprint for both the def/world/ (editor-placed gates) and unit/hookup/ (prefab-spawned gates) directories, ensuring 100% map coverage.
     Trigger Bump: Logistics Master (Section 03) trigger_distance increased to 90.0m for all three gate variants to fully accommodate long-nose setups.
