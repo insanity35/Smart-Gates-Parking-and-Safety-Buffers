@@ -1,4 +1,54 @@
 Group,Gate Classification,Distance (m),Yaw,Offset
+01,Toll Standard (E-ZPass 30mph),30.0,37.0,+/- 4.0
+02,Toll Precision (Cash Booths),15.0,32.0,+/- 3.0
+03,Logistics Master,115.0,85.0,+/- 4.5 / 2.5
+04,Border Check,45.0,50.0,0.0
+05,Logistics Slide,115.0,85.0,+/- 4.5 / 2.5
+06,Depot Precision (Backing),75.0,90.0,0.0
+07,Heavy Industrial,120.0,100.0,0.0
+08,Farm / Ranch,90.0,100.0,2.5
+09,Port / Maritime,120.0,130.0,-3.5
+10,Logging / Forestry,100.0,115.0,4.0
+11,Airport Security,100.0,80.0,+/- 4.5 / 2.5
+12,Weigh / Inspection,30.0,48.0,2.0
+13,Emergency / Municipal,55.0,85.0,0.0
+14,Construction Zone,100.0,95.0,2.5
+15,High Security / Tech,115.0,105.0,2.5
+16,Toll Express Micro,24.0,37.0,3.0
+17,Logging Timber Trail,95.0,120.0,3.0
+18,Oregon Storage,110.0,130.0,0.0
+19,Border Texas/Mexico,55.0,65.0,0.0
+20,Specialized Yards,65.0 - 115.0,Varies,0.0 - 2.5
+21,Niche DLC Elements,42.0 - 110.0,Varies,0.0 - 3.0
+22,Retail Car Lots,95.0,90.0,2.0
+23,Ag Coop Storage,100.0,105.0,2.5
+24,Historic Waypoint,40.0,55.0,0.0
+25,River Lock Barge,115.0,120.0,-2.5
+26,Heavy Rolling Yard,115.0,105.0,2.5
+27,Multi-Bay Freight,75.0,95.0,0.0
+28,Municipal City Yard,115.0,85.0,0.0
+29,Inland River Port,115.0,125.0,-3.0
+30,Aerospace Facility (TX/WA),115.0,105.0,0.0
+31,Livestock Auction (WY/NE/KS),100.0,100.0,2.5
+32,Quarry / Mine Boom (CO/MT),100.0,65.0,0.0
+33,Oil & Gas Drill Site (TX/OK),100.0,80.0,2.0
+34,Sawmill Pivot (AR/PNW),100.0,105.0,2.5
+35,Midwest Manufacturing (MO/IA),110.0,95.0,0.0
+36,Gulf Coast Maritime (LA),100.0 - 115.0,95.0 - 110.0,0.0 - 2.5
+37,Great Lakes Heavy (IL),90.0 - 115.0,85.0 - 105.0,0.0 - 3.5
+38,Federal Energy / Sec (NM/TX),115.0,95.0 - 100.0,0.0 - 2.0
+39,Nat Park / Air Cargo,45.0 - 115.0,55.0 - 95.0,-3.0 - 2.5
+40,Vanilla CA Ag Border,45.0,60.0,0.0
+41,PACCAR Test Track (WA),110.0,95.0,2.0
+42,Hydro Dam Security (NV/AZ),105.0,100.0,-2.0
+43,Research Black Sites (NM/ID),115.0,105.0,2.5
+44,Resort Studio VIP (NV/CA/CO),85.0,75.0,0.0
+45,Hidden Road Racetrack (AZ/TX),90.0,90.0,0.0
+46,Reforma Expansion,"Tolls: 20-30 / Aduana: 45-55 / Yards: 110",N/A,N/A
+47,ProMods Canada,"CBSA: 45-55 / Ferries: 115 / Timber: 95 / Yards: 110",N/A,N/A
+48,ATX Sierra Nevada,"CDFA Ag: 50 / Intermodal: 115",N/A,N/A
+49,Coast to Coast Hubs,"Tolls: 30 / Yards: 110",N/A,N/A
+50,Great America Industrial,115.0,105.0,3.0Group,Gate Classification,Distance (m),Yaw,Offset
 01,Toll Standard (E-ZPass 30mph),28.0,35.0,+/- 4.0
 02,Toll Precision (Cash Booths),14.0,30.0,+/- 3.0
 03,Logistics Master,100.0,80.0,+/- 4.5 / 2.5
