@@ -3,7 +3,7 @@ Smart Gates & Safety Buffers (SGSB) — v3.0.5-73026(Heavy Fruit)
 
 A Note from the Developer
   
-  	This project is dedicated to the glory of God. Every mile driven and every line of code written is an expression of gratitude for the journey. May this mod bring a little more order, peace, and grace to the virtual highways we all travel. This is our first mod ever, so please extend us some grace!
+  This project is dedicated to the glory of God. Every mile driven and every line of code written is an expression of gratitude for the journey. May this mod bring a little more order, peace, and grace to the virtual highways we all travel. This is our first mod ever, so please extend us some grace!
 
 Full Release Log
 https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
@@ -11,11 +11,9 @@ https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 **NOTICE Because it seems SOME DLC gates lack definition files, you cannot target them by adding code to a definition list. So i have to manually unpack state DLC files to look for gate codes. These will come in future updates like the massive 3.0 update. But some gates at yards and areas are hard coded and there is nothing I can do. **
 
 The Problem: "Gate Lag"
-	
 	After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
 
 The Solution: Smart Gates & Safety Buffers
-
 	SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. 
 	Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
