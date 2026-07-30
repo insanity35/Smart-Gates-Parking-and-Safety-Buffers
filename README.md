@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v3.0.4-73026(Heavy Fruit Hotfix)
+Smart Gates & Safety Buffers (SGSB) — v3.0.5-73026(Heavy Fruit)
 "The House That Code Built"
 
 A Note from the Developer
@@ -18,7 +18,7 @@ SGSB is the definitive logic overhaul for gate operations. We have stripped away
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
 Official Release Information
-    Current Version: v3.0.4-73026(Heavy Fruit Hotfix)(Stable)
+    Current Version: v3.0.5-73026(Heavy Fruit)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -36,6 +36,19 @@ The Early Development Phase
     July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
+
+	v3.0.5-73026
+	Logistics & Industrial Overhaul (Significant Boost)
+    	Trigger Distances Increased: Pushed nearly all major industrial yards, ports, logistics hubs, and heavy manufacturing facilities from 100.0m up to 115.0m – 120.0m.
+	Purpose: Gives heavy hauling rigs a much longer runway so gates are fully open before you have to touch the brakes, protecting your momentum.
+	Yaw Tolerances: Slightly widened on key multi-bay and heavy rolling yards to catch wide entry angles.
+	Tolls & Weigh Stations (Conservative Tweaks)
+	Trigger Distances: Kept tightly controlled, with only minor +1.0m to +2.0m adjustments (standard E-ZPass moved from 28m to 30m; cash booths moved from 14m to 15m).
+	Purpose: Prevents the game engine from accidentally reading your truck from an adjacent lane and opening the wrong toll barrier too early.
+	Border & Security Checkpoints (Moderate Adjustments)
+	Trigger Distances: Bumped up moderately (e.g., standard border checks moved from 35m to 45m; Texas/Mexico borders moved to 55m) to keep traffic flowing smoothly without breaking immersion.
+	Code Structure & Documentation
+	Restored the complete 50-Group Master Index metadata header at the top of the def/world/animated_gate.sii file for easy reference.
 
 	v3.0.4.1-73028
 		manifest dated wrong along with mod_description.
