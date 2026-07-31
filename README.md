@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v3.0.8-73026(Heavy Fruit)
+Smart Gates & Safety Buffers (SGSB) — v3.1-73126(Heavy Fruit)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -11,16 +11,14 @@ https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 **NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!! Also , lot of gates are hardcoded in the map editor at distances I cannot control that!**
 
 The Problem: "Gate Lag"
-	
 After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
 
 The Solution: Smart Gates & Safety Buffers
-
 SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. 
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
 Official Release Information
-    Current Version: v3.0.8-73026(Heavy Fruit)(Stable)
+    Current Version: v3.1-73126(Heavy Fruit)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -39,6 +37,22 @@ The Early Development Phase
     July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
+
+	v3.1-73126
+	[ARCHITECTURE & STABILITY]
+	- Moved deployment path to def/world/animated_gate.sii for global map-wide overrides.
+	- Stripped all invalid or unsupported runtime parameters to guarantee zero error log warnings.
+	- Reorganized configuration into 25 clean, function-based groups across 8 sections.
+	
+	[PHYSICS & DISTANCE TUNING]
+	- Logistics & Industrial: Increased to 125m for safe 53ft double trailer clearance.
+	- Ports & Special Transport: Increased to 135m for oversized loads and slow-moving maritime gates.
+	- Tolls & Borders: E-ZPass set to 35m; express micro-tolls set to 28m for smooth 30 MPH rolling stops.
+	
+	[CONTENT & COMPATIBILITY]
+	- Integrated all state map DLC expansions, base-game service shops, truck dealerships, and player garages.
+	- Verified compatibility with Reforma, ProMods Canada, Coast-to-Coast, and Sierra Nevada.
+	- Added [GROUP 25] Universal Fallback Buffer (gate.universal_fallback at 125m) to catch any unlisted or future DLC gates.
 
 	v3.0.8-73026(Hotfix)
 	Invisible gates fixed
@@ -226,10 +240,10 @@ Recommended Load Order
 
 	To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 	
-Top - Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
-	SoundFixes
+Top -   Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
+	    SoundFixes
     	Global Traffic & AI Density Mods
-Bottom - Map Expansion Mods (ProMods, Reforma, etc.)
+Bottom- Map Expansion Mods (ProMods, Reforma, etc.)
 
 Support, Feedback & Conflict Notices
 
