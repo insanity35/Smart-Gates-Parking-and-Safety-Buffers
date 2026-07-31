@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v3.0.7-73026(Heavy Fruit)
+Smart Gates & Safety Buffers (SGSB) — v3.0.8-73026(Heavy Fruit)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -20,7 +20,7 @@ SGSB is the definitive logic overhaul for gate operations. We have stripped away
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
 Official Release Information
-    Current Version: v3.0.7-73026(Heavy Fruit)(Stable)
+    Current Version: v3.0.8-73026(Heavy Fruit)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -39,6 +39,9 @@ The Early Development Phase
     July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
+
+	v3.0.8-73026(Hotfix)
+	Invisible gates fixed
 
 	v3.0.7-73026
 	more unit/hookup fixes think i got it this time
@@ -223,10 +226,10 @@ Recommended Load Order
 
 	To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 	
-	Top - Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
+Top - Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
 	SoundFixes
     	Global Traffic & AI Density Mods
-	Bottom - Map Expansion Mods (ProMods, Reforma, etc.)
+Bottom - Map Expansion Mods (ProMods, Reforma, etc.)
 
 Support, Feedback & Conflict Notices
 
