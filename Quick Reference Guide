@@ -1,27 +1,61 @@
-Group	Gate Classification	Distance (m)	Yaw	Offset
-01	Electronic Express Tolls	35.0	37.0	+/- 4.0
-02	Cash & Precision Tolls	18.0	32.0	+/- 3.0
-03	Weigh Stations	35.0	48.0	2.0
-04	Border & Ag Checkpoints	50.0	50.0	0.0
-05	Standard Freight Depots	125.0	85.0	+/- 4.5
-06	State-Specific DLC Logistics	125.0	95.0	2.5
-07	Intermodal & Rail Yards	125.0	105.0	3.5
-08	Wide Slide Gates	125.0	85.0	+/- 4.5
-09	Heavy Rolling Yards & Factories	125.0	100.0	2.5
-10	Oil, Gas & Chemical	125.0	105.0	0.0
-11	Food Processing & Recycling	115.0	95.0	0.0
-12	Aerospace & Tech	125.0	105.0	0.0
-13	Farms & Agriculture Hubs	105.0	100.0	2.5
-14	Forestry & Paper	105.0	115.0	3.0
-15	Mines, Quarries & Caves	125.0	100.0	0.0
-16	Maritime & Port Hubs	135.0	130.0	-3.5
-17	Escorted Transports	135.0	140.0	0.0
-18	Player Garages, Shops & Dealers	125.0	90.0	0.0
-19	Municipal & Construction	105.0	95.0	2.5
-20	Security, Military & Federal Sites	125.0	100.0	0.0
-21	Recreation, Hotels & Landmarks	90.0	80.0	0.0
-22	Reforma (Mexico)	35.0	37.0	4.0
-23	ProMods Canada	60.0	70.0	0.0
-24	Coast to Coast & Sierra Nevada	125.0	105.0	3.0
-25	Universal Fallback Buffer	125.0	90.0
-For comparison, earlier iterations like v3.0.9 utilized a 70-group structure. Version 3.1 refactors and consolidates those entries into 25 clean, logical functional sections across 8 categories, making the code much easier to manage while maintaining full, uncompromised coverage of all state DLCs and map mods.
+SGSB v3.2 Quick Reference Guide
+
+This reference outlines the architecture, parameter standards, and structural group breakdown for the Smart Gates, Tolls and Safety Buffers (SGSB) v3.2 mod.
+📋 Core Specifications
+Specification	Target Value	Purpose
+Target Environment	American Truck Simulator (ATS)	Native asset overriding via def/world/animated_gate.sii
+High-Speed Approach Range	125.0m – 135.0m	Ensures seamless gate activation at highway speeds for heavy multi-axle rigs
+Stop-and-Go Range	50.0m	Prevents queued vehicles from prematurely tripping manual lanes
+Orientation Tolerance	130.0∘ – 140.0∘	Eliminates missed triggers during sharp multi-axle turns and wide approaches
+Audio Routing	/sound/world/gate_iron.soundref	Native mechanical audio feedback across all standard and DLC assets
+🏗️ Group Structure Index
+
+[GROUP 1]  CORE BASE SHARE (Animated Gate Templates & Garage Assets)
+[GROUP 2A] TOLL BOOTHS — Cash Lanes (Stop-ans-Go Range)
+[GROUP 2B] TOLL BOOTHS — EZ-Pass / Electronic Lanes (High-Speed Range)
+[GROUP 3A] PACIFIC NORTHWEST SLIDING GATES (Oregon & Washington)
+[GROUP 3B] STATE DLCs (Texas, Montana, Wyoming, Kansas)
+[GROUP 4]  DIRECTIONAL ROTARY / SWING GATES
+[GROUP 5]  HEAVY INDUSTRIAL, SERVICE & SPECIALIZED ASSETS
+
+🔍 Parameter Standards by Category
+
+    [GROUP 1] Core Base Share & Garages (anim_gate.bar.01, gar_01, garage_sc, g_exp_door)
+
+        Trigger Distance: 110.0m to 135.0m
+
+        Orientation Tolerance: 135.0∘ to 140.0∘
+
+        Notes: Standardizes default base game templates and upgraded player garage service doors.
+
+    [GROUP 2A] Cash Toll Booths (anim_gate3r, anim_gate01, etc.)
+
+        Trigger Distance: 50.0m
+
+        Orientation Tolerance: 50.0∘
+
+        Notes: Shortened range and tight yaw arcs prevent idling vehicles deep in a queue from tripping the barrier.
+
+    [GROUP 2B] Electronic / EZ-Pass Lanes (anim_gate4r, soda_ash, etc.)
+
+        Trigger Distance: 125.0m
+
+        Orientation Tolerance: 130.0∘ to 135.0∘
+
+        Notes: Extended range for uninhibited, high-speed highway traffic flow.
+
+    [GROUP 3A & 3B] Regional Sliding & DLC Gates (ani_slide_01, ag_tx_oil, ag_ks_salt, etc.)
+
+        Trigger Distance: 135.0m
+
+        Orientation Tolerance: 140.0∘
+
+        Notes: Covers regional expansions across the Pacific Northwest, Texas oilfields, Montana farms, Wyoming mines, and Kansas industrial hubs. Uses trailer_activation: true on heavy industrial entries.
+
+    [GROUP 4 & 5] Rotary, Industrial & Service Assets (ag_rotate_ld, wshng_sttn)
+
+        Trigger Distance: 125.0m
+
+        Orientation Tolerance: 135.0∘
+
+        Notes: Handles swing gates, heavy storage entries, and specialized service washing stations paired with native audio (new_service_washing.soundref).
