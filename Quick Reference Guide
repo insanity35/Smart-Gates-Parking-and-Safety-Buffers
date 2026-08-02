@@ -1,61 +1,57 @@
-SGSB v3.2 Quick Reference Guide
+==============================================================================
+SGSB v3.2.1 QUICK REFERENCE GUIDE
+==============================================================================
 
-This reference outlines the architecture, parameter standards, and structural group breakdown for the Smart Gates, Tolls and Safety Buffers (SGSB) v3.2 mod.
-📋 Core Specifications
-Specification	Target Value	Purpose
-Target Environment	American Truck Simulator (ATS)	Native asset overriding via def/world/animated_gate.sii
-High-Speed Approach Range	125.0m – 135.0m	Ensures seamless gate activation at highway speeds for heavy multi-axle rigs
-Stop-and-Go Range	50.0m	Prevents queued vehicles from prematurely tripping manual lanes
-Orientation Tolerance	130.0∘ – 140.0∘	Eliminates missed triggers during sharp multi-axle turns and wide approaches
-Audio Routing	/sound/world/gate_iron.soundref	Native mechanical audio feedback across all standard and DLC assets
-🏗️ Group Structure Index
+Target Environment: American Truck Simulator (ATS)
+Target File Path: def/world/animated_gate.sii
+Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods/Reforma)
 
-[GROUP 1]  CORE BASE SHARE (Animated Gate Templates & Garage Assets)
-[GROUP 2A] TOLL BOOTHS — Cash Lanes (Stop-ans-Go Range)
-[GROUP 2B] TOLL BOOTHS — EZ-Pass / Electronic Lanes (High-Speed Range)
-[GROUP 3A] PACIFIC NORTHWEST SLIDING GATES (Oregon & Washington)
-[GROUP 3B] STATE DLCs (Texas, Montana, Wyoming, Kansas)
-[GROUP 4]  DIRECTIONAL ROTARY / SWING GATES
-[GROUP 5]  HEAVY INDUSTRIAL, SERVICE & SPECIALIZED ASSETS
+[CORE PARAMETER STANDARDS]
+- High-Speed Approach Range: 125.0m – 135.0m
+- Stop-and-Go Range (Cash Lanes): 50.0m
+- Orientation Tolerance: 130° – 140°
+- Audio Routing: /sound/world/gate_iron.soundref
 
-🔍 Parameter Standards by Category
+[GROUP STRUCTURE INDEX & CATEGORY STANDARDS]
 
-    [GROUP 1] Core Base Share & Garages (anim_gate.bar.01, gar_01, garage_sc, g_exp_door)
+GROUP 1: CORE BASE SHARE (Animated Gate Templates, Garage Assets & Security Checkpoints)
+- Units: anim_gate.bar.01, anim_gate.secur_01, gar_01, garage_sc, g_exp_door
+- Trigger Distance: 110.0m to 135.0m
+- Orientation Tolerance: 135° to 140°
 
-        Trigger Distance: 110.0m to 135.0m
+GROUP 2A: TOLL BOOTHS — Cash Lanes (Stop-and-Go Range)
+- Units: anim_gate3r, anim_gate3l, anim_gate01, anim_gate01.2m, anim_gate02
+- Trigger Distance: 50.0m
+- Orientation Tolerance: 50°
 
-        Orientation Tolerance: 135.0∘ to 140.0∘
+GROUP 2B: TOLL BOOTHS — EZ-Pass / Electronic Lanes (High-Speed Range)
+- Units: anim_gate4r, anim_gate4l, anim_gatm02, ag_ok_turn, anim_gate.soda_ash, anim_gate.soda_ash2
+- Trigger Distance: 125.0m
+- Orientation Tolerance: 130° to 135°
 
-        Notes: Standardizes default base game templates and upgraded player garage service doors.
+GROUP 3A: PACIFIC NORTHWEST SLIDING GATES (Oregon & Washington)
+- Units: ani_slide_01 through ani_slide_4f, anim_gate03-05
+- Trigger Distance: 135.0m
+- Orientation Tolerance: 140°
 
-    [GROUP 2A] Cash Toll Booths (anim_gate3r, anim_gate01, etc.)
+GROUP 3B: MIDWEST & WESTERN STATE DLCs (Texas, Montana, Wyoming, Kansas)
+- Units: ag_tx_oil, ag_tx_border, ani_slide_mt, ag_wy_mine, ag_ks_agri, ag_ks_salt, ag_ks_air
+- Trigger Distance: 135.0m
+- Orientation Tolerance: 140°
 
-        Trigger Distance: 50.0m
+GROUP 3C: NEWER EXPANSION DLCs (Oklahoma, Nebraska, Arkansas)
+- Units: ag_ne_farm, ag_ar_mill (alongside ag_ok_turn in 2B)
+- Trigger Distance: 135.0m
+- Orientation Tolerance: 140°
 
-        Orientation Tolerance: 50.0∘
+GROUP 4: DIRECTIONAL ROTARY / SWING GATES
+- Units: ag_rotate_ld, ag_rotate_lf, ag_rotate_lb, ag_rotate_rd, ag_rotate_rf, ag_rotate_rb
+- Trigger Distance: 125.0m
+- Orientation Tolerance: 135°
 
-        Notes: Shortened range and tight yaw arcs prevent idling vehicles deep in a queue from tripping the barrier.
-
-    [GROUP 2B] Electronic / EZ-Pass Lanes (anim_gate4r, soda_ash, etc.)
-
-        Trigger Distance: 125.0m
-
-        Orientation Tolerance: 130.0∘ to 135.0∘
-
-        Notes: Extended range for uninhibited, high-speed highway traffic flow.
-
-    [GROUP 3A & 3B] Regional Sliding & DLC Gates (ani_slide_01, ag_tx_oil, ag_ks_salt, etc.)
-
-        Trigger Distance: 135.0m
-
-        Orientation Tolerance: 140.0∘
-
-        Notes: Covers regional expansions across the Pacific Northwest, Texas oilfields, Montana farms, Wyoming mines, and Kansas industrial hubs. Uses trailer_activation: true on heavy industrial entries.
-
-    [GROUP 4 & 5] Rotary, Industrial & Service Assets (ag_rotate_ld, wshng_sttn)
-
-        Trigger Distance: 125.0m
-
-        Orientation Tolerance: 135.0∘
-
-        Notes: Handles swing gates, heavy storage entries, and specialized service washing stations paired with native audio (new_service_washing.soundref).
+GROUP 5: HEAVY INDUSTRIAL, SERVICE & SPECIALIZED ASSETS
+- Units: metal_rev_01, wshng_sttn
+- Trigger Distance: 125.0m
+- Orientation Tolerance: 135°
+- Special Audio: wshng_sttn uses /sound/world/newservice/new_service_washing.soundref
+==============================================================================
