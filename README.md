@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v3.2.2-8326(Heavy Fruit)
+Smart Gates & Safety Buffers (SGSB) — v4.0-8726(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -18,7 +18,7 @@ SGSB is the definitive logic overhaul for gate operations. We have stripped away
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
 Official Release Information
-    Current Version: v3.2.2-8326(Heavy Fruit)(Stable)
+    Current Version: v4.0-8726(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -38,81 +38,100 @@ The Early Development Phase
 
 Version History & Changelog Evolution
 
-v3.2.2-8326
-	More unit/hookup mitigation's, it is strongly recommended to have all dlc. I am targeting all gates in one file. WE FINALLY GOT IT!! If gates aren't already open they will be open long before you pull up. Tolls are all within 50m. Now to dial in values a bit more!
+	v4.0-8726(Midnight Train)
+    Comprehensive Regional Audit: Completed a full asset scan and integration across all official ATS map expansions and major regional packages.
+    Granular Behavioral Tuning: Transitioned from uniform triggers to precise, environment-specific distance profiles (high-speed e-tolls, strict cash lanes, and realistic security checkpoints).
+	Regional Map Expansions & Asset Additions
+    Montana Expansion: Added the Miles City Gate, Great Falls Airport Gate, Sidney Memorial Gate, and Gateway Canyon Gas.
+    Wyoming Expansion: Integrated the Independence Rock Gate, I-80 Refinery Gate, Riverton Cemetery Gate, and Jackson Town Square Gates.
+    Kansas & Turnpike Infrastructure: Added the complete K-Turnpike E-Toll System (ks_etoll_gate_0_1_exit), Emporia Fairgrounds Gate, and Dodge City Museum Gate alongside dedicated traffic light nodes.
+    Midwest, South, & Great Lakes: Incorporated asset expansions for Nebraska, Missouri, Iowa, Arkansas, Louisiana (including Cameron LNG and port houses), and Illinois (Chicago Underground Gates and movable bridge systems).
+	Trigger Distance & Behavioral Tuning
+    [Group 1] Cash Toll Lanes: Pinned to a strict 20.0m stop-and-go range with customized offsets to prevent premature triggering.
+    [Group 2] High-Speed E-Tolls: Configured to 125.0m for smooth, uninterrupted EZ-PASS / PikePass / E-Toll fly-through lanes.
+    [Group 8] Secure Industrial & Border Checkpoints: Hard-tuned to a strict 15.0m stop-and-wait range with a tight 90.0° orientation tolerance for:
+        International border crossings (Texas Laredo, La Salle, and border gate props).
+        Coastal and industrial port terminals (Houston, Galveston, Brownsville, Cameron LNG, Lake Charles).
+        Heavy industrial facilities, mining complexes, and refinery perimeters (Wyoming I-80 Refinery, salt mines, aviation gates).
+    [Group 7] Movable Bridges & Locks: Calibrated to 25.0m for Chicago bridge gates and Louisiana river floodgates.
+	Future-Proofing & Framework
+    [Group 9] Placeholders: Established initial structural framework for upcoming state map expansions (North Dakota, Indiana, South Dakota) to ensure seamless day-one integration upon asset release.
 
-	v3.2.1-8126
-	Baseline Missing Assets Injected:
-	    Generic Security (anim_gate.secur_01): Added to Group 1. Pushed the trigger footprint out to 135m with a 140° tolerance limit to handle industrial security checkpoints smoothly.
-	    Oklahoma Turnpike High-Speed Gate (ag_ok_turn): Added directly into the EZ-Pass cluster (Group 2B). Calibrated perfectly to the 125m / 130° EZ-Pass standards for uninterrupted free flow.
-	    Nebraska Farms (ag_ne_farm): Captured missing heavy agriculture gates utilized in the NE expansion. Standardized to 135m / 140°.
-	    Arkansas Timber Mills (ag_ar_mill): Mapped native AR logging gates so flatbeds hauling deep woods timber can maintain a steady roll through the yards. Standardized to 135m / 140°.
-	Data Fine-Tuning & Error Purge:
-	    Performed a complete sweep to ensure 100% parameter compliance.
+v3.2.2-8326
+More unit/hookup mitigation's, it is strongly recommended to have all dlc. I am targeting all gates in one file. WE FINALLY GOT IT!! If gates aren't already open they will be open long before you pull up. Tolls are all within 50m. Now to dial in values a bit more!
+
+v3.2.1-8126
+Baseline Missing Assets Injected:
+    Generic Security (anim_gate.secur_01): Added to Group 1. Pushed the trigger footprint out to 135m with a 140° tolerance limit to handle industrial security checkpoints smoothly.
+    Oklahoma Turnpike High-Speed Gate (ag_ok_turn): Added directly into the EZ-Pass cluster (Group 2B). Calibrated perfectly to the 125m / 130° EZ-Pass standards for uninterrupted free flow.
+    Nebraska Farms (ag_ne_farm): Captured missing heavy agriculture gates utilized in the NE expansion. Standardized to 135m / 140°.
+    Arkansas Timber Mills (ag_ar_mill): Mapped native AR logging gates so flatbeds hauling deep woods timber can maintain a steady roll through the yards. Standardized to 135m / 140°.
+Data Fine-Tuning & Error Purge:
+    Performed a complete sweep to ensure 100% parameter compliance.
+
+v3.2-8126
+	Native Identifier Architecture: Stripped unverified v3.1 custom "ghost code" strings and locked down 100% verified native SCS base game and DLC asset definitions.
+	Cash Lanes (Group 2A): Maintained strict stop-and-go range (50.0m trigger distance, 50.0° orientation tolerance) to prevent queued vehicles from accidentally triggering barriers while idling in lines.
+	EZ-Pass / Electronic Lanes (Group 2B): Configured with high-speed approach buffers (125.0m trigger distance, 130.0° orientation tolerance) for seamless activation at highway speeds.
+    Orientation Tolerance Optimization: Tuned angular detection windows across base templates, PNW sliding gates, and heavy industrial assets (135° to 140°) to eliminate missed triggers during sharp multi-axle approaches and tight turns.
+    Complete Sound Integration: Added explicit iron sound paths (/sound/world/gate_iron.soundref) and specialized service washing station audio hooks across all entries.
+    Expanded State DLC Coverage: Incorporated specialized regional assets for Oregon, Washington, Texas, Montana, Wyoming, and Kansas (including oilfields, border checkpoints, salt mines, and aviation plants).
+    Hidden Service Asset Integration: Added native service center doors (anim_gate.gar_sc, anim_gate.gar_exp) and the service washing station asset (wshng_sttn) to cover upgraded player garages and service complexes.
+
+v3.1-73126
+[ARCHITECTURE & STABILITY]
+- Moved deployment path to def/world/animated_gate.sii for global map-wide overrides.
+- Stripped all invalid or unsupported runtime parameters to guarantee zero error log warnings.
+- Reorganized configuration into 25 clean, function-based groups across 8 sections.
+
+[PHYSICS & DISTANCE TUNING]
+- Logistics & Industrial: Increased to 125m for safe 53ft double trailer clearance.
+- Ports & Special Transport: Increased to 135m for oversized loads and slow-moving maritime gates.
+- Tolls & Borders: E-ZPass set to 35m; express micro-tolls set to 28m for smooth 30 MPH rolling stops.
+
+[CONTENT & COMPATIBILITY]
+- Integrated all state map DLC expansions, base-game service shops, truck dealerships, and player garages.
+- Verified compatibility with Reforma, ProMods Canada, Coast-to-Coast, and Sierra Nevada.
+- Added [GROUP 25] Universal Fallback Buffer (gate.universal_fallback at 125m) to catch any unlisted or future DLC gates.
+
+	v3.0.8-73026(Hotfix)
+	Invisible gates fixed
+
+	v3.0.7-73026
+	more unit/hookup fixes think i got it this time
+
+	v3.0.5-73026
+	Logistics & Industrial Overhaul (Significant Boost)
+    	Trigger Distances Increased: Pushed nearly all major industrial yards, ports, logistics hubs, and heavy manufacturing facilities from 100.0m up to 115.0m – 120.0m.
+	Purpose: Gives heavy hauling rigs a much longer runway so gates are fully open before you have to touch the brakes, protecting your momentum.
+	Yaw Tolerances: Slightly widened on key multi-bay and heavy rolling yards to catch wide entry angles.
+	Tolls & Weigh Stations (Conservative Tweaks)
+	Trigger Distances: Kept tightly controlled, with only minor +1.0m to +2.0m adjustments (standard E-ZPass moved from 28m to 30m; cash booths moved from 14m to 15m).
+	Purpose: Prevents the game engine from accidentally reading your truck from an adjacent lane and opening the wrong toll barrier too early.
+	Border & Security Checkpoints (Moderate Adjustments)
+	Trigger Distances: Bumped up moderately (e.g., standard border checks moved from 35m to 45m; Texas/Mexico borders moved to 55m) to keep traffic flowing smoothly without breaking immersion.
+	Code Structure & Documentation
+	Restored the complete 50-Group Master Index metadata header at the top of the def/world/animated_gate.sii file for easy reference.
+
+	v3.0.4.1-73028
+		manifest dated wrong along with mod_description.
 	
-	v3.2-8126
-		Native Identifier Architecture: Stripped unverified v3.1 custom "ghost code" strings and locked down 100% verified native SCS base game and DLC asset definitions.
-		Cash Lanes (Group 2A): Maintained strict stop-and-go range (50.0m trigger distance, 50.0° orientation tolerance) to prevent queued vehicles from accidentally triggering barriers while idling in lines.
-		EZ-Pass / Electronic Lanes (Group 2B): Configured with high-speed approach buffers (125.0m trigger distance, 130.0° orientation tolerance) for seamless activation at highway speeds.
-	    Orientation Tolerance Optimization: Tuned angular detection windows across base templates, PNW sliding gates, and heavy industrial assets (135° to 140°) to eliminate missed triggers during sharp multi-axle approaches and tight turns.
-	    Complete Sound Integration: Added explicit iron sound paths (/sound/world/gate_iron.soundref) and specialized service washing station audio hooks across all entries.
-	    Expanded State DLC Coverage: Incorporated specialized regional assets for Oregon, Washington, Texas, Montana, Wyoming, and Kansas (including oilfields, border checkpoints, salt mines, and aviation plants).
-	    Hidden Service Asset Integration: Added native service center doors (anim_gate.gar_sc, anim_gate.gar_exp) and the service washing station asset (wshng_sttn) to cover upgraded player garages and service complexes.
-	
-	v3.1-73126
-	[ARCHITECTURE & STABILITY]
-	- Moved deployment path to def/world/animated_gate.sii for global map-wide overrides.
-	- Stripped all invalid or unsupported runtime parameters to guarantee zero error log warnings.
-	- Reorganized configuration into 25 clean, function-based groups across 8 sections.
-	
-	[PHYSICS & DISTANCE TUNING]
-	- Logistics & Industrial: Increased to 125m for safe 53ft double trailer clearance.
-	- Ports & Special Transport: Increased to 135m for oversized loads and slow-moving maritime gates.
-	- Tolls & Borders: E-ZPass set to 35m; express micro-tolls set to 28m for smooth 30 MPH rolling stops.
-	
-	[CONTENT & COMPATIBILITY]
-	- Integrated all state map DLC expansions, base-game service shops, truck dealerships, and player garages.
-	- Verified compatibility with Reforma, ProMods Canada, Coast-to-Coast, and Sierra Nevada.
-	- Added [GROUP 25] Universal Fallback Buffer (gate.universal_fallback at 125m) to catch any unlisted or future DLC gates.
-	
-		v3.0.8-73026(Hotfix)
-		Invisible gates fixed
-	
-		v3.0.7-73026
-		more unit/hookup fixes think i got it this time
-	
-		v3.0.5-73026
-		Logistics & Industrial Overhaul (Significant Boost)
-	    	Trigger Distances Increased: Pushed nearly all major industrial yards, ports, logistics hubs, and heavy manufacturing facilities from 100.0m up to 115.0m – 120.0m.
-		Purpose: Gives heavy hauling rigs a much longer runway so gates are fully open before you have to touch the brakes, protecting your momentum.
-		Yaw Tolerances: Slightly widened on key multi-bay and heavy rolling yards to catch wide entry angles.
-		Tolls & Weigh Stations (Conservative Tweaks)
-		Trigger Distances: Kept tightly controlled, with only minor +1.0m to +2.0m adjustments (standard E-ZPass moved from 28m to 30m; cash booths moved from 14m to 15m).
-		Purpose: Prevents the game engine from accidentally reading your truck from an adjacent lane and opening the wrong toll barrier too early.
-		Border & Security Checkpoints (Moderate Adjustments)
-		Trigger Distances: Bumped up moderately (e.g., standard border checks moved from 35m to 45m; Texas/Mexico borders moved to 55m) to keep traffic flowing smoothly without breaking immersion.
-		Code Structure & Documentation
-		Restored the complete 50-Group Master Index metadata header at the top of the def/world/animated_gate.sii file for easy reference.
-	
-		v3.0.4.1-73028
-			manifest dated wrong along with mod_description.
+	v3.0.4-73026
+		unit/hookup fix
 		
-		v3.0.4-73026
-			unit/hookup fix
-			
-		v3.0.3-72826(Heavy Fruit)
-			Depot & Warehouse Doors: Tuned to 50m–60m for clean dock backing without highway false triggers.
-			Precision Tolls: Locked cash booths to 14m.
-			Parser Fix: Corrected Oregon Storage to gate.metal_01.
-			Heavy Yards & Map Mods: Maintained at 85m–100m for smooth momentum.
-			Dual-Path Ready: Verified for both def/world/ and unit/hookup/.
-			Clean Layout: Added high-visibility headers across all 50 groups.
-		
-		v3.0.2-72826(HEAVY FRUIT Hotfix)
-		    Dual-Directory Sync: This exact code serves as the unified blueprint for both the def/world/ (editor-placed gates) and unit/hookup/ (prefab-spawned gates) directories, ensuring 100% map coverage.
-		    Trigger Bump: Logistics Master (Section 03) trigger_distance increased to 90.0m for all three gate variants to fully accommodate long-nose setups.
-		    Engine Compliance: Filename standardized to the engine-hardcoded animated_gate.sii to force the game to overwrite vanilla baseline stats.
-		    Toll Integrity: Zero changes to toll barriers or border checks; all parameters remain strictly locked to baseline.
+	v3.0.3-72826(Heavy Fruit)
+		Depot & Warehouse Doors: Tuned to 50m–60m for clean dock backing without highway false triggers.
+		Precision Tolls: Locked cash booths to 14m.
+		Parser Fix: Corrected Oregon Storage to gate.metal_01.
+		Heavy Yards & Map Mods: Maintained at 85m–100m for smooth momentum.
+		Dual-Path Ready: Verified for both def/world/ and unit/hookup/.
+		Clean Layout: Added high-visibility headers across all 50 groups.
+	
+	v3.0.2-72826(HEAVY FRUIT Hotfix)
+	    Dual-Directory Sync: This exact code serves as the unified blueprint for both the def/world/ (editor-placed gates) and unit/hookup/ (prefab-spawned gates) directories, ensuring 100% map coverage.
+	    Trigger Bump: Logistics Master (Section 03) trigger_distance increased to 90.0m for all three gate variants to fully accommodate long-nose setups.
+	    Engine Compliance: Filename standardized to the engine-hardcoded animated_gate.sii to force the game to overwrite vanilla baseline stats.
+	    Toll Integrity: Zero changes to toll barriers or border checks; all parameters remain strictly locked to baseline.
 	    
 	   v3.0.0-72726(PROJECT HEAVY FRUIT)
 		Everything from 2.1
@@ -188,7 +207,7 @@ v3.2.2-8326
 	  	Section 1B (Precision 13M): Standardized orientation_tolerance to 35.0° for tight, single-lane toll booths.Compound-Curve Expansion: 
 	  	Extended Logistics Master & Sliding Gates (Sections 2 & 2C) to 75.0° yaw tolerance to accommodate sharp, off-angle depot approaches without trigger drops.
 	
-	  v2.0.0-72226(Evolution)
+	 v2.0.0-72226(Evolution)
 		Unified Architecture: New "Global Logic" groups make the mod faster and easier to maintain.
 		Engine-Native Cleanse: Removed legacy code to ensure zero-log-error performance.
 		Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
@@ -197,11 +216,11 @@ v3.2.2-8326
 	  	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
 	  	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
 	
-	  v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
+	 v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
 	    Deprecated trailer code causing some gates/tolls to not trigger at a distance.
 	    Cleaned up mod_description to clean up warnings in long. No code change. I will be working on a Github link for full changelogs in the coming days.
 	  
-	  v1.7.2-71826R3 (Couldnt Get it right) Hotfix
+	 v1.7.2-71826R3 (Couldnt Get it right) Hotfix
 	    Fixed AI Traffic Jams: Resolved an issue where gates would occasionally stay closed too long, causing AI trucks to get stuck at depot entrances.
 	    Smoother Animations: Fine-tuned gate movement to eliminate stuttering or "shivering" when pulling up to a gate in a long-nose truck.
 	    Refined Sound Quality: Optimized in-cab audio to better muffle gate operation, making the experience more immersive from the driver's seat.
@@ -209,13 +228,13 @@ v3.2.2-8326
 	    General Performance: Minor backend cleanup to improve frame stability when passing through gate collision zones.
 	    Trigger Distance bumped 49m!
 	
-	   v1.7.1-71826R2 Hotfix "The House Thats Code Built" (Current Version)
+	 v1.7.1-71826R2 Hotfix "The House Thats Code Built" (Current Version)
 	    No More Crushed Trailers: Fixed a bug where warehouse roll-up doors would accidentally close on your trailer while you were trying to back into tight docks.
 	    Better Sensors for Long-Nose Trucks: Fine-tuned the trigger zones at toll booths and left-side gates so long conventional trucks open them more reliably without having to scrape the mirrors.
 	    Cleaner Game Logs: Fixed some internal file names to clear out map-node warnings and keep your game.log.txt clean.
 	    Under-the-Hood Polish: Updated the background code to perfectly match the newest ATS v1.60+ engine standards for better stability.
 	
-	   v1.7.0-71826 — "The House That Code Built" (Current Version)
+	 v1.7.0-71826 — "The House That Code Built" (Current Version)
 	        Engine Rest Restoration: Fully integrated native 1.60+ automatic rest distance mechanics across all definitions. Extraneous engine-level overrides have been safely scrubbed to let the base code handle drop-in/drop-out scaling perfectly without micro-stutters.
 	        Global Pointer Audit: Standardized identifier parsing across complex automated sub-variants. Fixed an inherited naming syntax bug in Section 2C where gate.ani_slide_3f mismatched its structural family (gate.an_slide_f3f), completely eliminating map-node registration failures and dead assets.
 	        Left-Hand Toll Offset Calibration: Refined left-hand mirror variants (gate.anim_gate3l) to match inverse axis geometry. Shuffled the bounding boxes relative to the node origin to stop long-nose conventionals from having to pull up too deep into left-side manual cash slots.
