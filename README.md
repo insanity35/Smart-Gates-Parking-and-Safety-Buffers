@@ -17,7 +17,7 @@ The Solution: Smart Gates & Safety Buffers
 SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. 
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
-Official Release Information
+	Official Release Information
     Current Version: v4.0-8726(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
@@ -280,10 +280,10 @@ Recommended Load Order
 
 	To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 	
-Top -   Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
+	Top -   Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
 	SoundFixes
     	Global Traffic & AI Density Mods
-Bottom- Map Expansion Mods (ProMods, Reforma, etc.)
+	Bottom- Map Expansion Mods (ProMods, Reforma, etc.)
 
 Support, Feedback & Conflict Notices
 
