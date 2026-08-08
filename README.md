@@ -1,4 +1,4 @@
-Smart Gates & Safety Buffers (SGSB) — v4.0-8726(Midnight Train)
+Smart Gates & Safety Buffers (SGSB) — v4.0.1-8826(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -18,7 +18,7 @@ SGSB is the definitive logic overhaul for gate operations. We have stripped away
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
 	Official Release Information
-    Current Version: v4.0-8726(Midnight Train)(Stable)
+    Current Version: v4.0.1-8826(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -38,15 +38,18 @@ The Early Development Phase
 
 Version History & Changelog Evolution
 
-	v4.0-8726(Midnight Train)
+	v4.0.1-8826(Hotfix)
+	added animated_gate.dlc_or.sii to unit hookup and pulled metal_01 & metal_rev_01. Thanks FunGaming44 for the catch!
+
+v4.0-8726(Midnight Train)
     Comprehensive Regional Audit: Completed a full asset scan and integration across all official ATS map expansions and major regional packages.
     Granular Behavioral Tuning: Transitioned from uniform triggers to precise, environment-specific distance profiles (high-speed e-tolls, strict cash lanes, and realistic security checkpoints).
-	Regional Map Expansions & Asset Additions
+Regional Map Expansions & Asset Additions
     Montana Expansion: Added the Miles City Gate, Great Falls Airport Gate, Sidney Memorial Gate, and Gateway Canyon Gas.
     Wyoming Expansion: Integrated the Independence Rock Gate, I-80 Refinery Gate, Riverton Cemetery Gate, and Jackson Town Square Gates.
     Kansas & Turnpike Infrastructure: Added the complete K-Turnpike E-Toll System (ks_etoll_gate_0_1_exit), Emporia Fairgrounds Gate, and Dodge City Museum Gate alongside dedicated traffic light nodes.
     Midwest, South, & Great Lakes: Incorporated asset expansions for Nebraska, Missouri, Iowa, Arkansas, Louisiana (including Cameron LNG and port houses), and Illinois (Chicago Underground Gates and movable bridge systems).
-	Trigger Distance & Behavioral Tuning
+Trigger Distance & Behavioral Tuning
     [Group 1] Cash Toll Lanes: Pinned to a strict 20.0m stop-and-go range with customized offsets to prevent premature triggering.
     [Group 2] High-Speed E-Tolls: Configured to 125.0m for smooth, uninterrupted EZ-PASS / PikePass / E-Toll fly-through lanes.
     [Group 8] Secure Industrial & Border Checkpoints: Hard-tuned to a strict 15.0m stop-and-wait range with a tight 90.0° orientation tolerance for:
@@ -54,7 +57,7 @@ Version History & Changelog Evolution
         Coastal and industrial port terminals (Houston, Galveston, Brownsville, Cameron LNG, Lake Charles).
         Heavy industrial facilities, mining complexes, and refinery perimeters (Wyoming I-80 Refinery, salt mines, aviation gates).
     [Group 7] Movable Bridges & Locks: Calibrated to 25.0m for Chicago bridge gates and Louisiana river floodgates.
-	Future-Proofing & Framework
+Future-Proofing & Framework
     [Group 9] Placeholders: Established initial structural framework for upcoming state map expansions (North Dakota, Indiana, South Dakota) to ensure seamless day-one integration upon asset release.
 
 v3.2.2-8326
@@ -133,7 +136,7 @@ v3.1-73126
 	    Engine Compliance: Filename standardized to the engine-hardcoded animated_gate.sii to force the game to overwrite vanilla baseline stats.
 	    Toll Integrity: Zero changes to toll barriers or border checks; all parameters remain strictly locked to baseline.
 	    
-	   v3.0.0-72726(PROJECT HEAVY FRUIT)
+	 v3.0.0-72726(PROJECT HEAVY FRUIT)
 		Everything from 2.1
 		Smart Gates & Safety Buffers (SGSB) — v3.0.0 [PROJECT HEAVY FRUIT]
 	Master Change Manifest: Complete Record of All Additions & Adjustments
@@ -280,7 +283,8 @@ Recommended Load Order
 
 	To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 	
-	Top -   Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
+	Top -   
+	Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
 	SoundFixes
     	Global Traffic & AI Density Mods
 	Bottom- Map Expansion Mods (ProMods, Reforma, etc.)
