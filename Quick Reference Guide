@@ -1,8 +1,9 @@
 ==============================================================================
-SGSB v4.0 "MIDNIGHT TRAIN" QUICK REFERENCE GUIDE
+SGSB v4.0.1 "MIDNIGHT TRAIN" QUICK REFERENCE GUIDE (HOTFIX)
 
 Target Environment: American Truck Simulator (ATS)
-Target File Path: def/world/animated_gate.sii (or /unit/hookup/animated_gate.sii)
+Target Master File Path: /unit/hookup/animated_gate.sii
+Target DLC Override Path: /unit/hookup/animated_gate.dlc_or.sii
 Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods/Reforma)
 
 [CORE PARAMETER STANDARDS]
@@ -45,13 +46,15 @@ GROUP 3: BASE MAP & WESTERN / MOUNTAIN EXPANSIONS (OR, WA, ID, MT, WY, UT, NM, N
 
     Orientation Tolerance: 130° to 140°
 
-GROUP 4: DIRECTIONAL ROTARY / SWING GATES & HEAVY INDUSTRIAL
+GROUP 4: DIRECTIONAL ROTARY / SWING GATES
 
-    Units: ag_rotate_ld through rb, metal_01, metal_rev_01
+    Units: ag_rotate_ld through rb
 
     Trigger Distance: 125.0m
 
     Orientation Tolerance: 135°
+
+    *NOTE (v4.0.1): Heavy metal doors (metal_01, metal_rev_01) have been moved to animated_gate.dlc_or.sii to prevent Oregon DLC collisions. They retain 125m triggers and 135° tolerance.*
 
 GROUP 5: MIDWEST DLC EXPANSIONS (KS, NE, MO, IA, IL)
 
@@ -94,4 +97,4 @@ GROUP 9: UPCOMING / FUTURE STATE EXPANSIONS (Placeholders)
     Trigger Distance: Pending
 
     Orientation Tolerance: Pending
-    ==============================================================================
+==============================================================================
