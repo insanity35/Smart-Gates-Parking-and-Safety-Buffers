@@ -10,7 +10,7 @@ This project is dedicated to the glory of God. Every mile driven and every line 
 Full Release Log
 https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 
-**NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!! Also , lot of gates are hardcoded in the map editor at distances I cannot control that!**
+**NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!! Also , a lot of gates are hardcoded in the map editor at distances I cannot control that!**
 
 The Problem: "Gate Lag"
 After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
