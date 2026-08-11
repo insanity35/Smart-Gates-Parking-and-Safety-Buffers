@@ -1,6 +1,6 @@
 ![Project Header](IMG_20260807_092114.png)
 
-Smart Gates & Safety Buffers (SGSB) — v4.0.3.1-81126(Midnight Train)
+Smart Gates & Safety Buffers (SGSB) — v4.0.4-81126(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -10,7 +10,9 @@ This project is dedicated to the glory of God. Every mile driven and every line 
 Full Release Log
 https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 
-**NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!! Also , a lot of gates are hardcoded in the map editor at distances I cannot control that!**
+**NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!!
+**Prefab Gates (Hardcoded)*I Cannot change values*
+	Army Gate Next To OHare Airpot, Union Pacific, Albuqureque 
 
 The Problem: "Gate Lag"
 After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
@@ -40,7 +42,16 @@ The Early Development Phase
 
 Version History & Changelog Evolution
 
-	v4.0.3.1-81126(Hotfix)
+v4.0.4-81126
+
+	*Note Tolls are apart of tollgate.sii and gate_trigger.sii. When i edit these gated tolls will not operate. They fail to open. So as of now Toll booths are stock. tolls gates in Group 1 are guard gates. Example of this is coke a cola in Albuquerque and General Mills in Roswell.*
+	[GROUP 1] bumper to 22.0 trigger distance and orientation 55.0
+	Illinois DLC Added: Integrated Chicago underground gates, construction fences, and Springfield panoramic assets.
+	Texas DLC Overhauled: Fixed and expanded gate ranges for regional cities, border checkpoints, oilfields, and major ports (Houston, Galveston, Brownsville, etc.).
+	Universal Range Boost: Pushed primary sliding and industrial gate trigger distances to a uniform 135m with trailer activation enabled to stop rear clipping.
+	Master Hookup Updates: Cleaned up company yard entries (like Sunshine Crops).
+	
+v4.0.3.1-81126(Hotfix)
 	Security Gate fix
 
 v4.0.3-81126
@@ -223,7 +234,7 @@ v3.1-73126
 	  	Section 1B (Precision 13M): Standardized orientation_tolerance to 35.0° for tight, single-lane toll booths.Compound-Curve Expansion: 
 	  	Extended Logistics Master & Sliding Gates (Sections 2 & 2C) to 75.0° yaw tolerance to accommodate sharp, off-angle depot approaches without trigger drops.
 	
-	 v2.0.0-72226(Evolution)
+	  v2.0.0-72226(Evolution)
 		Unified Architecture: New "Global Logic" groups make the mod faster and easier to maintain.
 		Engine-Native Cleanse: Removed legacy code to ensure zero-log-error performance.
 		Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
@@ -232,11 +243,11 @@ v3.1-73126
 	  	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
 	  	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
 	
-	 v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
+	  v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
 	    Deprecated trailer code causing some gates/tolls to not trigger at a distance.
 	    Cleaned up mod_description to clean up warnings in long. No code change. I will be working on a Github link for full changelogs in the coming days.
 	  
-	 v1.7.2-71826R3 (Couldnt Get it right) Hotfix
+	  v1.7.2-71826R3 (Couldnt Get it right) Hotfix
 	    Fixed AI Traffic Jams: Resolved an issue where gates would occasionally stay closed too long, causing AI trucks to get stuck at depot entrances.
 	    Smoother Animations: Fine-tuned gate movement to eliminate stuttering or "shivering" when pulling up to a gate in a long-nose truck.
 	    Refined Sound Quality: Optimized in-cab audio to better muffle gate operation, making the experience more immersive from the driver's seat.
@@ -244,13 +255,13 @@ v3.1-73126
 	    General Performance: Minor backend cleanup to improve frame stability when passing through gate collision zones.
 	    Trigger Distance bumped 49m!
 	
-	 v1.7.1-71826R2 Hotfix "The House Thats Code Built" (Current Version)
+	   v1.7.1-71826R2 Hotfix "The House Thats Code Built" (Current Version)
 	    No More Crushed Trailers: Fixed a bug where warehouse roll-up doors would accidentally close on your trailer while you were trying to back into tight docks.
 	    Better Sensors for Long-Nose Trucks: Fine-tuned the trigger zones at toll booths and left-side gates so long conventional trucks open them more reliably without having to scrape the mirrors.
 	    Cleaner Game Logs: Fixed some internal file names to clear out map-node warnings and keep your game.log.txt clean.
 	    Under-the-Hood Polish: Updated the background code to perfectly match the newest ATS v1.60+ engine standards for better stability.
 	
-	 v1.7.0-71826 — "The House That Code Built" (Current Version)
+	   v1.7.0-71826 — "The House That Code Built" (Current Version)
 	        Engine Rest Restoration: Fully integrated native 1.60+ automatic rest distance mechanics across all definitions. Extraneous engine-level overrides have been safely scrubbed to let the base code handle drop-in/drop-out scaling perfectly without micro-stutters.
 	        Global Pointer Audit: Standardized identifier parsing across complex automated sub-variants. Fixed an inherited naming syntax bug in Section 2C where gate.ani_slide_3f mismatched its structural family (gate.an_slide_f3f), completely eliminating map-node registration failures and dead assets.
 	        Left-Hand Toll Offset Calibration: Refined left-hand mirror variants (gate.anim_gate3l) to match inverse axis geometry. Shuffled the bounding boxes relative to the node origin to stop long-nose conventionals from having to pull up too deep into left-side manual cash slots.
