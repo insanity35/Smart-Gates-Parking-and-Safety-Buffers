@@ -6,6 +6,8 @@ Target Master File Path: /unit/hookup/animated_gate.sii
 Target DLC Override Path: /unit/hookup/animated_gate.dlc_or.sii
 Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods/Reforma)
 
+Tollgates are controlled by tollgate.sii and gate_trigger.sii I cannot get to work so tolls might or might not work on custom trigger)
+
 [CORE PARAMETER STANDARDS]
 
     High-Speed Approach Range (E-Tolls / Standard Open): 125.0m – 135.0m
