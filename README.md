@@ -1,6 +1,6 @@
 ![Project Header](IMG_20260807_092114.png)
 
-Smart Gates & Safety Buffers (SGSB) — v4.0.2-8926(Midnight Train)
+Smart Gates & Safety Buffers (SGSB) — v4.0.3-81126(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -20,7 +20,7 @@ SGSB is the definitive logic overhaul for gate operations. We have stripped away
 Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
   	
 Official Release Information
-    Current Version: v4.0.2-8926(Midnight Train)(Stable)
+    Current Version: v4.0.3-81126(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -40,9 +40,14 @@ The Early Development Phase
 
 Version History & Changelog Evolution
 
+	v4.0.3-81126
+		Albuquerque Gate American Lines cannot be changed. Prefab is set until i can get map editor to work on linux. Thanks to ratta_moh for the find. 
+		Expanded Core Security Gate Architecture (Group 3): Preserved and optimized the core security gate definitions (hookup.gate_sec, hookup.gate_sec_l, and hookup.gate_sec_r) with built-in trailer activation (trailer_activation: true), a 135-meter range, and a wide 140-degree orientation tolerance to prevent gates from closing early on long vehicle combinations during tight yard turns.
+		Directional Rotary & Swing Gate Refinements (Group 4): Maintained left and right swing/rotary gate variations with tailored directional offsets and one-way parameters.Regional DLC Hookup Framework: Maintained active mapping support and structured compatibility across regional state expansions (including Arkansas, Iowa, Illinois, Kansas, Louisiana, Missouri, Montana, and Nebraska) with standardized trigger zones and clearance values. 
+	
 	v4.0.2-8926
-	All DLC has been added to its own animated_gate.dlc_*.sii file. This will help cut down on game log spam for missing DLC. I also dont understand why most of Oregon minus one gate and all of Washington is in base animated_gate.sii file but i left them there too.
-
+		All DLC has been added to its own animated_gate.dlc_*.sii file. This will help cut down on game log spam for missing DLC. I also dont understand why most of Oregon minus one gate and all of Washington is in base animated_gate.sii file but i left them there too.
+	
 	v4.0.1-8826(Hotfix)
 	added animated_gate.dlc_or.sii to unit hookup and pulled metal_01 & metal_rev_01. Thanks FunGaming44 for the catch!
 	
@@ -215,7 +220,7 @@ Version History & Changelog Evolution
 		  	Section 1B (Precision 13M): Standardized orientation_tolerance to 35.0° for tight, single-lane toll booths.Compound-Curve Expansion: 
 		  	Extended Logistics Master & Sliding Gates (Sections 2 & 2C) to 75.0° yaw tolerance to accommodate sharp, off-angle depot approaches without trigger drops.
 		
-		 v2.0.0-72226(Evolution)
+		  v2.0.0-72226(Evolution)
 			Unified Architecture: New "Global Logic" groups make the mod faster and easier to maintain.
 			Engine-Native Cleanse: Removed legacy code to ensure zero-log-error performance.
 			Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
@@ -224,11 +229,11 @@ Version History & Changelog Evolution
 		  	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
 		  	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
 		
-		 v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
+		  v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
 		    Deprecated trailer code causing some gates/tolls to not trigger at a distance.
 		    Cleaned up mod_description to clean up warnings in long. No code change. I will be working on a Github link for full changelogs in the coming days.
 		  
-		  	1.7.2-71826R3 (Couldnt Get it right) Hotfix
+		  v1.7.2-71826R3 (Couldnt Get it right) Hotfix
 		    Fixed AI Traffic Jams: Resolved an issue where gates would occasionally stay closed too long, causing AI trucks to get stuck at depot entrances.
 		    Smoother Animations: Fine-tuned gate movement to eliminate stuttering or "shivering" when pulling up to a gate in a long-nose truck.
 		    Refined Sound Quality: Optimized in-cab audio to better muffle gate operation, making the experience more immersive from the driver's seat.
