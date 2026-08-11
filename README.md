@@ -12,7 +12,8 @@ https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 
 **NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!!
 **Prefab Gates (Hardcoded)*I Cannot change values*
-	Army Gate Next To OHare Airpot, Union Pacific, Albuqureque 
+	Army Gate Next To OHare Airpot, Union Pacific, Albuqureque
+**Note Tolls are apart of tollgate.sii and gate_trigger.sii. When i edit these gated tolls will not operate. They fail to open. So as of now Toll booths are stock. Tolls gates in Group 1 are guard gates. Example of this is coke a cola in Albuquerque and General Mills in Roswell.*
 
 The Problem: "Gate Lag"
 After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
@@ -43,7 +44,7 @@ The Early Development Phase
 Version History & Changelog Evolution
 
 v4.0.4-81126
-
+	
 	*Note Tolls are apart of tollgate.sii and gate_trigger.sii. When i edit these gated tolls will not operate. They fail to open. So as of now Toll booths are stock. tolls gates in Group 1 are guard gates. Example of this is coke a cola in Albuquerque and General Mills in Roswell.*
 	[GROUP 1] bumper to 22.0 trigger distance and orientation 55.0
 	Illinois DLC Added: Integrated Chicago underground gates, construction fences, and Springfield panoramic assets.
