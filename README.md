@@ -11,8 +11,9 @@ Full Release Log
 https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
 
 **NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!!
-**Prefab Gates (Hardcoded)*I Cannot change values unless someone can teach me ats map editor i can mess with prefab gates or"dumb gates"*
-	Army Gate Next To OHare Airpot, Union Pacific, Albuqureque, DOW in Illonis
+
+**Prefab Gates (Hardcoded)*I Cannot change values unless someone can teach me ats map editor. I cannot mess with prefab gates or "dumb gates"*
+  Army Gate Next To OHare Airpot, Union Pacific, Albuqureque, DOW in Illonis
 **Note Tolls are apart of tollgate.sii and gate_trigger.sii. When i edit these gated tolls will not operate. They fail to open. So as of now Toll booths are stock. Tolls gates in Group 1 are guard gates. Example of this is coke a cola in Albuquerque and General Mills in Roswell.*
 
 The Problem: "Gate Lag"
