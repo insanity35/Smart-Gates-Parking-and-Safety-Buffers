@@ -1,4 +1,4 @@
-![Project Header](IMG_20260807_092114.png)
+![Project Header](SGSB410.jpeg)
 
 Smart Gates, Parking and Safety Buffers (SGSB) — v4.1-81426(Midnight Train)
 	"The House That Code Built"
