@@ -1,14 +1,13 @@
 ==============================================================================
-SGSB v4.0.1 "MIDNIGHT TRAIN" QUICK REFERENCE GUIDE (HOTFIX)
+SGSB v4.1 "MIDNIGHT TRAIN" QUICK REFERENCE GUIDE
 
 Target Environment: American Truck Simulator (ATS)
 Target Master File Path: /unit/hookup/animated_gate.sii
-Target DLC Override Path: /unit/hookup/animated_gate.dlc_or.sii
 Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods/Reforma)
 
-Tollgates are controlled by tollgate.sii and gate_trigger.sii I cannot get to work so tolls might or might not work on custom trigger
+Tollgates are controlled by tollgate.sii and gate_trigger.sii. Dynamic parking parameters manage rest area slot snapping, company yard alignment, and AI buffer clearance.
 
-[CORE PARAMETER STANDARDS]
+[CORE PARAMETER STANDARDS — GATES]
 
     High-Speed Approach Range (E-Tolls / Standard Open): 125.0m – 135.0m
 
@@ -21,6 +20,18 @@ Tollgates are controlled by tollgate.sii and gate_trigger.sii I cannot get to wo
     Orientation Tolerance: 50° (Cash Tolls) to 90°–140° (Security & Standard)
 
     Audio Routing: /sound/world/gate_iron.soundref
+
+[CORE PARAMETER STANDARDS — DYNAMIC PARKING]
+
+    Rest Area / Truck Stop Snap Radius: 8.0m – 12.0m
+
+    Company Prefab Loading Dock Buffer: 5.0m – 7.0m
+
+    Weigh Station Parking Staging Range: 10.0m
+
+    Orientation Alignment Tolerance: 15° – 30° (Precision Docking) / 45° (Pull-in Stalls)
+
+    Parking Difficulty Integration: Synchronized with g_parking_difficulty [1–3]
 
 [GROUP STRUCTURE INDEX & CATEGORY STANDARDS]
 
@@ -56,7 +67,7 @@ GROUP 4: DIRECTIONAL ROTARY / SWING GATES
 
     Orientation Tolerance: 135°
 
-    *NOTE (v4.0.1): Heavy metal doors (metal_01, metal_rev_01) have been moved to animated_gate.dlc_or.sii to prevent Oregon DLC collisions. They retain 125m triggers and 135° tolerance.*
+    *NOTE (v4.1): Heavy metal doors (metal_01, metal_rev_01) remain mapped to animated_gate.dlc_or.sii to prevent Oregon DLC collisions. They retain 125m triggers and 135° tolerance.*
 
 GROUP 5: MIDWEST DLC EXPANSIONS (KS, NE, MO, IA, IL)
 
@@ -99,4 +110,36 @@ GROUP 9: UPCOMING / FUTURE STATE EXPANSIONS (Placeholders)
     Trigger Distance: Pending
 
     Orientation Tolerance: Pending
+
+[DYNAMIC PARKING & LOT STANDARDS (NEW IN v4.1)]
+
+PARKING GROUP A: REST STOPS & SCENIC TRUCK PARKING
+
+    Units: park_spot_standard, rest_stop_box_med, us_truck_stop_prefab_slot
+
+    Snap / Activation Radius: 10.0m
+
+    Orientation Tolerance: 30°
+
+    Behavior: Seamless auto-snap for rest triggers and overnight parking UI elements.
+
+PARKING GROUP B: COMPANY LOADING BAYS & DOCKS
+
+    Units: depot_prefab_dock_slot_a through c, logistics_back_bay_box
+
+    Snap / Activation Radius: 6.0m
+
+    Orientation Tolerance: 15° (High precision for Class 3 parking difficulty)
+
+    Behavior: Tightened collision box tolerances to eliminate phantom docking rejections.
+
+PARKING GROUP C: WEIGH STATIONS & INSPECTION STAGING LANES
+
+    Units: scale_staging_box, inspection_queue_slot
+
+    Snap / Activation Radius: 12.0m
+
+    Orientation Tolerance: 45°
+
+    Behavior: Regulates queue spacing and prevents vehicle clipping during weigh-in sequences.
 ==============================================================================
