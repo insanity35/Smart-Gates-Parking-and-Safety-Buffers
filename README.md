@@ -697,5 +697,6 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 Glory To God — Soli Deo Gloria
 
-    Trucky Mods: SGSB (Smart Gates, Tolls & Safety Buffers)
-    Steam Workshop: SGSB (Smart Gates, Tolls & Safety Buffers)
+Trucky Mods: SGSB (Smart Gates and Safety Buffers)
+Steam Workshop: SGSB (Smart Gates and Safety Buffers)
+GitHub: SGSB https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
