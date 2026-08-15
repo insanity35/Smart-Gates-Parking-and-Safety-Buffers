@@ -666,13 +666,13 @@ Recommended Load Order
 
 	To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 	
--Top-
-    Background Maps
-    SGSB(Only for sound files I attached to gates)
-    SoundFixes 
-    Global Traffic & AI Density Mods
-    Map Expansion Mods (ProMods, Reforma, etc.)
--Bottom-
+	-Top-
+	    Background Maps
+	    SGSB(Only for sound files I attached to gates)
+	    SoundFixes 
+	    Global Traffic & AI Density Mods
+	    Map Expansion Mods (ProMods, Reforma, etc.)
+	-Bottom-
 
 Support, Feedback & Conflict Notices
 Conflict Notice: This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (animated_gate blocks).
@@ -697,6 +697,6 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 Glory To God — Soli Deo Gloria
 
-Trucky Mods: SGSB (Smart Gates and Safety Buffers)
-Steam Workshop: SGSB (Smart Gates and Safety Buffers)
-GitHub: SGSB https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
+	Trucky Mods: SGSB (Smart Gates and Safety Buffers)
+	Steam Workshop: SGSB (Smart Gates and Safety Buffers)
+	GitHub: SGSB https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
