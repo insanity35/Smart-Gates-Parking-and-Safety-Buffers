@@ -1,8 +1,9 @@
 ==============================================================================
-SGSB v4.1 "MIDNIGHT TRAIN" QUICK REFERENCE GUIDE
+SGSB v4.1.1 "MIDNIGHT TRAIN" QUICK REFERENCE GUIDE
 
 Target Environment: American Truck Simulator (ATS)
 Target Master File Path: /unit/hookup/animated_gate.sii
+Target DLC Override Path: /unit/hookup/animated_gate.dlc_or.sii
 Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods/Reforma)
 
 Tollgates are controlled by tollgate.sii and gate_trigger.sii. Dynamic parking parameters manage rest area slot snapping, company yard alignment, and AI buffer clearance.
@@ -67,11 +68,11 @@ GROUP 4: DIRECTIONAL ROTARY / SWING GATES
 
     Orientation Tolerance: 135°
 
-    *NOTE (v4.1): Heavy metal doors (metal_01, metal_rev_01) remain mapped to animated_gate.dlc_or.sii to prevent Oregon DLC collisions. They retain 125m triggers and 135° tolerance.*
+    *NOTE (v4.1.1): Heavy metal doors (metal_01, metal_rev_01) remain mapped to animated_gate.dlc_or.sii to prevent Oregon DLC collisions. They retain 125m triggers and 135° tolerance.*
 
-GROUP 5: MIDWEST DLC EXPANSIONS (KS, NE, MO, IA, IL)
+GROUP 5: MIDWEST & ILLINOIS DLC EXPANSIONS (KS, NE, MO, IA, IL)
 
-    Units: ag_ks_agri, ag_ne_memorial_cem, ag_mo_stlouis_car4, ag_ia_cedar_rapids, etc.
+    Units: ag_ks_agri, ag_ne_memorial_cem, ag_mo_stlouis_car4, ag_ia_cedar_rapids, ag_il_chic, ag_il_sprg, ag_il_chund, ag_il_fence, etc.
 
     Trigger Distance: 125.0m to 135.0m
 
@@ -111,7 +112,7 @@ GROUP 9: UPCOMING / FUTURE STATE EXPANSIONS (Placeholders)
 
     Orientation Tolerance: Pending
 
-[DYNAMIC PARKING & LOT STANDARDS (NEW IN v4.1)]
+[DYNAMIC PARKING & LOT STANDARDS (NEW IN v4.1.1)]
 
 PARKING GROUP A: REST STOPS & SCENIC TRUCK PARKING
 
