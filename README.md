@@ -666,10 +666,13 @@ Recommended Load Order
 
 	To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 	
-Top -   Smart Gates and Safety Buffers (SGSB) (Place Right Here)(Needs to be high for def/world structure)
-	SoundFixes
-    	Global Traffic & AI Density Mods
-Bottom- Map Expansion Mods (ProMods, Reforma, etc.)
+-Top-
+    Background Maps
+    SGSB(Only for sound files I attached to gates)
+    SoundFixes 
+    Global Traffic & AI Density Mods
+    Map Expansion Mods (ProMods, Reforma, etc.)
+-Bottom-
 
 Support, Feedback & Conflict Notices
 Conflict Notice: This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (animated_gate blocks).
