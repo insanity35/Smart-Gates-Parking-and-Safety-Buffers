@@ -1,6 +1,6 @@
 ![Project Header](SGSB410.jpeg)
 
-Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.1-81526(Midnight Train)
+Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.2-81726(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -29,7 +29,7 @@ Native Dynamic Parking System (New in v4.1)
 Version 4.1 introduces a built-in, native dynamic parking framework engineered completely from scratch for SGSB. Designed to eliminate legacy mod conflicts, this standalone system utilizes custom-isolated namespaces to manage rest area slot snapping, high-precision company loading bay alignment, and weigh station queue spacing. It integrates seamlessly with your map configurations and ATS parking settings, delivering enhanced realism and fluid staging entirely on its own engine logic.
   	
 Official Release Information
-    Current Version: v4.1.1-81526(Midnight Train)(Stable)
+    Current Version: v4.1.2-81726(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -39,17 +39,32 @@ Complete Mod Genesis & Release History
 
 The Early Development Phase
 
-    June 2026 [Alpha Phase: Extraction & Mapping]: Natively developed on Ubuntu 26.04. Utilized the sk-zk Extractor tool to dissect def.scs and base.scs. Performed a deep-dive code analysis to map game logic specifically within animated_gate blocks and identify critical trigger/reset dependencies.
+June 2026 [Alpha Phase: Extraction & Mapping]: Natively developed on Ubuntu 26.04. Utilized the sk-zk Extractor tool to dissect def.scs and base.scs. Performed a deep-dive code analysis to map game logic specifically within animated_gate blocks and identify critical trigger/reset dependencies.
 
-    July 10–11, 2026 [Beta Testing: Stress Testing the Framework]: Field-tested across high-density industrial hubs in Phoenix and Stockton. Confirmed 100% Convoy-ready multiplayer compatibility with zero "mod-mismatch" errors.
+July 10–11, 2026 [Beta Testing: Stress Testing the Framework]: Field-tested across high-density industrial hubs in Phoenix and Stockton. Confirmed 100% Convoy-ready multiplayer compatibility with zero "mod-mismatch" errors.
 
-    July 11–14, 2026 [Release Candidate 1.0: Real-World Discoveries]: Implemented a standardized 47m trigger distance for all industrial yard gates to ensure full clearance for double and triple trailer combinations. Discovered during a vacation road trip that the engine handles rest distances automatically now; native reset code remains commented out until v1.7.
+July 11–14, 2026 [Release Candidate 1.0: Real-World Discoveries]: Implemented a standardized 47m trigger distance for all industrial yard gates to ensure full clearance for double and triple trailer combinations. Discovered during a vacation road trip that the engine handles rest distances automatically now; native reset code remains commented out until v1.7.
 
-    July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
+July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 Version History & Changelog Evolution
 
-	v4.1.1-81526
+	v4.1.2-81726
+		Animated Gate Spatial & Trigger Optimization (animated_gate.sii)
+	    Group 1 Toll Booths (Cash Lanes): Increased stop-and-go trigger distance from 22.0m to 25.0m to improve AI and player approach logic.
+	    Strict Security Checkpoints: Bumped trigger distance from 19.0m to 20.0m for standard security gates to allow better clearance for heavy haulers.
+	    Oregon Slide 4 Gates: Fine-tuned trigger distance on the forward and backward slide 4 variants (an_slide_f4f, an_slide_b4f), increasing it from 30.0m to 33.0m.
+	    File Architecture: Updated metadata and comment blocks to reflect v4.1.2 and cleaned up syntax for Prism3D stability.
+		
+	    Parked Vehicle Spawn & Physics Rebalance (parked_vehicle.sii)
+	    SUVs & Full-Size Pickups: Increased spawn weight to 3.5 to accurately reflect real-world US traffic distribution.
+	    Delivery Fleets Split: Separated generic package vans into dedicated company profiles. FedEx heavily prioritized (weight 3.0), while DHL presence is scaled back (weight 0.5).
+	    Budget/Owner-Operator Semis: Increased spawn weight to 1.5 for a more worn-in, realistic feel in industrial zones.
+	    Sports Cars: Reduced spawn weight to 0.7 to prevent over-saturation of supercars and EVs.
+	    Municipal & Utility Fleets: Reduced spawn weight of street sweepers and garbage trucks to 0.4 for balanced city depot spawning.
+	    Limousines: Reduced spawn weight to 0.1 to make them rare, exclusive sights.
+
+v4.1.1-81526
 	llinois DLC Hookup File (animated_gate.dlc_il.sii):Updated the unit name for the Chicago underground gate variant to ag_il_chund to comply with ATS engine naming formatting rules and clear parsing errors.  
 	Preserved all core Illinois DLC definitions including Chicago, Springfield, and construction fence gate hookups.  
 	Parked Vehicle Physics File (parked_vehicle.sgsb.sii):Removed the unsupported attribute forced_flare_parking: true from all night-time vehicle profiles to resolve engine startup errors regarding invalid attributes on parked_vehicle units.  
@@ -321,13 +336,11 @@ Continued the streamlined process of adding new gates, service areas etc and re-
 
 
 Compatibility & Load Order
-
 Convoy-Ready: Fully optimized file layout ensures seamless synchronization during multiplayer convoy sessions with zero mod-mismatch errors.
     Map Compatibility: Clean, definition-only architecture guarantees absolute stability and pristine game logs alongside major map expansions like ProMods Canada, Reforma, and global traffic AI mods.
 
 Recommended Load Order
-
-	To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
+To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
 	
 -Top-
     Background Maps
