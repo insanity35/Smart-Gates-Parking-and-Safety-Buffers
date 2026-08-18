@@ -1,6 +1,6 @@
 ![Project Header](SGSB410.jpeg)
 
-Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.2-81726(Midnight Train)
+Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.2.1-81726(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -29,7 +29,7 @@ Native Dynamic Parking System (New in v4.1)
 Version 4.1 introduces a built-in, native dynamic parking framework engineered completely from scratch for SGSB. Designed to eliminate legacy mod conflicts, this standalone system utilizes custom-isolated namespaces to manage rest area slot snapping, high-precision company loading bay alignment, and weigh station queue spacing. It integrates seamlessly with your map configurations and ATS parking settings, delivering enhanced realism and fluid staging entirely on its own engine logic.
   	
 Official Release Information
-    Current Version: v4.1.2-81726(Midnight Train)(Stable)
+    Current Version: v4.1.2.1-81726(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
