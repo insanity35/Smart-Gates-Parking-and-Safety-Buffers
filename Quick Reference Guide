@@ -1,111 +1,174 @@
-# Smart Gates, Tolls and Safety Buffers (SGSB) v4.1.2
-## Quick Reference Guide — "Midnight Train"
+Smart Gates, Tolls and Safety Buffers (SGSB) v4.1.3
+Quick Reference Guide — "AI Purge & Performance Rebalance" (Build 82126)
 
-**Target Environment:** American Truck Simulator (ATS)  
-**Target Master File Path:** `/unit/hookup/animated_gate.sii`  
-**Target DLC Override Path:** `/unit/hookup/animated_gate.dlc_or.sii`  
-**Target Parked Vehicles Path:** `/unit/hookup/parked_vehicle.sii`  
-**Compatibility:** ATS Base Map, All State DLCs, & Major Map Combos (ProMods / Reforma)
+Target Environment: American Truck Simulator (ATS)
 
-> *Note: Tollgates are controlled by `tollgate.sii` and `gate_trigger.sii`. Dynamic parking parameters manage rest area slot snapping, company yard alignment, and AI buffer clearance.*
+Target Master File Path: /unit/hookup/animated_gate.sii
 
----
+Target DLC Override Path: /unit/hookup/animated_gate.dlc_or.sii
 
-## [1] Core Parameter Standards — Gates
+Target Parked Vehicles Path: /unit/hookup/parked_vehicle.sii
 
-*   **High-Speed Approach Range** (E-Tolls / Standard Open): `125.0m – 135.0m`
-*   **Stop-and-Go Range** (Cash Toll Ramps): `25.0m`
-*   **Guard-Check / Security Range** (Borders, Ports, Mines): `20.0m`
-*   **Bridge / Lock Gate Range:** `25.0m`
-*   **Orientation Tolerance:** `50°` (Cash Tolls) to `90° – 140°` (Security & Standard)
-*   **Audio Routing:** `/sound/world/gate_iron.soundref`
+Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods / Reforma)
 
----
+    Note: Tollgates are controlled by tollgate.sii and gate_trigger.sii. Dynamic parking parameters manage rest area slot snapping, company yard alignment, AI buffer clearance, and time-of-day probability weighting.
 
-## [2] Core Parameter Standards — Dynamic Parking
+[1] Core Parameter Standards — Gates
 
-*   **Rest Area / Truck Stop Snap Radius:** `8.0m – 12.0m`
-*   **Company Prefab Loading Dock Buffer:** `5.0m – 7.0m`
-*   **Weigh Station Parking Staging Range:** `10.0m`
-*   **Orientation Alignment Tolerance:** `15° – 30°` (Precision Docking) / `45°` (Pull-in Stalls)
-*   **Parking Difficulty Integration:** Synchronized with `g_parking_difficulty [1–3]`
+    Universal High-Speed Approach Range (E-Tolls / Standard Panorama): 125.0m (Standardized across IL, NM, TX)
 
----
+    Extended Trailer Clearance Range (Oregon Heavy Storage Door): 135.0m (metal_01 anti-clipping optimization)
 
-## [3] Group Structure Index & Category Standards
+    Pneumatic & Short-Range Industrial Range (KS, MT, OK, WY): 17.0m (Upgraded from 15.0m for smoother activation)
 
-### **Group 1: Toll Booths — Cash Lanes (Stop-and-Go Range)**
-*   **Units:** `anim_gate3r`, `anim_gate3l`, `anim_gate01`, `anim_gate01.2m`, `anim_gate02`
-*   **Trigger Distance:** `25.0m`
-*   **Orientation Tolerance:** `50°`
+    Guard-Check / Security Range (Borders, Ports, Mines): 20.0m
 
-### **Group 2: Toll Booths — EZ-Pass / PikePass / E-Toll (High-Speed Range)**
-*   **Units:** `anim_gate4r`, `anim_gate4l`, `anim_gatm02`, `anim_gate.soda_ash`, `anim_gate.soda_ash2`, `ag_ks_etoll`
-*   **Trigger Distance:** `125.0m`
-*   **Orientation Tolerance:** `130°`
+    Stop-and-Go Range (Cash Toll Ramps, River Locks, Floodgates): 25.0m
 
-### **Group 3: Base Map & Western / Mountain Expansions (OR, WA, ID, MT, WY, UT, NM, NV)**
-*   **Units:** `ani_slide_01` through `ani_slide_3f`, Oregon Slide 4 variants (`an_slide_f4f`, `an_slide_b4f`), `wa_gate_1-3`, `mt_farm_slide`, regional panorama gates
-*   **Trigger Distance:** `125.0m` to `135.0m` (Oregon Slide 4 optimized to `33.0m`)
-*   **Orientation Tolerance:** `130°` to `140°`
+    Orientation Tolerance: 50° (Cash Tolls) to 90° (Security) and 130° – 140° (Standard Panorama)
 
-### **Group 4: Directional Rotary / Swing Gates**
-*   **Units:** `ag_rotate_ld` through `rb`
-*   **Trigger Distance:** `125.0m`
-*   **Orientation Tolerance:** `135°`
-*   *NOTE (v4.1.2): Heavy metal doors (`metal_01`, `metal_rev_01`) remain mapped to `animated_gate.dlc_or.sii` to prevent Oregon DLC collisions. They retain `125m` triggers and `135°` tolerance.*
+    Audio Routing: Standardized to /sound/world/gate_iron.soundref
 
-### **Group 5: Midwest & Illinois DLC Expansions (KS, NE, MO, IA, IL)**
-*   **Units:** `ag_ks_agri`, `ag_ne_memorial_cem`, `ag_mo_stlouis_car4`, `ag_ia_cedar_rapids`, `ag_il_chic`, `ag_il_sprg`, `ag_il_chund`, `ag_il_fence`, etc.
-*   **Trigger Distance:** `125.0m` to `135.0m`
-*   **Orientation Tolerance:** `130°` to `140°`
+    Collider Geometry Enforcement: Explicit .pmc physical collider file verification (Fixed .pmg path errors on ag_nv_wstg & ag_suncrops)
 
-### **Group 6: Southern DLC Expansions (OK, TX, AR, LA) & Toll Ramps**
-*   **Units:** `ag_ok_stroud`, `ag_la_mandeville_toll` (`25m` tolls); city/park gates (`125m`)
-*   **Trigger Distance:** `25.0m` (Tolls) / `125.0m` (Scenic/Parks)
-*   **Orientation Tolerance:** `130°`
+[2] Core Parameter Standards — Dynamic Parking & Fleet Optimization
 
-### **Group 7: Special Dynamic Movers & Bridge Gates (Illinois / River Locks)**
-*   **Units:** `ag_il_bridge_gate_1`, `ag_il_bridge_gate_2`, `ag_la_lock_gate_02`, `ag_la_river_floodgate`
-*   **Trigger Distance:** `25.0m`
-*   **Orientation Tolerance:** `100°`
-*   **Special Audio:** `/sound/world/gate_iron.soundref`
+    Rest Area / Truck Stop Snap Radius: 8.0m – 12.0m
 
-### **Group 8: Secure Industrial Sites, Mines, Refineries, Ports & Border Checkpoints**
-*   **Units:** `ag_wy_mine`, `ag_ks_salt`, `ag_ks_air`, `ag_tx_oil`, `ag_wy_refinery`, `ag_tx_border`, `ag_tx_brownsville_port`, `ag_tx_galveston_port`, `ag_la_cameron_lng`, `ag_la_lake_charles_port`, `ag_prefab_mine`, `ag_prefab_houston_gate1-5`, `ag_prefab_bus_factory`
-*   **Trigger Distance:** `20.0m` (Strict Guard-Check / Stop-and-Wait)
-*   **Orientation Tolerance:** `90°`
+    Company Prefab Loading Dock Buffer: 5.0m – 7.0m (Tightened 15° alignment to eliminate phantom rejections)
 
-### **Group 9: Upcoming / Future State Expansions (Placeholders)**
-*   **Units:** North Dakota, Indiana, South Dakota framework integration
-*   **Trigger Distance:** Pending
-*   **Orientation Tolerance:** Pending
+    Weigh Station Parking Staging Range: 10.0m – 12.0m (45° alignment for queue spacing)
 
----
+    Fallback AI Optimization Standard: low_poly_only: true forced across all Section 9 individual vehicle units
 
-## [4] Parked Vehicle Fleet Management (Updated in v4.1.2)
+    Municipal Operations Realism: Inverted Street Sweeper schedules (0.6 Night / 0.3 Day)
 
-*   **Units:** `package_van.always.parked.physics`, `transit.fedex`, `transit.dhl`
-*   **Behavior:** Delivery fleets are cleanly separated into dedicated company profiles for FedEx and DHL to streamline console logs and avoid spawn conflicts.
+    Parking Difficulty Integration: Synchronized with g_parking_difficulty [1–3]
 
----
+[3] Group Structure Index & Category Standards
+Group 1: Toll Booths — Cash Lanes (Stop-and-Go Range)
 
-## [5] Dynamic Parking & Lot Standards
+    Units: anim_gate3r, anim_gate3l, anim_gate01, anim_gate01.2m, anim_gate02
 
-### **Parking Group A: Rest Stops & Scenic Truck Parking**
-*   **Units:** `park_spot_standard`, `rest_stop_box_med`, `us_truck_stop_prefab_slot`
-*   **Snap / Activation Radius:** `10.0m`
-*   **Orientation Tolerance:** `30°`
-*   **Behavior:** Seamless auto-snap for rest triggers and overnight parking UI elements.
+    Trigger Distance: 25.0m
 
-### **Parking Group B: Company Loading Bays & Docks**
-*   **Units:** `depot_prefab_dock_slot_a` through `c`, `logistics_back_bay_box`
-*   **Snap / Activation Radius:** `6.0m`
-*   **Orientation Tolerance:** `15°` (High precision for Class 3 parking difficulty)
-*   **Behavior:** Tightened collision box tolerances to eliminate phantom docking rejections.
+    Orientation Tolerance: 50°
 
-### **Parking Group C: Weigh Stations & Inspection Staging Lanes**
-*   **Units:** `scale_staging_box`, `inspection_queue_slot`
-*   **Snap / Activation Radius:** `12.0m`
-*   **Orientation Tolerance:** `45°`
-*   **Behavior:** Regulates queue spacing and prevents vehicle clipping during weigh-in sequences.
+Group 2: Toll Booths — EZ-Pass / PikePass / E-Toll (High-Speed Range)
+
+    Units: anim_gate4r, anim_gate4l, anim_gatm02, anim_gate.soda_ash, anim_gate.soda_ash2, ag_ks_etoll
+
+    Trigger Distance: 125.0m
+
+    Orientation Tolerance: 130°
+
+Group 3: Base Map & Western / Mountain Expansions (OR, WA, ID, MT, WY, UT, NM, NV)
+
+    Units: ani_slide_01 through ani_slide_3f, Oregon Slide 4 variants (an_slide_f4f, an_slide_b4f), wa_gate_1-3, mt_farm_slide, ag_mt_gfll, ag_wy_mine, ag_wy_ref, regional panorama gates (ag_nm_trad, ag_nm_abq1, ag_nm_abqt)
+
+    Trigger Distance: 125.0m (Panorama/Standard), 17.0m (Pneumatic Industrial in MT/WY)
+
+    Orientation Tolerance: 130° to 140°
+
+Group 4: Directional Rotary / Swing Gates & Heavy Doors
+
+    Units: ag_rotate_ld through rb, metal_01, metal_rev_01
+
+    Trigger Distance: 125.0m (Rotary) / 135.0m (metal_01 in animated_gate.dlc_or.sii to eliminate trailer tail-swing clipping)
+
+    Orientation Tolerance: 135°
+
+Group 5: Midwest & Illinois DLC Expansions (KS, NE, MO, IA, IL)
+
+    Units: ag_ks_agri, ag_ks_salt, ag_ks_air, ag_ne_memorial_cem, ag_mo_stlouis_car4, ag_ia_cedar_rapids, ag_il_chic, ag_il_sprg, ag_il_chund, ag_il_fence
+
+    Trigger Distance: 125.0m (Standardized across IL/MO/IA/NE), 17.0m (Pneumatic Salt/Air Gates in KS)
+
+    Orientation Tolerance: 130° to 140°
+
+Group 6: Southern DLC Expansions (OK, TX, AR, LA) & Toll Ramps
+
+    Units: ag_ok_stroud, ag_pf_busf, ag_la_mandeville_toll, Texas Panorama/Oilfield/Border/Port units (16 total)
+
+    Trigger Distance: 25.0m (Tolls), 17.0m (ag_pf_busf Depot), 125.0m (Standardized across TX Panoramas & Scenic)
+
+    Orientation Tolerance: 130°
+
+Group 7: Special Dynamic Movers & Bridge Gates (Illinois / River Locks)
+
+    Units: ag_il_bridge_gate_1, ag_il_bridge_gate_2, ag_la_lock_gate_02, ag_la_river_floodgate
+
+    Trigger Distance: 25.0m
+
+    Orientation Tolerance: 100°
+
+    Special Audio: /sound/world/gate_iron.soundref
+
+Group 8: Secure Industrial Sites, Mines, Refineries, Ports & Border Checkpoints
+
+    Units: ag_tx_oil, ag_tx_border, ag_tx_brownsville_port, ag_tx_galveston_port, ag_la_cameron_lng, ag_la_lake_charles_port, ag_prefab_mine, ag_prefab_houston_gate1-5, ag_prefab_bus_factory
+
+    Trigger Distance: 20.0m (Strict Guard-Check / Stop-and-Wait)
+
+    Orientation Tolerance: 90°
+
+Group 9: Upcoming / Future State Expansions (Placeholders)
+
+    Units: North Dakota, Indiana, South Dakota framework integration
+
+    Trigger Distance: Pending
+
+    Orientation Tolerance: Pending
+
+[4] Parked Vehicle Fleet Management & AI Purge (Updated in v4.1.3)
+
+    Low-Poly Migration (Performance Boost): Forced low_poly_only: true across all individual AI fallback profiles in Section 9 (ai.1951.oldsmobile through ai.xc90) to reduce rendering overhead in crowded yards.
+
+    Tesla Purge: Completely removed traffic.tesla from all sport car lists, fallback profiles, and car dealer lots to resolve missing data chain physics errors.
+
+    Car Dealer Reassignment: Replaced traffic.tesla with traffic.mustang in car_dealer.always.parked.physics.
+
+    UDS Delivery Van Purge: Purged traffic.pv_uds across all package van, car ship, and general van spawn lists to streamline console logging.
+
+[5] Dynamic Parking & Lot Standards / Probability Schedules
+Parking Group A: Rest Stops & Scenic Truck Parking
+
+    Units: park_spot_standard, rest_stop_box_med, us_truck_stop_prefab_slot
+
+    Snap / Activation Radius: 10.0m
+
+    Orientation Tolerance: 30°
+
+    Behavior: Seamless auto-snap for rest triggers and overnight parking UI elements.
+
+Parking Group B: Company Loading Bays & Docks
+
+    Units: depot_prefab_dock_slot_a through c, logistics_back_bay_box
+
+    Snap / Activation Radius: 6.0m
+
+    Orientation Tolerance: 15° (High precision for Class 3 parking difficulty)
+
+    Behavior: Tightened collision box tolerances to eliminate phantom docking rejections.
+
+Parking Group C: Weigh Stations & Inspection Staging Lanes
+
+    Units: scale_staging_box, inspection_queue_slot
+
+    Snap / Activation Radius: 12.0m
+
+    Orientation Tolerance: 45°
+
+    Behavior: Regulates queue spacing and prevents vehicle clipping during weigh-in sequences.
+
+Parking Group D: Time-of-Day Traffic Weighting Schedules (v4.1.3 Rebalance)
+
+    Municipal Sweepers (city.sweeper): Rebalanced to 0.6 Night / 0.3 Day to mirror realistic municipal maintenance hours.
+
+    Standard Passenger Cars & Police: Daytime probability boosted from 1.0 to 1.5.
+
+    Trucks & Trailer Combos: Daytime probability increased from 0.5 to 0.85; nighttime bumped to 0.55.
+
+    SUVs & Pickups: Daytime baseline weighted to 3.7; nighttime baseline weighted to 1.2.
+
+    Logistics & Service Fleets: Daytime DHL vans boosted to 1.2; Garbage trucks boosted to 0.6; Nighttime Limousines doubled to 0.2.
