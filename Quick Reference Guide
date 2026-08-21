@@ -11,11 +11,11 @@ Target Parked Vehicles Path: /unit/hookup/parked_vehicle.sii
 
 Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods / Reforma)
 
-    Note: Tollgates are controlled by tollgate.sii and gate_trigger.sii. Dynamic parking parameters manage rest area slot snapping, company yard alignment, AI buffer clearance, and time-of-day probability weighting.
+Note: SGSB Dynamic parking parameters manage rest area slot snapping, company yard alignment, AI buffer clearance, and time-of-day probability weighting.
 
 [1] Core Parameter Standards — Gates
 
-    Universal High-Speed Approach Range (E-Tolls / Standard Panorama): 125.0m (Standardized across IL, NM, TX)
+    Universal High-Speed Approach Range (Standard tard gates): 125.0m (Standardized across IL, NM, TX)
 
     Extended Trailer Clearance Range (Oregon Heavy Storage Door): 135.0m (metal_01 anti-clipping optimization)
 
