@@ -1,6 +1,6 @@
 ![Project Header](SGSB410.jpeg)
 
-Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.2.1-81726(Midnight Train)
+Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.3-82126(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -8,7 +8,7 @@ A Note from the Developer
 This project is dedicated to the glory of God. Every mile driven and every line of code written is an expression of gratitude for the journey. May this mod bring a little more order, peace, and grace to the virtual highways we all travel. This is our first mod ever, so please extend us some grace!
 
 Full Release Log
-https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
+https://github.com/insanity35/Smart-Gates-Parking-and-Safety-Buffers
 
 **NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!!
 
@@ -29,7 +29,7 @@ Native Dynamic Parking System (New in v4.1)
 Version 4.1 introduces a built-in, native dynamic parking framework engineered completely from scratch for SGSB. Designed to eliminate legacy mod conflicts, this standalone system utilizes custom-isolated namespaces to manage rest area slot snapping, high-precision company loading bay alignment, and weigh station queue spacing. It integrates seamlessly with your map configurations and ATS parking settings, delivering enhanced realism and fluid staging entirely on its own engine logic.
   	
 Official Release Information
-    Current Version: v4.1.2.1-81726(Midnight Train)(Stable)
+    Current Version: v4.1.3-82126(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -49,14 +49,59 @@ July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successful
 
 Version History & Changelog Evolution
 
-	v4.1.2-81726
-		Animated Gate Spatial & Trigger Optimization (animated_gate.sii)
+	v4.1.3-82126
+	Gate Fixes & Adjustments
+    ag_nv_wstg: Fixed the collision parameter pointing to /model/lv/westgate.pmg (geometry) instead of the proper .pmc collider file.
+    ag_suncrops: Fixed the collision parameter pointing to /model/sign/company_logos/sunshine_crops/suncrops_gate.pmg instead of the proper .pmc collider file.
+	State Hookup Updates
+    Illinois (animated_gate.dlc_il.sii)
+        Standardized: Reduced the trigger_distance for all panorama, underground, and construction fence gates from 135.0 to the universal 125.0.
+        Affected Units: ag_il_chic, ag_il_sprg, ag_il_chund, ag_il_fence
+    Kansas (animated_gate.dlc_ks.sii)
+        Adjusted: Increased the trigger_distance for short-range pneumatic/industrial gates from 15.0 to 17.0.
+        Affected Units: ag_ks_salt, ag_ks_air
+    Montana (animated_gate.dlc_mt.sii)
+        Adjusted: Increased the trigger_distance for the short-range pneumatic gate from 15.0 to 17.0.
+        Affected Units: ag_mt_gfll
+    New Mexico (animated_gate.dlc_nm.sii)
+        Verified/Standardized: Confirmed and locked in the universal 125.0 trigger_distance for all panorama and tradition gates across the state.
+        Affected Units: ag_nm_trad, ag_nm_abq1, ag_nm_abqt
+    Oklahoma (animated_gate.dlc_ok.sii)
+        Adjusted: Increased the trigger_distance for the short-range depot gate from 15.0 to 17.0.
+        Affected Units: ag_pf_busf
+    Oregon (animated_gate.dlc_or.sii)
+        Fixed: Significantly increased the trigger_distance for the metal storage door from 50.0 to 135.0 to prevent late-opening clipping issues.
+        Affected Units: metal_01
+    Texas (animated_gate.dlc_tx.sii)
+        Standardized: Reduced the trigger_distance for all 16 panorama, oilfield, border, and Houston port gates from 135.0 down to the universal 125.0.
+    Wyoming (animated_gate.dlc_wy.sii)
+        Adjusted: Increased the trigger_distance for short-range pneumatic/industrial gates from 15.0 to 17.0.
+        Affected Units: ag_wy_mine, ag_wy_ref
+	Parking Optimizations (AI Purge & Performance Rebalance) - 
+		Parking UpdatesOptimization & PerformanceLow-Poly Migration: 
+ 	Forced all Section 9 individual AI fallback profiles (from the 1951 Oldsmobile through the Volvo XC90) to low_poly_only: true for significant rendering PERFORMANCE IMPROVMENTS!!! 
+	Vehicle Removals & Fixes Purge: 
+ 		Completely removed traffic.tesla from all sport car lists and fallback profiles to resolve missing data 	 chain physics errors.  
+	Dealership Update: 
+		Replaced the Tesla in the car_dealer profile with the traffic.mustang.  
+ 	UDS Van Purge: 
+		Eliminated traffic.pv_uds from all package van, car ship, and general van spawn profiles.  Unit Conflicts: 
+	Rebalancing Realism Update: 
+ 		Inverted street sweeper spawn times to heavily favor nighttime hours (0.6 night / 0.3 day) to accurately reflect real-world municipal operating schedules.  
+	Standard Cars & Police: 
+		Boosted daytime spawn probabilities from 1.0 to 1.5.  
+		Trucks & Trailers: Increased daytime combos from 0.5 to 0.85, with a minor nighttime bump from 0.5 to 0.55.  
+ 		SUVs & Pickups: Tweaked daytime baselines up to 3.7 and nighttime baselines to 1.2.  
+ 	Logistics & Service Fleets: 
+ 		Buffed daytime DHL vans significantly (0.5 to 1.2) and Garbage Trucks (0.4 to 0.6). Nighttime Limo spawns doubled to 0.2.  
+
+v4.1.2-81726
+	Animated Gate Spatial & Trigger Optimization (animated_gate.sii)
 	    Group 1 Toll Booths (Cash Lanes): Increased stop-and-go trigger distance from 22.0m to 25.0m to improve AI and player approach logic.
 	    Strict Security Checkpoints: Bumped trigger distance from 19.0m to 20.0m for standard security gates to allow better clearance for heavy haulers.
 	    Oregon Slide 4 Gates: Fine-tuned trigger distance on the forward and backward slide 4 variants (an_slide_f4f, an_slide_b4f), increasing it from 30.0m to 33.0m.
-	    File Architecture: Updated metadata and comment blocks to reflect v4.1.2 and cleaned up syntax for Prism3D stability.
-		
-	    Parked Vehicle Spawn & Physics Rebalance (parked_vehicle.sii)
+	    File Architecture: Updated metadata and comment blocks to reflect v4.1.2 and cleaned up syntax for Prism3D stability.	
+	Parked Vehicle Spawn & Physics Rebalance (parked_vehicle.sii)
 	    SUVs & Full-Size Pickups: Increased spawn weight to 3.5 to accurately reflect real-world US traffic distribution.
 	    Delivery Fleets Split: Separated generic package vans into dedicated company profiles. FedEx heavily prioritized (weight 3.0), while DHL presence is scaled back (weight 0.5).
 	    Budget/Owner-Operator Semis: Increased spawn weight to 1.5 for a more worn-in, realistic feel in industrial zones.
@@ -292,13 +337,13 @@ v1.7.2-71826R3 (Couldnt Get it right) Hotfix
 	    General Performance: Minor backend cleanup to improve frame stability when passing through gate collision zones.
 	    Trigger Distance bumped 49m!
 	
-v1.7.1-71826R2 Hotfix "The House Thats Code Built" (Current Version)
+v1.7.1-71826R2 Hotfix "The House Thats Code Built"
 	    No More Crushed Trailers: Fixed a bug where warehouse roll-up doors would accidentally close on your trailer while you were trying to back into tight docks.
 	    Better Sensors for Long-Nose Trucks: Fine-tuned the trigger zones at toll booths and left-side gates so long conventional trucks open them more reliably without having to scrape the mirrors.
 	    Cleaner Game Logs: Fixed some internal file names to clear out map-node warnings and keep your game.log.txt clean.
 	    Under-the-Hood Polish: Updated the background code to perfectly match the newest ATS v1.60+ engine standards for better stability.
 	
-v1.7.0-71826 — "The House That Code Built" (Current Version)
+v1.7.0-71826 — "The House That Code Built"
 	        Engine Rest Restoration: Fully integrated native 1.60+ automatic rest distance mechanics across all definitions. Extraneous engine-level overrides have been safely scrubbed to let the base code handle drop-in/drop-out scaling perfectly without micro-stutters.
 	        Global Pointer Audit: Standardized identifier parsing across complex automated sub-variants. Fixed an inherited naming syntax bug in Section 2C where gate.ani_slide_3f mismatched its structural family (gate.an_slide_f3f), completely eliminating map-node registration failures and dead assets.
 	        Left-Hand Toll Offset Calibration: Refined left-hand mirror variants (gate.anim_gate3l) to match inverse axis geometry. Shuffled the bounding boxes relative to the node origin to stop long-nose conventionals from having to pull up too deep into left-side manual cash slots.
@@ -359,7 +404,7 @@ If you encounter a specific yard, toll plaza, or logistics depot anywhere on the
 
 Credits & Technical Acknowledgments
 
-    Development Group: Smoke Show Studios & Smoke Show Creations
+    Development Group: Smoke Show Studios, Smoke Show Creations & Harambes Children
     Lead Developer & Tester: meanshadows35
     Co-Developer: mrh368
     Technical Consultant: Overdrive
@@ -375,4 +420,4 @@ Glory To God — Soli Deo Gloria
 
 Trucky Mods: SGSB (Smart Gates and Safety Buffers)
 Steam Workshop: SGSB (Smart Gates and Safety Buffers)
-GitHub: SGSB https://github.com/insanity35/Smart-Gates-Tolls-and-Safety-Buffers
+GitHub: SGSB https://github.com/insanity35/Smart-Gates-Parking-and-Safety-Buffers
