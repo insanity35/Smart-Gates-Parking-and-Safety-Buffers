@@ -1,6 +1,6 @@
 ![Project Header](SGSB410.jpeg)
 
-Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.3-82126(Midnight Train)
+Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.4-82326(Midnight Train)
 	"The House That Code Built"
 
 A Note from the Developer
@@ -27,9 +27,12 @@ Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tig
 Native Dynamic Parking System (New in v4.1)
 
 Version 4.1 introduces a built-in, native dynamic parking framework engineered completely from scratch for SGSB. Designed to eliminate legacy mod conflicts, this standalone system utilizes custom-isolated namespaces to manage rest area slot snapping, high-precision company loading bay alignment, and weigh station queue spacing. It integrates seamlessly with your map configurations and ATS parking settings, delivering enhanced realism and fluid staging entirely on its own engine logic.
+
+Weight Station Probability(4.1.4)
+20% probability down from 60%(default scs) 
   	
 Official Release Information
-    Current Version: v4.1.3-82126(Midnight Train)(Stable)
+    Current Version: v4.1.4-82326(Midnight Train)(Stable)
     Official Launch Date (v1.0): Tuesday, July 14, 2026
     ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
     Development Environment: Ubuntu 26.04 LTS via Linux
@@ -49,7 +52,17 @@ July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successful
 
 Version History & Changelog Evolution
 
-	v4.1.3-82126
+	4.1.4-82326 (Nighttime Fleet Density, AI Balance & Weight Stations)
+	NEW *Weight Station Probability bumped from 60% to 20% to be more realistic.* 
+    	AI Spawn Rebalance (Consumer Vehicles): Reduced the daytime and nighttime spawn probabilities for all Pickups and SUVs (suv, pickup, tt_pickup, f_150) from 3.7 down to 3.5 to slightly reduce civilian clutter in industrial zones.
+    	AI Spawn Rebalance (Commercial Vehicles): Increased the daytime and nighttime spawn probabilities for Commercial Delivery Vans (van, van...box) from 1.0 up to 1.9 to boost the presence of local delivery traffic.
+    	Environment Immersion (Truck Stops): Doubled the nighttime spawn probability for parked semi-truck fleets (truck_trlr.parked.physics.night and truck_trlr.cheap.parked.physics.night) from 0.55 to 1.1. Truck stops and rest areas will now feel significantly more packed and challenging to navigate during late-night hours.
+	Global Density Bump: Applied a clean 7% spawn weight multiplier across all vehicle classes to gently fill out empty background lots and scenic turnouts without model spam or duplication.
+	Broadened Time Windows: Replaced hard 0.0 drop-offs with low "bleed-over" probability values across day and night cycles, completely eliminating the sudden mass-extinction and pop-in effect during dawn and dusk transitions.
+	Municipal Night Shift Flipped: Reconfigured city sweepers and garbage trucks (Mack RD and standard units) to own the graveyard shift, driving up nighttime probabilities (0.85) while lowering daytime presence for peak realism.
+	Render Distance Optimization: Integrated the engine parameter uset g_lod_factor_parked "1.1" to pull background parked vehicle culling distances out just far enough to catch assets before entering your immediate field of view.
+
+v4.1.3-82126
 	Gate Fixes & Adjustments
     ag_nv_wstg: Fixed the collision parameter pointing to /model/lv/westgate.pmg (geometry) instead of the proper .pmc collider file.
     ag_suncrops: Fixed the collision parameter pointing to /model/sign/company_logos/sunshine_crops/suncrops_gate.pmg instead of the proper .pmc collider file.
