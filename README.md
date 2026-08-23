@@ -159,7 +159,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 ### v3.x Series Legacy Milestones
 * **v3.2.1:** Injected missing baseline assets (OK Turnpike, NE Farms, AR Timber Mills).
 * **v3.2.0:** Stripped unverified "ghost code", optimized orientation tolerances, integrated state DLC coverage, and complete sound integration.
-* **v3.1.0:** Moved deployment path to `def/world/animated_gate.sii`. Reorganized into 25 clean function-based groups. Set logistics gates to 125m for 53ft trailer clearance.
+* **v3.1.0:** Moved deployment path to `unit/hookup/animated_gate.sii`. Reorganized into 25 clean function-based groups. Set logistics gates to 125m for 53ft trailer clearance.
 * **v3.0.0 (PROJECT HEAVY FRUIT):** Systematically scaled up trigger distances globally. Expanded master index to incorporate specialized DLC assets (Groups 22-35). Built native compatibility layers for map mods like ProMods Canada and Reforma (Groups 36-50).
 
 ### v2.x & v1.x Series Legacy Milestones
