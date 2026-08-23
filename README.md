@@ -1,436 +1,173 @@
 ![Project Header](SGSB410.jpeg)
 
-Smart Gates, Parking and Safety Buffers (SGSB) — v4.1.4-82326(Midnight Train)
-	"The House That Code Built"
+# Smart Gates, Parking and Safety Buffers (SGSB)
+**v4.1.4-82326 (Midnight Train) — "The House That Code Built"**
 
-A Note from the Developer
-  
-This project is dedicated to the glory of God. Every mile driven and every line of code written is an expression of gratitude for the journey. May this mod bring a little more order, peace, and grace to the virtual highways we all travel. This is our first mod ever, so please extend us some grace!
+---
 
-Full Release Log
-https://github.com/insanity35/Smart-Gates-Parking-and-Safety-Buffers
+## 📖 A Note from the Developer
+This project is dedicated to the glory of God. Every mile driven and every line of code written is an expression of gratitude for the journey. May this mod bring a little more order, peace, and grace to the virtual highways we all travel. 
 
-**NOTICE NEEDS TO BE ABOVE SOUNDFIXES!!!
+This is our first mod ever, so please extend us some grace! 
+*— Built by a driver, for drivers.*
 
-**Prefab Gates (Hardcoded)*I Cannot change values unless someone can teach me ats map editor. I cannot mess with prefab gates or "dumb gates"*
-  Army Gate Next To OHare Airpot, Union Pacific, Albuqureque, DOW in Illonis
-**Note Tolls are apart of tollgate.sii and gate_trigger.sii. When i edit these gated tolls will not operate. They fail to open. So as of now Toll booths are stock. Tolls gates in Group 1 are guard gates. Example of this is coke a cola in Albuquerque and General Mills in Roswell.*
+**Full Release Log & Source:** [GitHub Repository](https://github.com/insanity35/Smart-Gates-Parking-and-Safety-Buffers)
 
-The Problem: "Gate Lag"
-After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out.
+---
 
-The Solution: Smart Gates & Safety Buffers
+## 🛑 The Problem: "Gate Lag"
+After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out. 
 
-SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. 
-Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects. Built by a driver, for drivers.
+## ✅ The Solution: Smart Gates & Safety Buffers
+SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects.
 
-Native Dynamic Parking System (New in v4.1)
-
+### 🚛 Native Dynamic Parking System (New in v4.1)
 Version 4.1 introduces a built-in, native dynamic parking framework engineered completely from scratch for SGSB. Designed to eliminate legacy mod conflicts, this standalone system utilizes custom-isolated namespaces to manage rest area slot snapping, high-precision company loading bay alignment, and weigh station queue spacing. It integrates seamlessly with your map configurations and ATS parking settings, delivering enhanced realism and fluid staging entirely on its own engine logic.
 
-Weight Station Probability(4.1.4)
-20% probability down from 60%(default scs) 
-  	
-Official Release Information
-    Current Version: v4.1.4-82326(Midnight Train)(Stable)
-    Official Launch Date (v1.0): Tuesday, July 14, 2026
-    ATS Compatibility: v1.60.* branch (Until SCS breaks the core gate code)
-    Development Environment: Ubuntu 26.04 LTS via Linux
-    Architecture: Pure definition-only (.sii) layout
+### ⚖️ Weigh Station Flow Control (New in v4.1.4)
+Scale house checks have been dropped from the frustrating base-game default (60%) down to a highly realistic **20% check probability** for smoother long-haul pacing.
 
-Complete Mod Genesis & Release History
+---
 
-The Early Development Phase
+## 📊 Official Release Information
+* **Current Version:** v4.1.4-82326 (Midnight Train) (Stable)
+* **Official Launch Date (v1.0):** Tuesday, July 14, 2026
+* **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code)
+* **Development Environment:** Ubuntu 26.04 LTS via Linux
+* **Architecture:** Pure definition-only (.sii) layout
 
-June 2026 [Alpha Phase: Extraction & Mapping]: Natively developed on Ubuntu 26.04. Utilized the sk-zk Extractor tool to dissect def.scs and base.scs. Performed a deep-dive code analysis to map game logic specifically within animated_gate blocks and identify critical trigger/reset dependencies.
+---
 
-July 10–11, 2026 [Beta Testing: Stress Testing the Framework]: Field-tested across high-density industrial hubs in Phoenix and Stockton. Confirmed 100% Convoy-ready multiplayer compatibility with zero "mod-mismatch" errors.
+## ⚙️ Engine Optimization (Highly Recommended)
+To get the absolute best visual experience out of the parking density, open your game's `config.cfg` file (or use the developer console) and apply this parameter:
 
-July 11–14, 2026 [Release Candidate 1.0: Real-World Discoveries]: Implemented a standardized 47m trigger distance for all industrial yard gates to ensure full clearance for double and triple trailer combinations. Discovered during a vacation road trip that the engine handles rest distances automatically now; native reset code remains commented out until v1.7.
+`uset g_lod_factor_parked "1.1"`
 
-July 14, 2026 [Version 1.0.0: Public Launch]: Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
+*This establishes the optimal draw distance setting to pull background parked vehicle culling out just far enough to catch assets before entering your immediate field of view, without tanking your FPS or VRAM.*
 
-Version History & Changelog Evolution
+---
 
-	4.1.4-82326 (Nighttime Fleet Density, AI Balance & Weight Stations)
-	NEW *Weight Station Probability bumped from 60% to 20% to be more realistic.* 
-    	AI Spawn Rebalance (Consumer Vehicles): Reduced the daytime and nighttime spawn probabilities for all Pickups and SUVs (suv, pickup, tt_pickup, f_150) from 3.7 down to 3.5 to slightly reduce civilian clutter in industrial zones.
-    	AI Spawn Rebalance (Commercial Vehicles): Increased the daytime and nighttime spawn probabilities for Commercial Delivery Vans (van, van...box) from 1.0 up to 1.9 to boost the presence of local delivery traffic.
-    	Environment Immersion (Truck Stops): Doubled the nighttime spawn probability for parked semi-truck fleets (truck_trlr.parked.physics.night and truck_trlr.cheap.parked.physics.night) from 0.55 to 1.1. Truck stops and rest areas will now feel significantly more packed and challenging to navigate during late-night hours.
-	Global Density Bump: Applied a clean 7% spawn weight multiplier across all vehicle classes to gently fill out empty background lots and scenic turnouts without model spam or duplication.
-	Broadened Time Windows: Replaced hard 0.0 drop-offs with low "bleed-over" probability values across day and night cycles, completely eliminating the sudden mass-extinction and pop-in effect during dawn and dusk transitions.
-	Municipal Night Shift Flipped: Reconfigured city sweepers and garbage trucks (Mack RD and standard units) to own the graveyard shift, driving up nighttime probabilities (0.85) while lowering daytime presence for peak realism.
-	Render Distance Optimization: Integrated the engine parameter uset g_lod_factor_parked "1.1" to pull background parked vehicle culling distances out just far enough to catch assets before entering your immediate field of view.
+## ⚠️ Compatibility & Load Order
 
-v4.1.3-82126
-	Gate Fixes & Adjustments
-    ag_nv_wstg: Fixed the collision parameter pointing to /model/lv/westgate.pmg (geometry) instead of the proper .pmc collider file.
-    ag_suncrops: Fixed the collision parameter pointing to /model/sign/company_logos/sunshine_crops/suncrops_gate.pmg instead of the proper .pmc collider file.
-	State Hookup Updates
-    Illinois (animated_gate.dlc_il.sii)
-        Standardized: Reduced the trigger_distance for all panorama, underground, and construction fence gates from 135.0 to the universal 125.0.
-        Affected Units: ag_il_chic, ag_il_sprg, ag_il_chund, ag_il_fence
-    Kansas (animated_gate.dlc_ks.sii)
-        Adjusted: Increased the trigger_distance for short-range pneumatic/industrial gates from 15.0 to 17.0.
-        Affected Units: ag_ks_salt, ag_ks_air
-    Montana (animated_gate.dlc_mt.sii)
-        Adjusted: Increased the trigger_distance for the short-range pneumatic gate from 15.0 to 17.0.
-        Affected Units: ag_mt_gfll
-    New Mexico (animated_gate.dlc_nm.sii)
-        Verified/Standardized: Confirmed and locked in the universal 125.0 trigger_distance for all panorama and tradition gates across the state.
-        Affected Units: ag_nm_trad, ag_nm_abq1, ag_nm_abqt
-    Oklahoma (animated_gate.dlc_ok.sii)
-        Adjusted: Increased the trigger_distance for the short-range depot gate from 15.0 to 17.0.
-        Affected Units: ag_pf_busf
-    Oregon (animated_gate.dlc_or.sii)
-        Fixed: Significantly increased the trigger_distance for the metal storage door from 50.0 to 135.0 to prevent late-opening clipping issues.
-        Affected Units: metal_01
-    Texas (animated_gate.dlc_tx.sii)
-        Standardized: Reduced the trigger_distance for all 16 panorama, oilfield, border, and Houston port gates from 135.0 down to the universal 125.0.
-    Wyoming (animated_gate.dlc_wy.sii)
-        Adjusted: Increased the trigger_distance for short-range pneumatic/industrial gates from 15.0 to 17.0.
-        Affected Units: ag_wy_mine, ag_wy_ref
-	Parking Optimizations (AI Purge & Performance Rebalance) - 
-		Parking UpdatesOptimization & PerformanceLow-Poly Migration: 
- 	Forced all Section 9 individual AI fallback profiles (from the 1951 Oldsmobile through the Volvo XC90) to low_poly_only: true for significant rendering PERFORMANCE IMPROVMENTS!!! 
-	Vehicle Removals & Fixes Purge: 
- 		Completely removed traffic.tesla from all sport car lists and fallback profiles to resolve missing data 	 chain physics errors.  
-	Dealership Update: 
-		Replaced the Tesla in the car_dealer profile with the traffic.mustang.  
- 	UDS Van Purge: 
-		Eliminated traffic.pv_uds from all package van, car ship, and general van spawn profiles.  Unit Conflicts: 
-	Rebalancing Realism Update: 
- 		Inverted street sweeper spawn times to heavily favor nighttime hours (0.6 night / 0.3 day) to accurately reflect real-world municipal operating schedules.  
-	Standard Cars & Police: 
-		Boosted daytime spawn probabilities from 1.0 to 1.5.  
-		Trucks & Trailers: Increased daytime combos from 0.5 to 0.85, with a minor nighttime bump from 0.5 to 0.55.  
- 		SUVs & Pickups: Tweaked daytime baselines up to 3.7 and nighttime baselines to 1.2.  
- 	Logistics & Service Fleets: 
- 		Buffed daytime DHL vans significantly (0.5 to 1.2) and Garbage Trucks (0.4 to 0.6). Nighttime Limo spawns doubled to 0.2.  
+**Convoy-Ready:** Fully optimized file layout ensures seamless synchronization during multiplayer convoy sessions with zero mod-mismatch errors.  
+**Map Compatibility:** Clean, definition-only architecture guarantees absolute stability alongside major map expansions like ProMods Canada, Reforma, and global traffic AI mods.
 
-v4.1.2-81726
-	Animated Gate Spatial & Trigger Optimization (animated_gate.sii)
-	    Group 1 Toll Booths (Cash Lanes): Increased stop-and-go trigger distance from 22.0m to 25.0m to improve AI and player approach logic.
-	    Strict Security Checkpoints: Bumped trigger distance from 19.0m to 20.0m for standard security gates to allow better clearance for heavy haulers.
-	    Oregon Slide 4 Gates: Fine-tuned trigger distance on the forward and backward slide 4 variants (an_slide_f4f, an_slide_b4f), increasing it from 30.0m to 33.0m.
-	    File Architecture: Updated metadata and comment blocks to reflect v4.1.2 and cleaned up syntax for Prism3D stability.	
-	Parked Vehicle Spawn & Physics Rebalance (parked_vehicle.sii)
-	    SUVs & Full-Size Pickups: Increased spawn weight to 3.5 to accurately reflect real-world US traffic distribution.
-	    Delivery Fleets Split: Separated generic package vans into dedicated company profiles. FedEx heavily prioritized (weight 3.0), while DHL presence is scaled back (weight 0.5).
-	    Budget/Owner-Operator Semis: Increased spawn weight to 1.5 for a more worn-in, realistic feel in industrial zones.
-	    Sports Cars: Reduced spawn weight to 0.7 to prevent over-saturation of supercars and EVs.
-	    Municipal & Utility Fleets: Reduced spawn weight of street sweepers and garbage trucks to 0.4 for balanced city depot spawning.
-	    Limousines: Reduced spawn weight to 0.1 to make them rare, exclusive sights.
+### Recommended Load Order
+To ensure the custom safety buffer parameters take priority over world geometry data, organize your Mod Manager as follows:
 
-v4.1.1-81526
-	llinois DLC Hookup File (animated_gate.dlc_il.sii):Updated the unit name for the Chicago underground gate variant to ag_il_chund to comply with ATS engine naming formatting rules and clear parsing errors.  
-	Preserved all core Illinois DLC definitions including Chicago, Springfield, and construction fence gate hookups.  
-	Parked Vehicle Physics File (parked_vehicle.sgsb.sii):Removed the unsupported attribute forced_flare_parking: true from all night-time vehicle profiles to resolve engine startup errors regarding invalid attributes on parked_vehicle units.  
-	Retained the complete range of commercial, passenger, vintage, truck, emergency, and AI fallback configuration sections.  Master Universal Gate Hookup File (animated_gate_3.sii):Kept the vanilla-accurate unit name format anim_gate01.2m intact.  Standardized sound references (sound_path: "/sound/world/gate_iron.soundref") across the directional rotary and industrial gate groups.  
+**— TOP —**
+1. Background Maps
+2. **SGSB (Notice: Needs to be ABOVE SoundFixes for custom gate sound files!)**
+3. SoundFixes
+4. Global Traffic & AI Density Mods
+5. Map Expansion Mods (ProMods, Reforma, etc.)
+**— BOTTOM —**
 
-v4.1.0-81426
-	New Feature: Native Dynamically Parked Vehicle SystemIntegrated a complete, custom-coded parked vehicle suite directly into SGSB to permanently replace outdated and conflicting third-party workshop dependencies.Namespace Isolation (sgsb.)
-	Fully prefixed every unit definition (e.g., sgsb.suv.always.parked.physics, sgsb.truck_trlr.always.parked.physics) to prevent base-game and cross-mod naming collisions, entirely eliminating "duplicate unit definition" errors in the game log.  
-	Expanded Vehicle Staging & LayoutsAdded robust configuration nodes for bobtails, full truck-and-trailer combinations, box vans, SUVs, pickups, city service vehicles, and police/emergency units.Advanced Environmental LogicEmbedded native timing parameters (probability_day, probability_night) and precise alignment tags (rear_align) to handle automated day/night cycles and dock-backing behavior at truck stops and warehouses.Editor Workflow 
-	OptimizationOrganized all custom parking locators to group cleanly under the sgsb search filter within the ATS Map Editor for fast and efficient level design.
+### Prefab Limitations (The "Hardcoded" Gates)
+I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". The following remain vanilla:
+* Army Gate next to O'Hare Airport (IL)
+* Union Pacific Gate
+* DOW Gate (IL)
+* Group 1 Guard Gates (e.g., Coca-Cola in Albuquerque, General Mills in Roswell)
 
-v4.0.5-81326
-	Extended Trigger Range Parameters: Fine-tuned the proximity and distance thresholds in the gate hookup definitions to accommodate long trailers, multi-axle setups, and heavy haul configurations without premature closure.
-	Hookup Indexing & Stability: Streamlined dependency structures, achieving a clean mount of 110 addon hookups with zero loading errors or engine crashes.
-	
-v4.0.4-81126
-	*Note Tolls are apart of tollgate.sii and gate_trigger.sii. When i edit these gated tolls will not operate. They fail to open. So as of now Toll booths are stock. tolls gates in Group 1 are guard gates. Example of this is coke a cola in Albuquerque and General Mills in Roswell.*
-	[GROUP 1] bumper to 22.0 trigger distance and orientation 55.0
-	Illinois DLC Added: Integrated Chicago underground gates, construction fences, and Springfield panoramic assets.
-	Texas DLC Overhauled: Fixed and expanded gate ranges for regional cities, border checkpoints, oilfields, and major ports (Houston, Galveston, Brownsville, etc.).
-	Universal Range Boost: Pushed primary sliding and industrial gate trigger distances to a uniform 135m with trailer activation enabled to stop rear clipping.
-	Master Hookup Updates: Cleaned up company yard entries (like Sunshine Crops).
-	
-v4.0.3.1-81126(Hotfix)
-	Security Gate fix
+**Note on Toll Booths:** Tolls are a part of `tollgate.sii` and `gate_trigger.sii`. When I edit these, gated tolls fail to open. So as of now, Toll booths are stock.
 
-v4.0.3-81126
-	Albuquerque Gate American Lines cannot be changed. Prefab is set until i can get map editor to work on linux. Thanks to ratta_moh for the find. 
-	Expanded Core Security Gate Architecture (Group 3): Preserved and optimized the core security gate definitions (hookup.gate_sec, hookup.gate_sec_l, and hookup.gate_sec_r) with built-in trailer activation (trailer_activation: true), a 135-meter range, and a wide 140-degree orientation tolerance to prevent gates from closing early on long vehicle combinations during tight yard turns.
-	Directional Rotary & Swing Gate Refinements (Group 4): Maintained left and right swing/rotary gate variations with tailored directional offsets and one-way parameters.Regional DLC Hookup Framework: Maintained active mapping support and structured compatibility across regional state expansions (including Arkansas, Iowa, Illinois, Kansas, Louisiana, Missouri, Montana, and Nebraska) with standardized trigger zones and clearance values. 
+**Conflict Notice:** This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (`animated_gate` blocks).
 
-v4.0.2-8926
-	All DLC has been added to its own animated_gate.dlc_*.sii file. This will help cut down on game log spam for missing DLC. I also dont understand why most of Oregon minus one gate and all of Washington is in base animated_gate.sii file but i left them there too.
+---
 
-v4.0.1-8826(Hotfix)
-added animated_gate.dlc_or.sii to unit hookup and pulled metal_01 & metal_rev_01. Thanks FunGaming44 for the catch!
+## 📝 Support & Bug Reporting
+If you encounter a specific yard, toll plaza, or logistics depot anywhere on the map that still feels "off" or doesn't trigger correctly, please drop the **City and Company Name** in the comments section. Feedback will be logged and prioritized for upcoming hotfixes.
 
-v4.0-8726(Midnight Train)
-    Comprehensive Regional Audit: Completed a full asset scan and integration across all official ATS map expansions and major regional packages.
-    Granular Behavioral Tuning: Transitioned from uniform triggers to precise, environment-specific distance profiles (high-speed e-tolls, strict cash lanes, and realistic security checkpoints).
-Regional Map Expansions & Asset Additions
-    Montana Expansion: Added the Miles City Gate, Great Falls Airport Gate, Sidney Memorial Gate, and Gateway Canyon Gas.
-    Wyoming Expansion: Integrated the Independence Rock Gate, I-80 Refinery Gate, Riverton Cemetery Gate, and Jackson Town Square Gates.
-    Kansas & Turnpike Infrastructure: Added the complete K-Turnpike E-Toll System (ks_etoll_gate_0_1_exit), Emporia Fairgrounds Gate, and Dodge City Museum Gate alongside dedicated traffic light nodes.
-    Midwest, South, & Great Lakes: Incorporated asset expansions for Nebraska, Missouri, Iowa, Arkansas, Louisiana (including Cameron LNG and port houses), and Illinois (Chicago Underground Gates and movable bridge systems).
-Trigger Distance & Behavioral Tuning
-    [Group 1] Cash Toll Lanes: Pinned to a strict 20.0m stop-and-go range with customized offsets to prevent premature triggering.
-    [Group 2] High-Speed E-Tolls: Configured to 125.0m for smooth, uninterrupted EZ-PASS / PikePass / E-Toll fly-through lanes.
-    [Group 8] Secure Industrial & Border Checkpoints: Hard-tuned to a strict 15.0m stop-and-wait range with a tight 90.0° orientation tolerance for:
-        International border crossings (Texas Laredo, La Salle, and border gate props).
-        Coastal and industrial port terminals (Houston, Galveston, Brownsville, Cameron LNG, Lake Charles).
-        Heavy industrial facilities, mining complexes, and refinery perimeters (Wyoming I-80 Refinery, salt mines, aviation gates).
-    [Group 7] Movable Bridges & Locks: Calibrated to 25.0m for Chicago bridge gates and Louisiana river floodgates.
-Future-Proofing & Framework
-    [Group 9] Placeholders: Established initial structural framework for upcoming state map expansions (North Dakota, Indiana, South Dakota) to ensure seamless day-one integration upon asset release.
+---
 
-v3.2.2-8326
-More unit/hookup mitigation's, it is strongly recommended to have all dlc. I am targeting all gates in one file. WE FINALLY GOT IT!! If gates aren't already open they will be open long before you pull up. Tolls are all within 50m. Now to dial in values a bit more!
+## 🏆 Credits & Technical Acknowledgments
+* **Development Group:** Smoke Show Studios, Smoke Show Creations & Harambes Children
+* **Lead Developer & Tester:** meanshadows35
+* **Co-Developer:** mrh368
+* **Technical Consultant:** Overdrive
 
-v3.2.1-8126
-Baseline Missing Assets Injected:
-    Generic Security (anim_gate.secur_01): Added to Group 1. Pushed the trigger footprint out to 135m with a 140° tolerance limit to handle industrial security checkpoints smoothly.
-    Oklahoma Turnpike High-Speed Gate (ag_ok_turn): Added directly into the EZ-Pass cluster (Group 2B). Calibrated perfectly to the 125m / 130° EZ-Pass standards for uninterrupted free flow.
-    Nebraska Farms (ag_ne_farm): Captured missing heavy agriculture gates utilized in the NE expansion. Standardized to 135m / 140°.
-    Arkansas Timber Mills (ag_ar_mill): Mapped native AR logging gates so flatbeds hauling deep woods timber can maintain a steady roll through the yards. Standardized to 135m / 140°.
-Data Fine-Tuning & Error Purge:
-    Performed a complete sweep to ensure 100% parameter compliance.
+A massive shout-out to our three-person team for pulling this together, and special thanks to the entire trucking community for the incredible passion and feedback.
+* Developed natively on Ubuntu 26.04 LTS
+* Mod testing powered by the sk-zk Extractor tool
+* Built using the official SCS Uploader tool running under Proton
+* Thank you to SCS Software for the robust modding ecosystem
 
-v3.2-8126
-	Native Identifier Architecture: Stripped unverified v3.1 custom "ghost code" strings and locked down 100% verified native SCS base game and DLC asset definitions.
-	Cash Lanes (Group 2A): Maintained strict stop-and-go range (50.0m trigger distance, 50.0° orientation tolerance) to prevent queued vehicles from accidentally triggering barriers while idling in lines.
-	EZ-Pass / Electronic Lanes (Group 2B): Configured with high-speed approach buffers (125.0m trigger distance, 130.0° orientation tolerance) for seamless activation at highway speeds.
-    Orientation Tolerance Optimization: Tuned angular detection windows across base templates, PNW sliding gates, and heavy industrial assets (135° to 140°) to eliminate missed triggers during sharp multi-axle approaches and tight turns.
-    Complete Sound Integration: Added explicit iron sound paths (/sound/world/gate_iron.soundref) and specialized service washing station audio hooks across all entries.
-    Expanded State DLC Coverage: Incorporated specialized regional assets for Oregon, Washington, Texas, Montana, Wyoming, and Kansas (including oilfields, border checkpoints, salt mines, and aviation plants).
-    Hidden Service Asset Integration: Added native service center doors (anim_gate.gar_sc, anim_gate.gar_exp) and the service washing station asset (wshng_sttn) to cover upgraded player garages and service complexes.
+**Soli Deo Gloria**
 
-v3.1-73126
-[ARCHITECTURE & STABILITY]
-- Moved deployment path to def/world/animated_gate.sii for global map-wide overrides.
-- Stripped all invalid or unsupported runtime parameters to guarantee zero error log warnings.
-- Reorganized configuration into 25 clean, function-based groups across 8 sections.
+---
+---
 
-[PHYSICS & DISTANCE TUNING]
-- Logistics & Industrial: Increased to 125m for safe 53ft double trailer clearance.
-- Ports & Special Transport: Increased to 135m for oversized loads and slow-moving maritime gates.
-- Tolls & Borders: E-ZPass set to 35m; express micro-tolls set to 28m for smooth 30 MPH rolling stops.
+## 📜 Complete Mod Genesis & Release History
 
-[CONTENT & COMPATIBILITY]
-- Integrated all state map DLC expansions, base-game service shops, truck dealerships, and player garages.
-- Verified compatibility with Reforma, ProMods Canada, Coast-to-Coast, and Sierra Nevada.
-- Added [GROUP 25] Universal Fallback Buffer (gate.universal_fallback at 125m) to catch any unlisted or future DLC gates.
+### The Early Development Phase (June/July 2026)
+* **June 2026 [Alpha Phase: Extraction & Mapping]:** Natively developed on Ubuntu 26.04. Utilized the sk-zk Extractor tool to dissect def.scs and base.scs. Performed a deep-dive code analysis to map game logic specifically within animated_gate blocks and identify critical trigger/reset dependencies.
+* **July 10–11, 2026 [Beta Testing: Stress Testing the Framework]:** Field-tested across high-density industrial hubs in Phoenix and Stockton. Confirmed 100% Convoy-ready multiplayer compatibility with zero "mod-mismatch" errors.
+* **July 11–14, 2026 [Release Candidate 1.0: Real-World Discoveries]:** Implemented a standardized 47m trigger distance for all industrial yard gates to ensure full clearance for double and triple trailer combinations. Discovered during a vacation road trip that the engine handles rest distances automatically now; native reset code remains commented out until v1.7.
+* **July 14, 2026 [Version 1.0.0: Public Launch]:** Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
-v3.0.8-73026(Hotfix)
-	Invisible gates fixed
+---
 
-v3.0.7-73026
-	more unit/hookup fixes think i got it this time
+### v4.1.4-82326 (Nighttime Fleet Density, AI Balance & Weight Stations)
+* **NEW:** Weight Station Probability bumped from 60% to 20% to be more realistic.
+* **AI Spawn Rebalance (Consumer Vehicles):** Reduced daytime/nighttime spawn probabilities for all Pickups and SUVs from 3.7 down to 3.5 to slightly reduce civilian clutter in industrial zones.
+* **AI Spawn Rebalance (Commercial Vehicles):** Increased daytime/nighttime spawn probabilities for Commercial Delivery Vans from 1.0 up to 1.9 to boost local delivery traffic.
+* **Environment Immersion (Truck Stops):** Doubled nighttime spawn probability for parked semi-truck fleets from 0.55 to 1.1. Truck stops and rest areas feel significantly more packed late at night.
+* **Global Density Bump:** Applied a clean 7% spawn weight multiplier across all vehicle classes.
+* **Broadened Time Windows:** Replaced hard 0.0 drop-offs with low "bleed-over" probability values across day and night cycles to eliminate dawn/dusk pop-ins.
+* **Municipal Night Shift Flipped:** Reconfigured city sweepers and garbage trucks to own the graveyard shift (0.85 nighttime spawn probability).
 
-v3.0.5-73026
-	Logistics & Industrial Overhaul (Significant Boost)
-    	Trigger Distances Increased: Pushed nearly all major industrial yards, ports, logistics hubs, and heavy manufacturing facilities from 100.0m up to 115.0m – 120.0m.
-	Purpose: Gives heavy hauling rigs a much longer runway so gates are fully open before you have to touch the brakes, protecting your momentum.
-	Yaw Tolerances: Slightly widened on key multi-bay and heavy rolling yards to catch wide entry angles.
-	Tolls & Weigh Stations (Conservative Tweaks)
-	Trigger Distances: Kept tightly controlled, with only minor +1.0m to +2.0m adjustments (standard E-ZPass moved from 28m to 30m; cash booths moved from 14m to 15m).
-	Purpose: Prevents the game engine from accidentally reading your truck from an adjacent lane and opening the wrong toll barrier too early.
-	Border & Security Checkpoints (Moderate Adjustments)
-	Trigger Distances: Bumped up moderately (e.g., standard border checks moved from 35m to 45m; Texas/Mexico borders moved to 55m) to keep traffic flowing smoothly without breaking immersion.
-	Code Structure & Documentation
-	Restored the complete 50-Group Master Index metadata header at the top of the def/world/animated_gate.sii file for easy reference.
+### v4.1.3-82126
+* **Gate Fixes & Adjustments:** Fixed collision parameters on `ag_nv_wstg` and `ag_suncrops` to point to proper `.pmc` collider files instead of geometry.
+* **State Hookup Updates:** 
+  * Standardized IL, NM, and TX panorama/traditional gates to 125.0 trigger distances.
+  * Adjusted short-range pneumatic/industrial gates in KS, MT, OK, and WY to 17.0.
+  * Fixed OR `metal_01` storage door from 50.0 to 135.0 to prevent late-opening clipping.
+* **Parking Optimizations:** Forced all Section 9 AI fallback profiles to `low_poly_only: true` for massive performance improvements. Completely removed deprecated `traffic.tesla` from all lists.
+* **Rebalancing Realism:** Inverted street sweeper spawn times (0.6 night / 0.3 day). Boosted daytime cars/police to 1.5. Tweaked daytime trucks combos to 0.85. Buffed daytime DHL vans and Garbage trucks. Nighttime limo spawns doubled.
 
-v3.0.4.1-73028
-		manifest dated wrong along with mod_description.
-	
-v3.0.4-73026
-		unit/hookup fix
-		
-v3.0.3-72826(Heavy Fruit)
-		Depot & Warehouse Doors: Tuned to 50m–60m for clean dock backing without highway false triggers.
-		Precision Tolls: Locked cash booths to 14m.
-		Parser Fix: Corrected Oregon Storage to gate.metal_01.
-		Heavy Yards & Map Mods: Maintained at 85m–100m for smooth momentum.
-		Dual-Path Ready: Verified for both def/world/ and unit/hookup/.
-		Clean Layout: Added high-visibility headers across all 50 groups.
-	
-v3.0.2-72826(HEAVY FRUIT Hotfix)
-	    Dual-Directory Sync: This exact code serves as the unified blueprint for both the def/world/ (editor-placed gates) and unit/hookup/ (prefab-spawned gates) directories, ensuring 100% map coverage.
-	    Trigger Bump: Logistics Master (Section 03) trigger_distance increased to 90.0m for all three gate variants to fully accommodate long-nose setups.
-	    Engine Compliance: Filename standardized to the engine-hardcoded animated_gate.sii to force the game to overwrite vanilla baseline stats.
-	    Toll Integrity: Zero changes to toll barriers or border checks; all parameters remain strictly locked to baseline.
-	    
-v3.0.0-72726(PROJECT HEAVY FRUIT)
-		Everything from 2.1
-		Smart Gates & Safety Buffers (SGSB) — v3.0.0 [PROJECT HEAVY FRUIT]
-	Master Change Manifest: Complete Record of All Additions & Adjustments
-	The following is the exhaustive, definitive accounting of every single change, addition, and parameter optimization integrated into the v3.0 master build (animated_gate.sgsb.sii) for American Truck Simulator (ATS v1.60)
-	
-Part 1: All Core Parameter Changes (The Smoothness & Long-Nose Calibration)
-	To eliminate truck nose-clipping (such as with long-nose configurations like the Kenworth W900) and prevent raycasting lag at highway speeds, every existing parameter block was systematically scaled up:
-	Trigger Distances (trigger_distance): Uniformly bumped across all tiers by +3m to +10m to grant the physics engine predictive lead time:
-	Standard Tolls (E-ZPass): Increased from 28.0m to 32.0m
-	Precision Tolls (Cash Booths): Increased from 13.0m to 15.0m
-	Logistics & Slide Gates: Increased from 75.0m to 85.0m
-	Heavy Industrial & Ports: Scaled up to 100.0m
-	Angular Tolerances (orientation_tolerance): Widened by +5° to +15° to catch wide-swinging turns and diagonal yard entries without dropping trigger states:
-	Tolls: Expanded from 35.0° to 40.0°
-	Logistics Masters: Expanded from 70.0° to 80.0°
-	Maritime & Ferry Ports: Scaled up to 120.0°
-	Lateral Offsets (trigger_offset): Fine-tuned across multi-lane prefabs to +/-3.5m through +/-4.5m to reliably catch vehicles hugging either side of wide entry lanes.
-	
-Part 2: All Newly Added DLC Prefabs & Specialized Yards (Groups 22–35)
-	The master index was expanded to incorporate specialized corporate, regional, and state DLC assets:
-	[Group 22] Retail Car Lots (gate.car_dealership_01): Suburban automotive display and security gates.
-	[Group 23] Agricultural Co-Ops (gate.ag_coop_01): Midwest grain elevator and farm supply access points.
-	[Group 24] Historic Waypoints (gate.historic_park_01): Route 66 and state park decorative wood/stone-pillar pivot barriers.
-	[Group 25] River Locks & Barges (gate.river_lock_01): Commercial waterway lock gates and barge terminals.
-	[Group 26] Heavy Rolling Freight Yards (gate.heavy_rolling_01): Intermodal container terminal rolling gates.
-	[Group 27] Multi-Bay Freight Docks (gate.multibay_freight_01): High-throughput warehouse drop-off docks with electric actuation.
-	[Group 28] Municipal City Yards (gate.muni_service_01): Local public works and service department security gates.
-	[Group 29] Inland River Ports (gate.river_port_01): Heavy shipping terminal gates linking water and highway logistics.
-	[Group 30] Aerospace Facilities (gate.aero_sec_01): High-security defense and manufacturing compound gates (TX/WA).
-	[Group 31] Livestock Auctions (gate.livestock_01): Specialized ranch and livestock transport yards (WY/NE/KS).
-	[Group 32] Quarry & Mine Booms (gate.quarry_boom_01): Aggregate extraction site pneumatic check-booms (CO/MT).
-	[Group 33] Oil & Gas Drill Sites (gate.oil_site_01): Remote energy extraction security barriers (TX/OK).
-	[Group 34] Sawmill Pivots (gate.sawmill_01): Regional timber and lumber processing mill gates (AR/PNW).
-	[Group 35] Midwest Manufacturing (gate.ethanol_plt_01 & gate.meat_pack_01): Dedicated ethanol processing plants and industrial meatpacking facilities (MO/IA).
-	
-Part 3: All Map Mod Integration Layers Added (Groups 36–40)
-	Native configuration bindings were built directly into Tier 3 to eliminate the need for separate sub-mod compatibility patches:
-	[Group 36] Reforma Expansion (gate.ref_toll01 to gate.ref_farm_01): Calibrated parameters for Mexican/Central American highway toll plazas (casetas), customs border control (garitas), and ranch gates.
-	[Group 37] ProMods Canada (gate.pm_border1 to gate.pm_timber01): Profiled for Canadian Border Services Agency (CBSA) inspection lanes, BC ferry terminals, and northern timber logging trails.
-	[Group 38] Sierra Nevada (gate.sn_ag_check01 & gate.atx_intermodal_01): Configured for California Department of Food and Agriculture (CDFA) agricultural check stations and regional intermodal rail yards.
-	[Group 39] Coast to Coast (C2C) Hubs (gate.c2c_toll_01 & gate.c2c_yard_01): Mapped custom C2C highway toll barrier prefabs and freight yard gates.
-	[Group 40] Great America Industrial (gate.ga_wide_01): Integrated oversized industrial security gates profiled specifically for wide-layout prefabs in the Great America map mod.
-	
-Part 4: Structural & Architectural Overhauls
-	Sequential 40-Group Master Index: Completely restructured the configuration from legacy naming into a clean, strictly sequential numbering scheme (01 to 40) across three distinct tiers to eliminate load-order conflicts.
-	ATS v1.61 Engine Alignment: Vetted against experimental physics updates to ensure zero frame stutter or desynchronization during rapid proximity raycasts.
-	
-Part 5: Illinois & Louisiana DLC Expansion Nodes (Groups 36–38)
-	[Group 36] Gulf Coast Maritime (LA) (gate.shipyard_01, gate.lng_terminal_01, gate.salt_mine_01): Integrated specialized heavy iron and pneumatic security barriers for Port Fourchon shipyards, LNG export terminals, and regional salt mining infrastructure.
-	[Group 37] Great Lakes Heavy Industrial (IL) (gate.chi_intermodal_01, gate.const_equip_01, gate.marina_sec_01): Configured wide-layout access gates for Chicago intermodal rail hubs, heavy construction equipment manufacturing plants, and regional waterfront security points.
-	[Group 38] Federal & Energy Security (NM/TX/AR) (gate.military_base_01, gate.energy_sec_01): Mapped high-clearance military reservation gates and critical energy infrastructure power plant barriers.
-	
-Part 6: National Parks, Research Facilities & Hidden Landmarks (Groups 39–45)
-	[Group 39] National Parks & Air Cargo (gate.nat_park_01, gate.air_cargo_01): Calibrated wood-framed ranger entrance booths and high-throughput airport cargo facility gates.
-	[Group 40] Vanilla California Ag Border (gate.ca_ag_check01): Optimized pneumatic inspection barriers for classic California agricultural quarantine stations.
-	[Group 41] PACCAR Test Track (WA) (gate.paccar_sec_01): Profiled high-security test facility gates.
-	[Group 42] Hydroelectric Dam Security (NV/AZ/WA) (gate.dam_sec_01): Mapped heavy blast-resistant security gates across major regional dam complexes.
-	[Group 43] Research & Black Sites (NM/ID) (gate.lab_black_01): Configured extended-range proximity triggers for isolated federal research compounds.
-	[Group 44] Resorts & VIP Studios (NV/CA/CO) (gate.resort_vip_01): Tailored fast-acting electric gates for luxury hotel and studio access points.
-	[Group 45] Hidden Road Racetracks (AZ/TX) (gate.hidden_track_01): Tuned access barriers for hidden motorsports and test circuit shortcuts.
-	
-Part 7: Re-indexed Community Map Overhauls (Groups 46–50)
-	Sequential Tier 3 Shift: Community map integration layers originally mapped to groups 36–40 were safely re-indexed upward to Groups 46 through 50 (Reforma, ProMods Canada, Sierra Nevada, Coast to Coast, and Great America) to preserve strict numerical continuity across the 50-group master build.
-		
-	INTERNAL CODE AND TEST VERSION NEVER RELEASED!! 
-	  v2.1.0-***SGSB (Tolls, And DLC Gates)
-	  	Oregon Metal_01 gate
-	  	Namespace Standardization: Renamed definition file to animated_gate.sgsb.sii for improved load order hierarchy and mod compatibility.
-	  	Toll Plaza Tuning:Section 1A (Standard): Shifted orientation_tolerance to 47.0° to better clear high-speed highway plaza approaches.
-	  	Section 1A Audio: Added missing sound_path: "/sound/world/gate_pneumatic.soundref" hooks to prevent silent barrier animations and engine log warnings.
-	  	Section 1B (Precision 13M): Standardized orientation_tolerance to 35.0° for tight, single-lane toll booths.Compound-Curve Expansion: 
-	  	Extended Logistics Master & Sliding Gates (Sections 2 & 2C) to 75.0° yaw tolerance to accommodate sharp, off-angle depot approaches without trigger drops.
-	
-v2.0.0-72226(Evolution)
-		Unified Architecture: New "Global Logic" groups make the mod faster and easier to maintain.
-		Engine-Native Cleanse: Removed legacy code to ensure zero-log-error performance.
-		Logistics Master Triggers: 55.0m for industrial yards and sliding gates.
-	  	Orientation Tolerance: Optimized to 60° to catch your approach angle early on tight compound turns.
-	  	Toll Plazas (Precision Lanes): Tuned to 10.0m for a smoother, more forgiving clearance window.
-	  	Toll Plazas (Standard Lanes): Left untouched at 23.0m.  
-	  	Depot Storage Doors: Set to 20.0m to completely eliminate slow-opening bay snags and trailer clipping.
-	
- v1.7.3-71826R4(Feeling Hot Hot Hot) Hotfix-71926
-	    Deprecated trailer code causing some gates/tolls to not trigger at a distance.
-	    Cleaned up mod_description to clean up warnings in long. No code change. I will be working on a Github link for full changelogs in the coming days.
-	  
-v1.7.2-71826R3 (Couldnt Get it right) Hotfix
-	    Fixed AI Traffic Jams: Resolved an issue where gates would occasionally stay closed too long, causing AI trucks to get stuck at depot entrances.
-	    Smoother Animations: Fine-tuned gate movement to eliminate stuttering or "shivering" when pulling up to a gate in a long-nose truck.
-	    Refined Sound Quality: Optimized in-cab audio to better muffle gate operation, making the experience more immersive from the driver's seat.
-	    Improved Lane Intelligence: Enhanced the gate's ability to ignore traffic in adjacent lanes, preventing "ghost triggers" from opening your gate when it shouldn't.
-	    General Performance: Minor backend cleanup to improve frame stability when passing through gate collision zones.
-	    Trigger Distance bumped 49m!
-	
-v1.7.1-71826R2 Hotfix "The House Thats Code Built"
-	    No More Crushed Trailers: Fixed a bug where warehouse roll-up doors would accidentally close on your trailer while you were trying to back into tight docks.
-	    Better Sensors for Long-Nose Trucks: Fine-tuned the trigger zones at toll booths and left-side gates so long conventional trucks open them more reliably without having to scrape the mirrors.
-	    Cleaner Game Logs: Fixed some internal file names to clear out map-node warnings and keep your game.log.txt clean.
-	    Under-the-Hood Polish: Updated the background code to perfectly match the newest ATS v1.60+ engine standards for better stability.
-	
-v1.7.0-71826 — "The House That Code Built"
-	        Engine Rest Restoration: Fully integrated native 1.60+ automatic rest distance mechanics across all definitions. Extraneous engine-level overrides have been safely scrubbed to let the base code handle drop-in/drop-out scaling perfectly without micro-stutters.
-	        Global Pointer Audit: Standardized identifier parsing across complex automated sub-variants. Fixed an inherited naming syntax bug in Section 2C where gate.ani_slide_3f mismatched its structural family (gate.an_slide_f3f), completely eliminating map-node registration failures and dead assets.
-	        Left-Hand Toll Offset Calibration: Refined left-hand mirror variants (gate.anim_gate3l) to match inverse axis geometry. Shuffled the bounding boxes relative to the node origin to stop long-nose conventionals from having to pull up too deep into left-side manual cash slots.
-	        Added missing gates!!!
+### v4.1.2-81726
+* **Animated Gate Spatial & Trigger Optimization:** Increased Group 1 cash toll triggers to 25.0m. Bumped security checkpoints to 20.0m. Fine-tuned Oregon Slide 4 gates to 33.0m.
+* **Parked Vehicle Rebalance:** Separated generic package vans into dedicated FedEx (weight 3.0) and DHL (weight 0.5) profiles. Reduced spawn weights for sports cars, limousines, and municipal fleets. Increased budget/owner-operator semis to 1.5.
 
-v1.6.0-71626 — "Fight Fire with Code"
-        EZ-Pass Lanes: Fine-tuned to a 23m trigger distance and a 4m trigger offset. This maintains your perfect 19m entry approach while tightening the exit zone to 27m to block tailgating AI traffic from slipping through on your green light.
-        Manual Cash Lanes: Retained the highly stable 5m trigger and -3m offset layout with full trailer tracking enabled for heavy-haul safety.
-        Border Customs: Programmed with a 25m trigger distance and realistic pneumatic lock sounds.
-        Traditional Toll Gates: Standardized at a 5m trigger with active trailer tracking.
-        Sliding & Automated Gates: Synchronized yard assets to a 48.9m trigger distance and a 47° orientation tolerance for seamless depot access. Applied progressive electric, metal, and wooden sound profiles based on asset styles.
+### v4.1.1-81526
+* **Illinois DLC Fixes:** Updated underground gate variant to `ag_il_chund` to comply with engine naming rules.
+* **Parked Vehicle Fixes:** Removed unsupported `forced_flare_parking: true` from night-time profiles to resolve engine startup errors.
+* **Master Hookup:** Standardized sound references (`gate_iron.soundref`) across directional rotary and industrial gate groups.
 
-v1.5.0-71626 — "For Whom the Code Tolls"
-        Total Trailer Protection: Added trailer_activation: true to every single gate block. Tolls, border checkpoints, and logistics yards now track your entire rig—no more barriers dropping early on long 53ft trailers, flatbeds, or double/triple setups.
-        Expanded Yard Buffers: Increased yard gate trigger distance to 48.9m (up from 48.7m) for a wider safety margin at busy depots.
-        Smart Sensor Tuning: Tightened yard gate opening angles back down to 45° (from 60°/75°). Gates will no longer swing open falsely when you are simply maneuvering or backing into an adjacent dock.
-        Refined Soundsets: Toll plazas remain silent to match vanilla plastic barriers, while logistics yards and border checkpoints enforce heavy, realistic iron gate clanks.
-        Animation Fix: Resolved a broken pathing bug on the Sliding Yard Gate (gate.ani_slide_3), restoring full opening and closing visuals.
+### v4.1.0-81426 (Native Dynamic Parking)
+* **New Feature:** Integrated a complete, custom-coded dynamically parked vehicle suite to permanently replace conflicting third-party mods.
+* **Namespace Isolation:** Fully prefixed every unit definition (e.g., `sgsb.suv.always.parked.physics`) to eliminate base-game naming collisions.
+* **Advanced Logic:** Embedded native timing parameters and precise alignment tags (`rear_align`) to handle automated cycles and dock-backing behavior.
 
-v1.3.0-71526 — "And Justice for Tolls"
-        EZ-Pass Lanes (Left Gates): Increased trigger to 15m for smooth, slow-roll tracking without stopping.
-        Cash Lanes (Right Gates): Kept tight at 5m for realistic stop-and-pay action.
-        Legacy Tolls (Single Gates): Standardized at 5m to preserve old-school realism.
-        Border Crossings: Increased to 25m so heavy gates clear long-nose rigs early.
-    
-v1.2.0-71526 — "Logic Overhaul"
-        Angle Adjustments: Widened the orientation_tolerance cones up to 60° and 75° so gates recognize your truck earlier when swinging into a yard from sharp, tight angles. Bumped trigger range to 48.7m.
+### v4.0.5-81326
+* **Extended Triggers:** Fine-tuned thresholds to accommodate long trailers and multi-axle setups without premature closure.
+* **Stability:** Achieved a clean mount of 110 addon hookups with zero loading errors.
 
-v1.1.0-71426 — "The Distance Baseline"
-        Range Bump: Expanded trigger distance baseline to 48.5m. Removed old alpha phase reset trigger comments from the active code base.
+### v4.0.4-81126
+* **Texas & Illinois additions:** Fixed/expanded gate ranges for TX regional cities, border checkpoints, and ports. Integrated IL underground gates and fences.
+* **Universal Boost:** Pushed primary sliding and industrial gate distances to a uniform 135m.
 
-Project Roadmap
+### v4.0.3-81126
+* **Expanded Core Security:** Optimized Group 3 gates with built-in trailer activation, 135m range, and 140-degree orientation tolerance.
+* **Regional DLC Framework:** Maintained active mapping support across AR, IA, IL, KS, LA, MO, MT, and NE.
 
-Continued the streamlined process of adding new gates, service areas etc and re-bases as needed.
+### v4.0.2 to v4.0 (Midnight Train)
+* **Regional Audit:** Split DLC hookups into dedicated `animated_gate.dlc_*.sii` files to cut down log spam.
+* **Behavioral Tuning:** Transitioned from uniform triggers to precise, environment-specific profiles (125m E-tolls, 20m cash lanes, 15m secure borders).
 
+### v3.x Series Legacy Milestones
+* **v3.2.1:** Injected missing baseline assets (OK Turnpike, NE Farms, AR Timber Mills).
+* **v3.2.0:** Stripped unverified "ghost code", optimized orientation tolerances, integrated state DLC coverage, and complete sound integration.
+* **v3.1.0:** Moved deployment path to `def/world/animated_gate.sii`. Reorganized into 25 clean function-based groups. Set logistics gates to 125m for 53ft trailer clearance.
+* **v3.0.0 (PROJECT HEAVY FRUIT):** Systematically scaled up trigger distances globally. Expanded master index to incorporate specialized DLC assets (Groups 22-35). Built native compatibility layers for map mods like ProMods Canada and Reforma (Groups 36-50).
 
-Compatibility & Load Order
-Convoy-Ready: Fully optimized file layout ensures seamless synchronization during multiplayer convoy sessions with zero mod-mismatch errors.
-    Map Compatibility: Clean, definition-only architecture guarantees absolute stability and pristine game logs alongside major map expansions like ProMods Canada, Reforma, and global traffic AI mods.
+### v2.x & v1.x Series Legacy Milestones
+* **v2.1.0:** Shifted toll plaza orientation to better clear high-speed approaches. Added missing pneumatic audio hooks.
+* **v2.0.0 (Evolution):** Engine-native cleanse. Optimized logistics master triggers to 55m and 60° angle tolerances.
+* **v1.7.0 (The House That Code Built):** Fully integrated native 1.60+ automatic rest distance mechanics. Fixed left-hand toll offset geometry for long-nose trucks.
+* **v1.6.0 (Fight Fire with Code):** Fine-tuned EZ-Pass lanes to 23m triggers. Standardized borders to 25m.
+* **v1.5.0 (For Whom the Code Tolls):** Added `trailer_activation: true` to every gate block to protect 53ft, double, and triple setups from early closure.
+* **v1.1.0:** Expanded trigger distance baseline.
 
-Recommended Load Order
-To ensure the custom safety buffer parameters take priority over world geometry data, organize your mod manager as follows:
-	
--Top-
-    Background Maps
-    SGSB(Only for sound files I attached to gates)
-    SoundFixes 
-    Global Traffic & AI Density Mods
-    Map Expansion Mods (ProMods, Reforma, etc.)
--Bottom-
-
-Support, Feedback & Conflict Notices
-Conflict Notice: This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (animated_gate blocks).
-
-Depot Reporting Protocol
-
-If you encounter a specific yard, toll plaza, or logistics depot anywhere on the map that still feels "off" or doesn't trigger correctly, please drop the City and Company Name in the comments section. Feedback will be logged and prioritized for our upcoming maintenance hotfixes.
-
-Credits & Technical Acknowledgments
-
-    Development Group: Smoke Show Studios, Smoke Show Creations & Harambes Children
-    Lead Developer & Tester: meanshadows35
-    Co-Developer: mrh368
-    Technical Consultant: Overdrive
-
-A massive shout-out to our three-person team for pulling this together, and special thanks to the entire trucking community for the incredible passion and feedback that keeps our virtual roads moving forward. We pray this turns into an excellent long-term resource for the community!
-
-    Developed natively on Ubuntu 26.04 LTS
-    Mod testing powered by thezk sk-zk Extractor tool (https://github.com/sk-/Extractor)
-    Built using the official SCS Uploader tool running under Proton
-    Thank you to SCS Software for the robust modding ecosystem
-
-Glory To God — Soli Deo Gloria
-
-Trucky Mods: SGSB (Smart Gates and Safety Buffers)
-Steam Workshop: SGSB (Smart Gates and Safety Buffers)
-GitHub: SGSB https://github.com/insanity35/Smart-Gates-Parking-and-Safety-Buffers
+---
