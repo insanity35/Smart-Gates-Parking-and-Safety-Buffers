@@ -39,6 +39,7 @@ Scale house checks have been dropped from the frustrating base-game default (60%
 ---
 
 ## ⚙️ Engine Optimization (Highly Recommended)
+*I use 1.1 but you could go to 1.5*
 To get the absolute best visual experience out of the parking density, open your game's `config.cfg` file (or use the developer console) and apply this parameter:
 
 `uset g_lod_factor_parked "1.1"`
