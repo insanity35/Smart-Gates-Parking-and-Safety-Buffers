@@ -38,11 +38,11 @@ Scale house checks have been dropped from the frustrating base-game default (60%
 
 ---
 
-## ⚙️ Engine Optimization (Highly Recommended)
-*I use 1.1 but you could go to 1.5*
+## ⚙️ Engine Optimization
+*I use 1.1 on SP but you could go to 1.5. It makes my game hitchy on convoy if I use this*
 
-To get the absolute best visual experience out of the parking density, open your game's `config.cfg` file (or use the developer console) and apply this parameter:
-
+Open your game's `config.cfg`
+ 
 `uset g_lod_factor_parked "1.1"`
 
 *This establishes the optimal draw distance setting to pull background parked vehicle culling out just far enough to catch assets before entering your immediate field of view, without tanking your FPS or VRAM.*
