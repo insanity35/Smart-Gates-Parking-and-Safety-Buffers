@@ -116,16 +116,16 @@ A massive shout-out to our three-person team for pulling this together, and spec
 ---
 
 ### v4.2-82826 ### (Major Fleet & Physics Optimization Release)
-    ##Title & Scope Update: Updated the official mod title to Smart Gates, Dynamic Parking and Safety Buffers (SGSB), fully purging legacy toll references to focus exclusively on automated gates, dynamic yards, and roadside safety configurations.##
-        * **Massive Industry & Prefab Expansion (Sections 10–48): Added 39 granular, sector-specific configuration blocks to ensure prefabs spawn contextually accurate vehicle and trailer combinations:
-        * **Industrial & Supply Chains: Deployed dedicated pools for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
-        * **Municipal & Emergency: Built explicit spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
-        * **Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat ramps, RV campgrounds, scale houses, and farm co-op lots with fitting local traffic profiles.
-        * **AI Fallback Profiles: Standardized individual AI fallback profiles in Section 49 to enforce lightweight mesh rendering.
-        * **Shift Probability Weights: Cleaned up to deterministic separation (active shift 1.5, inactive shift 0.0 or reduced nocturnal ratios).
-        * **Yard Trailers (Section 38): Tuned daytime weight to 1.6 and night to 0.6 with mandatory rear_align: true.
-        * **Lighting Flares: Standardized forced_flare_low_beam: true across all operational night-shift variants.
-        * **Performance & Low-Poly Architecture: Overhauled background and shift-based vehicle variants across all core sections by switching low_poly_only from false to true alongside always_visible: false, preventing VRAM spikes and stutter during heavy map mod loading.
+##Title & Scope Update: Updated the official mod title to Smart Gates, Dynamic Parking and Safety Buffers (SGSB), fully purging legacy toll references to focus exclusively on automated gates, dynamic yards, and roadside safety configurations.##
+* **Massive Industry & Prefab Expansion (Sections 10–48): Added 39 granular, sector-specific configuration blocks to ensure prefabs spawn contextually accurate vehicle and trailer combinations:
+* **Industrial & Supply Chains: Deployed dedicated pools for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
+* **Municipal & Emergency: Built explicit spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
+* **Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat ramps, RV campgrounds, scale houses, and farm co-op lots with fitting local traffic profiles.
+* **AI Fallback Profiles: Standardized individual AI fallback profiles in Section 49 to enforce lightweight mesh rendering.
+* **Shift Probability Weights: Cleaned up to deterministic separation (active shift 1.5, inactive shift 0.0 or reduced nocturnal ratios).
+* **Yard Trailers (Section 38): Tuned daytime weight to 1.6 and night to 0.6 with mandatory rear_align: true.
+* **Lighting Flares: Standardized forced_flare_low_beam: true across all operational night-shift variants.
+* **Performance & Low-Poly Architecture: Overhauled background and shift-based vehicle variants across all core sections by switching low_poly_only from false to true alongside always_visible: false, preventing VRAM spikes and stutter during heavy map mod loading.
     
 
 ### v4.1.4-82326 (Nighttime Fleet Density, AI Balance & Weight Stations)
