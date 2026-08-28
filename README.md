@@ -1,7 +1,7 @@
-![Project Header](SGSB410.jpeg)
+![Project Header](sgsbblue42.jpeg)
 
 # Smart Gates, Parking and Safety Buffers (SGSB)
-**v4.1.4-82326 (Midnight Train) — "The House That Code Built"**
+**v4.2-82826 (Midnight Train) — "The House That Code Built"**
 
 ---
 
@@ -15,26 +15,30 @@ This is our first mod ever, so please extend us some grace!
 
 ---
 
-## 🛑 The Problem: "Gate Lag"
-After years of long-haul trucking in American Truck Simulator, we know that immersion is everything. Nothing kills the flow of a delivery faster than "gate lag"—that frustrating moment when you are at the yard threshold, waiting for a barrier to crawl open while your multi-ton rig is already stalled out. 
+🛑 The Problem: "Gate Lag"
 
-## ✅ The Solution: Smart Gates & Safety Buffers
-SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects.
+For long-haul truckers across American Truck Simulator, immersion is everything. Nothing shatters the flow of a meticulous delivery faster than "gate lag"—that frustrating hitch at the yard threshold where you wait for a sluggish barrier to crawl open while your multi-ton rig idles out.
 
-### 🚛 Native Dynamic Parking System (New in v4.1)
-7% Global Density Bump:** Subtly populates empty background lots, depots, and scenic turnouts without model spam.
-Broadened Time Windows:** Completely eliminates the "mass-extinction" pop-in effect. Vehicles now "bleed over" during dawn and dusk. Truck stops stay packed at night, and lots don't magically empty at sunrise.
-Municipal Night Shift:** City sweepers and garbage trucks now realistically own the graveyard shift, dominating the overnight hours and clearing out by day.
+✅ The Solution: Smart Gates & Safety Buffers
+SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. Whether you are backing into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates now respond with the reliable precision a professional driver demands.
 
-### ⚖️ Weigh Station Flow Control (New in v4.1.4)
-Scale house checks have been dropped from the frustrating base-game default (60%) down to a highly realistic **20% check probability** for smoother long-haul pacing.
+🚛 Advanced Dynamic Parking System
+Immerse yourself in a living roadside ecosystem. Version 4.2 introduces a massive expansion across 39 granular industrial, commercial, and rural sectors:
+    Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
+    Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
+    Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
+    Optimized VRAM Performance: Industrial yards and truck stops are densely populated without frame-rate hits, leveraging forced low-poly background rendering (low_poly_only: true).
+    Precise Physical Alignment: Unattached yard trailers and heavy wreckers utilize strict rear_align: true protocols, ensuring assets lock securely onto pads without floating.
+
+⚖️ Weigh Station Flow Control
+Scale house checks have been reduced from the frustrating base-game default (60%) down to a realistic 20% check probability, ensuring smooth, uninterrupted pacing for your long-haul runs.
 
 ---
 
 ## 📊 Official Release Information
-* **Current Version:** v4.1.4-82326 (Midnight Train) (Stable)
+* **Current Version:** v4.2-82826 (Midnight Train) (Stable)
 * **Official Launch Date (v1.0):** Tuesday, July 14, 2026
-* **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code)
+* **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS via Linux
 * **Architecture:** Pure definition-only (.sii) layout
 
@@ -88,7 +92,6 @@ If you encounter a specific yard, toll plaza, or logistics depot anywhere on the
 ## 🏆 Credits & Technical Acknowledgments
 * **Development Group:** Smoke Show Studios, Smoke Show Creations & Harambes Children
 * **Lead Developer & Tester:** meanshadows35
-* **Co-Developer:** mrh368
 * **Technical Consultant:** Overdrive
 
 A massive shout-out to our three-person team for pulling this together, and special thanks to the entire trucking community for the incredible passion and feedback.
@@ -111,6 +114,22 @@ A massive shout-out to our three-person team for pulling this together, and spec
 * **July 14, 2026 [Version 1.0.0: Public Launch]:** Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
 
 ---
+
+ ### v4.2-82826 ### (Major Fleet & Physics Optimization Release)
+ *Updated the official mod title to Smart Gates, Dynamic Parking and Safety Buffers (SGSB), fully purging legacy toll references to focus exclusively on automated gates, dynamic yards, and roadside safety configurations.
+ 	*Bumped project version to v4.2 (Major Fleet & Physics Optimization Release).
+ *Massive Industry & Prefab Expansion (Sections 10–48)
+ 	Added 39 granular, sector-specific configuration blocks to ensure pre-fabs spawn contextually accurate vehicle and trailer combinations:
+ 	Industrial & Supply Chains: Deployed dedicated pools for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
+ 	Municipal & Emergency: Built explicit spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
+ *Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat ramps, RV campgrounds, scale houses, and farm co-op lots with fitting local traffic profiles.
+ 	Standardized individual AI fallback profiles in Section 49 to enforce lightweight mesh rendering.
+ 	Shift Probability Weights: Cleaned up to deterministic separation (active shift 1.5, inactive shift 0.0 or reduced nocturnal ratios).
+ 	Yard Trailers (Section 38): Tuned daytime weight to 1.6 and night to 0.6 with mandatory rear_align: true.
+ *Lighting Flares: Standardized forced_flare_low_beam: true across all operational night-shift variants.
+ 	Performance & Low-Poly Architecture
+ Massively overhauled background and shift-based vehicle variants across all core sections by switching low_poly_only from false to true alongside always_visible: false, preventing VRAM spikes and stutter during heavy map mod loading.
+
 
 ### v4.1.4-82326 (Nighttime Fleet Density, AI Balance & Weight Stations)
 * **NEW:** Weight Station Probability bumped from 60% to 20% to be more realistic.
