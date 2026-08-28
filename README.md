@@ -22,7 +22,9 @@ After years of long-haul trucking in American Truck Simulator, we know that imme
 SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. Whether you are hauling heavy cargo into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates will now respond with the reliable precision a professional driver expects.
 
 ### 🚛 Native Dynamic Parking System (New in v4.1)
-Version 4.1 introduces a built-in, native dynamic parking framework engineered completely from scratch for SGSB. Designed to eliminate legacy mod conflicts, this standalone system utilizes custom-isolated namespaces to manage rest area slot snapping, high-precision company loading bay alignment, and weigh station queue spacing. It integrates seamlessly with your map configurations and ATS parking settings, delivering enhanced realism and fluid staging entirely on its own engine logic.
+7% Global Density Bump:** Subtly populates empty background lots, depots, and scenic turnouts without model spam.
+Broadened Time Windows:** Completely eliminates the "mass-extinction" pop-in effect. Vehicles now "bleed over" during dawn and dusk. Truck stops stay packed at night, and lots don't magically empty at sunrise.
+Municipal Night Shift:** City sweepers and garbage trucks now realistically own the graveyard shift, dominating the overnight hours and clearing out by day.
 
 ### ⚖️ Weigh Station Flow Control (New in v4.1.4)
 Scale house checks have been dropped from the frustrating base-game default (60%) down to a highly realistic **20% check probability** for smoother long-haul pacing.
