@@ -1,87 +1,66 @@
-Smart Gates, Tolls and Safety Buffers (SGSB) v4.1.4
-Quick Reference Guide — "Weigh Station Balance & Fleet Flow"
+Smart Gates, Dynamic Parking and Safety Buffers (SGSB) v4.2
+Quick Reference Guide — "Major Fleet & Physics Optimization Release"
 
-Target Environment: American Truck Simulator (ATS)
+Target Environment: American Truck Simulator (ATS) v1.60+
 
 Target Master File Paths:
 
     /unit/hookup/animated_gate.sii
-
-    /def/world/trigger_action.sii (Weigh Station & Toll Compliance)
 
     /unit/hookup/animated_gate.dlc_*.sii (State DLC Overrides)
 
     /unit/hookup/parked_vehicle.sii (Fleet & Parking Density)
 
 Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods / Reforma)
+
 [1] Core Parameter Standards — Gates & Colliders
 
-    Universal High-Speed Approach Range: Standardized down or locked to 125.0m across Illinois (dlc_il), New Mexico (dlc_nm), and Texas (dlc_tx) panorama, underground, and construction fence gates.
+    Universal High-Speed Approach Range: Locked to 125.0m across Illinois (dlc_il), New Mexico (dlc_nm), and Texas (dlc_tx) panorama, underground, and construction fence gates.
 
     Extended Trailer Clearance Range (Oregon): 135.0m (metal_01 heavy metal storage door) to prevent late-opening trailer tail-swing clipping.
 
-    Pneumatic & Short-Range Industrial Range: Increased from 15.0m to 17.0m across Kansas (ag_ks_salt, ag_ks_air), Montana (ag_mt_gfll), Oklahoma (ag_pf_busf), and Wyoming (ag_wy_mine, ag_wy_ref) for smoother activation pacing.
+    Pneumatic & Short-Range Industrial Range: Increased to 17.0m across Kansas (ag_ks_salt, ag_ks_air), Montana (ag_mt_gfll), Oklahoma (ag_pf_busf), and Wyoming (ag_wy_mine, ag_wy_ref).
 
     Guard-Check / Security Range: 20.0m (Borders, Ports, Mines).
 
-    Stop-and-Go Range: 25.0m (Cash Toll Ramps, River Locks, Floodgates).
+    Stop-and-Go Range: 25.0m (River Locks, Floodgates). Note: Toll booths and scale actions have been reverted to stock/vanilla parameters to prevent native gate and toll-exit operational breakage.
 
-    Collider Geometry Enforcement: Explicit .pmc physical collider file verification (Fixed .pmg path errors on ag_nv_wstg and ag_suncrops).
+    Collider Geometry Enforcement: Explicit .pmc physical collider file verification (ag_nv_wstg and ag_suncrops).
 
-[2] Weigh Station & Scale Compliance Controls (v4.1.4 New Addition)
+[2] Massive Industry & Prefab Expansion (Sections 10–48 — v4.2 New Addition)
 
-    Target File: /def/world/trigger_action.sii
+    Industrial & Supply Chains: Granular, sector-specific configuration blocks deployed for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
 
-    Check Probability (trig_action.weigh / trig_action.weigh_req): Reduced from vanilla 60% (0.6) down to a realistic 20% (0.2) check rate.
+    Municipal & Emergency: Dedicated spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
 
-    Toll Preservation: Integrated full native toll definitions (trig_action.toll_exit, trig_action.toll_mid) to ensure zero toll booth breakage while modifying scale frequencies.
+    Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat ramps, RV campgrounds, scale houses, and farm co-op lots with matching local traffic profiles.
 
-[3] Dynamic Parking & Fleet Density Optimizations (v4.1.4 Additions)
+[3] Dynamic Parking & Fleet Density Optimizations (v4.2 Enhancements)
 
-    Global Density Bump: Clean 7% spawn weight multiplier applied across all vehicle classes to populate empty background lots and scenic turnouts without duplication spam.
+    Deterministic Shift Weights: Cleaned up to strict separation (active shift 1.5, inactive shift 0.0 or reduced nocturnal ratios).
 
-    Broadened Time Windows: Replaced hard 0.0 drop-offs with low "bleed-over" probability values across day and night cycles to eliminate dawn/dusk pop-in.
+    Yard Trailers (Section 38): Tuned daytime weight to 1.6 and night to 0.6 with mandatory rear_align: true to ensure assets lock securely onto pads without floating.
 
-    Municipal Night Shift Flipped: City sweepers and garbage trucks (Mack RD and standard units) locked to the graveyard shift with nighttime probabilities (0.85), lowering daytime presence.
+    Lighting Flares: Standardized forced_flare_low_beam: true across all operational night-shift variants.
 
-    Render Distance Optimization: Integrated engine parameter uset g_lod_factor_parked "1.1" to pull background culling distances out just far enough to catch parked assets before entering the immediate field of view.
+    Low-Poly Architecture: Overhauled background and shift-based vehicle variants across all core sections by switching low_poly_only from false to true alongside always_visible: false to eliminate VRAM spikes and stutter during heavy map mod loading.
 
-    AI Traffic Purge: Stripped all legacy configuration blocks and fallback references for the deprecated traffic.tesla unit.
+    Render Distance Optimization: Integrated engine parameter uset g_lod_factor_parked "1.1" to pull background culling distances out just far enough to catch assets before entering the immediate field of view.
 
 [4] Group Structure Index & Category Standards
 
-    Group 1: Toll Booths — Secuirty Check in toll: 25.0m range / 50° orientation.
+    Group 1 & 2 (Toll Booths): Maintained at stock engine configuration to preserve toll gate functionality.
 
-    Group 2: Toll Booths — EZ-Pass / E-Toll: 125.0m range / 130° orientation.
+    Group 3: Base Map & Western/Mountain Expansions (125.0m standard / 17.0m pneumatic).
 
-    Group 3: Base Map & Western/Mountain Expansions: 125.0m (Standard/Panorama) / 17.0m (Pneumatic Industrial in MT/WY).
+    Group 4: Directional Rotary / Swing Gates & Heavy Doors (125.0m rotary / 135.0m Oregon metal_01).
 
-    Group 4: Directional Rotary / Swing Gates & Heavy Doors: 125.0m (Rotary) / 135.0m (metal_01 in Oregon).
+    Group 5: Midwest & Illinois DLC Expansions (125.0m IL/MO/IA/NE / 17.0m KS).
 
-    Group 5: Midwest & Illinois DLC Expansions: 125.0m (IL/MO/IA/NE) / 17.0m (KS Salt/Air).
+    Group 6: Southern DLC Expansions & Depots (17.0m depot / 125.0m TX Panoramas).
 
-    Group 6: Southern DLC Expansions & Toll Ramps: 25.0m (Tolls) / 17.0m (Depot) / 125.0m (TX Panoramas).
+    Group 7: Special Dynamic Movers & Bridge Gates (25.0m range / 100° orientation / /sound/world/gate_iron.soundref).
 
-    Group 7: Special Dynamic Movers & Bridge Gates: 25.0m range / 100° orientation / /sound/world/gate_iron.soundref.
+    Group 8: Secure Industrial Sites, Mines, Refineries & Ports (20.0m range / 90° orientation).
 
-    Group 8: Secure Industrial Sites, Mines, Refineries & Ports: 20.0m range / 90° orientation.
-
-    Group 9: Future State Expansions (Placeholders): North Dakota, Indiana, South Dakota framework integration.
-
-[5] Dynamic Parking & Lot Standards / Probability Schedules
-
-    Rest Stops & Scenic Truck Parking: 10.0m snap radius / 30° orientation.
-
-    Company Loading Bays & Docks: 6.0m snap radius / 15° orientation (High precision).
-
-    Weigh Stations & Inspection Staging: 12.0m snap radius / 45° orientation.
-
-    Time-of-Day Traffic Weighting:
-
-        Municipal Sweepers: 0.6 Night / 0.3 Day
-
-        Passenger Cars & Police: Daytime baseline boosted to 1.5.
-
-        Trucks & Trailer Combos: Daytime 0.85 / Nighttime 0.55.
-
-        SUVs & Pickups: Daytime 3.7 / Nighttime 1.2.
+    Group 9: Future State Frameworks (North Dakota, Indiana, South Dakota integration).
