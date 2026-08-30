@@ -53,13 +53,13 @@ Scale house checks have been reduced from the frustrating base-game default (60%
 ### Recommended Load Order
 To ensure the custom safety buffer parameters take priority over world geometry data, organize your Mod Manager as follows:
 
-**— TOP —**
+* **— TOP —**
 1. Background Maps
 2. Smart Gates, Parking and Safety Buffers (SGSB) *(Notice: Needs to be ABOVE SoundFixes to keep hookups from being erased)*
 3. SoundFixes
 4. Global Traffic & AI Density Mods
 5. Map Expansion Mods (ProMods, Reforma, etc.)
-**— BOTTOM —**
+* **— BOTTOM —**
 
 ### Prefab Limitations (The "Hardcoded" Gates)
 I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". 
@@ -106,16 +106,16 @@ A massive shout-out to our three-person team for pulling this together, and spec
 * **Updated the official mod title to Smart Gates, Dynamic Parking and Safety Buffers (SGSB), fully purging legacy toll references to focus exclusively on automated gates, dynamic yards, and roadside safety configurations.**
 **Bumped project version to v4.2 (Major Fleet & Physics Optimization Release).
 * **Massive Industry & Prefab Expansion (Sections 10–48)**
-**Added 39 granular, sector-specific configuration blocks to ensure pre-fabs spawn contextually accurate vehicle and trailer combinations:
-**Industrial & Supply Chains: Deployed dedicated pools for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
-**Municipal & Emergency: Built explicit spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
+*Added 39 granular, sector-specific configuration blocks to ensure pre-fabs spawn contextually accurate vehicle and trailer combinations:
+*Industrial & Supply Chains: Deployed dedicated pools for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
+*Municipal & Emergency: Built explicit spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
 Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat ramps, RV campgrounds, scale houses, and farm co-op lots with fitting local traffic profiles.
-**Standardized individual AI fallback profiles in Section 49 to enforce lightweight mesh rendering.
-**Shift Probability Weights: Cleaned up to deterministic separation (active shift 1.5, inactive shift 0.0 or reduced nocturnal ratios).
-**Yard Trailers (Section 38): Tuned daytime weight to 1.6 and night to 0.6 with mandatory rear_align: true.
-**Lighting Flares: Standardized forced_flare_low_beam: true across all operational night-shift variants.
+*Standardized individual AI fallback profiles in Section 49 to enforce lightweight mesh rendering.
+*Shift Probability Weights: Cleaned up to deterministic separation (active shift 1.5, inactive shift 0.0 or reduced nocturnal ratios).
+  Yard Trailers (Section 38): Tuned daytime weight to 1.6 and night to 0.6 with mandatory rear_align: true.
+*Lighting Flares: Standardized forced_flare_low_beam: true across all operational night-shift variants.
 * **Performance & Low-Poly Architecture**
-**Massively overhauled background and shift-based vehicle variants across all core sections by switching low_poly_only from false to true alongside always_visible: false, preventing VRAM spikes and stutter during heavy map mod loading.
+*Massively overhauled background and shift-based vehicle variants across all core sections by switching low_poly_only from false to true alongside always_visible: false, preventing VRAM spikes and stutter during heavy map mod loading.
 
 
 ### v4.1.4-82326 (Nighttime Fleet Density, AI Balance & Weight Stations)
