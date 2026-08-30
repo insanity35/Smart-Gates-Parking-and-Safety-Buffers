@@ -15,14 +15,13 @@ This is our first mod ever, so please extend us some grace!
 
 ---
 
-🛑 The Problem: "Gate Lag"
-
+## 🛑 The Problem: "Gate Lag"
 For long-haul truckers across American Truck Simulator, immersion is everything. Nothing shatters the flow of a meticulous delivery faster than "gate lag"—that frustrating hitch at the yard threshold where you wait for a sluggish barrier to crawl open while your multi-ton rig idles out.
 
-✅ The Solution: Smart Gates & Safety Buffers
+## ✅ The Solution: Smart Gates & Safety Buffers
 SGSB is the definitive logic overhaul for gate operations. We have stripped away the inconsistent, immersion-breaking triggers of the base game and replaced them with a standardized, high-performance logic set. Whether you are backing into a Phoenix warehouse or navigating a tight depot in the Midwest, your gates now respond with the reliable precision a professional driver demands.
 
-🚛 Advanced Dynamic Parking System
+## 🚛 Advanced Dynamic Parking System
 Immerse yourself in a living roadside ecosystem. Version 4.2 introduces a massive expansion across 39 granular industrial, commercial, and rural sectors:
     Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
     Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
@@ -30,7 +29,7 @@ Immerse yourself in a living roadside ecosystem. Version 4.2 introduces a massiv
     Optimized VRAM Performance: Industrial yards and truck stops are densely populated without frame-rate hits, leveraging forced low-poly background rendering (low_poly_only: true).
     Precise Physical Alignment: Unattached yard trailers and heavy wreckers utilize strict rear_align: true protocols, ensuring assets lock securely onto pads without floating.
 
-⚖️ Weigh Station Flow Control
+## ⚖️ Weigh Station Flow Control
 Scale house checks have been reduced from the frustrating base-game default (60%) down to a realistic 20% check probability, ensuring smooth, uninterrupted pacing for your long-haul runs.
 
 ---
