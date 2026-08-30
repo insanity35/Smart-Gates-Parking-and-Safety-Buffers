@@ -1,18 +1,17 @@
 ![Project Header](sgsbblue.jpeg)
 
 # Smart Gates, Dynamic Parking and Safety Buffers (SGSB)
-**v4.2-82826 (Midnight Train)*
 
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
 * **Current Version:** v4.2-82826 (Stable)
 * **Development Name:** Midnight Train (4.0 - 4.2)
-* **Band of Choice** Rattlesnake Milk
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
-* Mod testing powered by the sk-zk Extractor tool
-* Built using the official SCS Uploader tool running under Proton 
+* Extracted by the sk-zk Extractor tool
+* https://github.com/sk-zk/Extractor
+* Official SCS Uploader tool running under Proton 
 * **Architecture:** Pure definition-only (.sii) layout
 
 ---
@@ -63,7 +62,8 @@ To ensure the custom safety buffer parameters take priority over world geometry 
 **— BOTTOM —**
 
 ### Prefab Limitations (The "Hardcoded" Gates)
-I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". The following remain vanilla:
+I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". 
+* The following remain vanilla:
 * Army Gate next to O'Hare Airport (IL)
 * Union Pacific Gate
 * DOW Gate (IL)
@@ -88,7 +88,7 @@ If you encounter a specific yard, toll plaza, or logistics depot anywhere on the
 A massive shout-out to our three-person team for pulling this together, and special thanks to the entire trucking community for the incredible passion and feedback.
 * Developed natively on Ubuntu 26.04 LTS
 * Thank you to SCS Software for letting us nod
-**Soli Deo Gloria**
+* **Soli Deo Gloria**
 
 ---
 
