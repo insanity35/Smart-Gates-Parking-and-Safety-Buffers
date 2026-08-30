@@ -10,7 +10,7 @@
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
 * Extracted by terminal by sk-zk Extractor tool
-  *https://github.com/sk-zk/Extractor
+  * https://github.com/sk-zk/Extractor
 * Official SCS Uploader tool running under Proton 
 * **Architecture:** Pure definition-only (.sii) layout
 
@@ -63,7 +63,7 @@ To ensure the custom safety buffer parameters take priority over world geometry 
 
 ### Prefab Limitations (The "Hardcoded" Gates)
 I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". 
-* The following remain vanilla:
+* The following remain vanilla(so far):
 * Army Gate next to O'Hare Airport (IL)
 * Union Pacific Gate
 * DOW Gate (IL)
