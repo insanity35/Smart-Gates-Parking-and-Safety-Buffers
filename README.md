@@ -9,8 +9,8 @@
 * **Development Name:** Midnight Train (4.0 - 4.2)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
-* Extracted by the sk-zk Extractor tool
-* https://github.com/sk-zk/Extractor
+* Extracted by terminal by sk-zk Extractor tool
+  *https://github.com/sk-zk/Extractor
 * Official SCS Uploader tool running under Proton 
 * **Architecture:** Pure definition-only (.sii) layout
 
