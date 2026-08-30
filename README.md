@@ -44,17 +44,6 @@ Scale house checks have been reduced from the frustrating base-game default (60%
 
 ---
 
-## ⚙️ Engine Optimization
-*I use 1.1 on SP but you could go to 1.5. It makes my game hitchy on convoy if I use this*
-
-Open your game's `config.cfg`
- 
-`uset g_lod_factor_parked "1.1"`
-
-*This establishes the optimal draw distance setting to pull background parked vehicle culling out just far enough to catch assets before entering your immediate field of view, without tanking your FPS or VRAM.*
-
----
-
 ## ⚠️ Compatibility & Load Order
 
 **Convoy-Ready:** Fully optimized file layout ensures seamless synchronization during multiplayer convoy sessions with zero mod-mismatch errors.  
