@@ -6,8 +6,9 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2-82826 (Midnight Train) (Stable)
-* **Official Launch Date (v1.0):** Tuesday, July 14, 2026
+* **Current Version:** v4.2-82826 (Stable)
+* **Development Name:** Midnight Train (4.0 - 4.2)
+
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
 * Mod testing powered by the sk-zk Extractor tool
