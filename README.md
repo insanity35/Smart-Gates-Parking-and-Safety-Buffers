@@ -1,7 +1,17 @@
 ![Project Header](sgsbblue.jpeg)
 
-# Smart Gates, Parking and Safety Buffers (SGSB)
-**v4.2-82826 (Midnight Train) — "The House That Code Built"**
+# Smart Gates, Dynamic Parking and Safety Buffers (SGSB)
+**v4.2-82826 (Midnight Train)*
+**"The House That Code Built"*
+
+## 📊 Official Release Information
+* **Current Version:** v4.2-82826 (Midnight Train) (Stable)
+* **Official Launch Date (v1.0):** Tuesday, July 14, 2026
+* **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
+* **Development Environment:** Ubuntu 26.04 LTS
+* Mod testing powered by the sk-zk Extractor tool
+* Built using the official SCS Uploader tool running under Proton 
+* **Architecture:** Pure definition-only (.sii) layout
 
 ---
 
@@ -31,15 +41,6 @@ Immerse yourself in a living roadside ecosystem. Version 4.2 introduces a massiv
 
 ## ⚖️ Weigh Station Flow Control
 Scale house checks have been reduced from the frustrating base-game default (60%) down to a realistic 20% check probability, ensuring smooth, uninterrupted pacing for your long-haul runs.
-
----
-
-## 📊 Official Release Information
-* **Current Version:** v4.2-82826 (Midnight Train) (Stable)
-* **Official Launch Date (v1.0):** Tuesday, July 14, 2026
-* **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
-* **Development Environment:** Ubuntu 26.04 LTS via Linux
-* **Architecture:** Pure definition-only (.sii) layout
 
 ---
 
@@ -84,13 +85,9 @@ If you encounter a specific yard, toll plaza, or logistics depot anywhere on the
 
 A massive shout-out to our three-person team for pulling this together, and special thanks to the entire trucking community for the incredible passion and feedback.
 * Developed natively on Ubuntu 26.04 LTS
-* Mod testing powered by the sk-zk Extractor tool
-* Built using the official SCS Uploader tool running under Proton
-* Thank you to SCS Software for the robust modding ecosystem
-
+* Thank you to SCS Software for letting us nod
 **Soli Deo Gloria**
 
----
 ---
 
 ## 📜 Complete Mod Genesis & Release History
@@ -148,8 +145,8 @@ Massively overhauled background and shift-based vehicle variants across all core
 
 ### v4.1.0-81426 (Native Dynamic Parking)
 * **New Feature:** Integrated a complete, custom-coded dynamically parked vehicle suite to permanently replace conflicting third-party mods.
-* **Namespace Isolation:** Fully prefixed every unit definition (e.g., `sgsb.suv.always.parked.physics`) to eliminate base-game naming collisions.
-* **Advanced Logic:** Embedded native timing parameters and precise alignment tags (`rear_align`) to handle automated cycles and dock-backing behavior.
+* **Namespace Isolation:** Fully prefixed every unit definition
+* **Advanced Logic:** Embedded native timing parameters and precise alignment tags.
 
 ### v4.0.5-81326
 * **Extended Triggers:** Fine-tuned thresholds to accommodate long trailers and multi-axle setups without premature closure.
@@ -163,7 +160,7 @@ Massively overhauled background and shift-based vehicle variants across all core
 * **Expanded Core Security:** Optimized Group 3 gates with built-in trailer activation, 135m range, and 140-degree orientation tolerance.
 * **Regional DLC Framework:** Maintained active mapping support across AR, IA, IL, KS, LA, MO, MT, and NE.
 
-### v4.0.2 to v4.0 (Midnight Train)
+### v4.0 (Midnight Train)
 * **Regional Audit:** Split DLC hookups into dedicated `animated_gate.dlc_*.sii` files to cut down log spam.
 * **Behavioral Tuning:** Transitioned from uniform triggers to precise, environment-specific profiles (125m E-tolls, 20m cash lanes, 15m secure borders).
 
