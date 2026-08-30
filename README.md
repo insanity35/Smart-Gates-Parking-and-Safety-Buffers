@@ -8,7 +8,7 @@
 ## 📊 Official Release Information
 * **Current Version:** v4.2-82826 (Stable)
 * **Development Name:** Midnight Train (4.0 - 4.2)
-
+* **Band of Choice** Rattlesnake Milk
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
 * Mod testing powered by the sk-zk Extractor tool
