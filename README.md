@@ -108,11 +108,11 @@ A massive shout-out to our three-person team for pulling this together, and spec
 ---
 
 ### v4.2-82628 (Major Fleet & Physics Optimization Release)
-## Updated the official mod title to Smart Gates, Dynamic Parking and Safety Buffers (SGSB), fully purging legacy toll references to focus exclusively on automated gates, dynamic yards, and roadside safety configurations.
+**Updated the official mod title to Smart Gates, Dynamic Parking and Safety Buffers (SGSB), fully purging legacy toll references to focus exclusively on automated gates, dynamic yards, and roadside safety configurations.**
 * Bumped project version to v4.2 (Major Fleet & Physics Optimization Release).
-## Massive Industry & Prefab Expansion (Sections 10–48)**
+**Massive Industry & Prefab Expansion (Sections 10–48)**
 * Added 39 granular, sector-specific configuration blocks to ensure pre-fabs spawn contextually accurate vehicle and trailer combinations:
-*Industrial & Supply Chains: Deployed dedicated pools for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
+* Industrial & Supply Chains: Deployed dedicated pools for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
 * Municipal & Emergency: Built explicit spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
 Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat ramps, RV campgrounds, scale houses, and farm co-op lots with fitting local traffic profiles.
 * Standardized individual AI fallback profiles in Section 49 to enforce lightweight mesh rendering.
