@@ -26,19 +26,19 @@ This is our first mod ever, so please extend us some grace!
 
 ---
 
-## 🛑 The Problem: "Gate Lag"
-For long-haul truckers across American Truck Simulator, immersion is everything. Nothing shatters the flow of a meticulous delivery faster than "gate lag"—that frustrating hitch at the yard threshold where you wait for a sluggish barrier to crawl open while your multi-ton rig idles out.
+## 🛑 The Problem: "Gate Lag" & Sterile Truck Stops/Yards
+For long-haul truckers across American Truck Simulator, immersion is everything. Nothing shatters the flow of a meticulous delivery faster than "gate lag"—that frustrating hitch at the yard threshold where you wait for a sluggish barrier to crawl open while your multi-ton rig idles out. Couple that with sterile, ghost-town truck stops, parking lots and getting flagged down at 60% of weigh stations. With that long-haul pacing takes a heavy hit.
 
 ## ✅ The Solution: Smart Gates & Safety Buffers
 Smart Gates, Dynamic Parking and Safety Buffers (SGSB) is an environmental and traffic modification for American Truck Simulator designed to enhance the realism of rest stops, loading zones, and world gate interactions.
 
 ## 🚦Smart Gate & Infrastructure Overhaul
    * Extended Trigger Ranges: Increased activation distances (125m for panoramas, custom industrial ranges) so gates open smoothly as you roll up, protecting your momentum.
-   * Collider Fixes: Repointed broken base-game geometry files to proper colliders so multi-axle setups and heavy loads pass through without clipping.
+   * Collider Fixes: Re-pointed broken base-game geometry files to proper colliders so multi-axle setups and heavy loads pass through without clipping.
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
 
 ## 🚛 Advanced Dynamic Parking System
-Immerse yourself in a living roadside ecosystem. Version 4.2 introduces a massive expansion across 39 granular industrial, commercial, and rural sectors:
+Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in empty truck stops with two trucks at night or parking lots with one car in it are gone. 4.2 introduces a massive expansion across 39 granular industrial, commercial, and rural sectors:
  *  Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
  *   Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
  *   Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
@@ -174,31 +174,28 @@ Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat
 ### v4.0.5-81326
 * **Extended Triggers:** Fine-tuned thresholds to accommodate long trailers and multi-axle setups without premature closure.
 * **Stability:** Achieved a clean mount of 110 addon hookups with zero loading errors.
-
 ### v4.0.4-81126
 * **Texas & Illinois additions:** Fixed/expanded gate ranges for TX regional cities, border checkpoints, and ports. Integrated IL underground gates and fences.
 * **Universal Boost:** Pushed primary sliding and industrial gate distances to a uniform 135m.
-
 ### v4.0.3-81126
 * **Expanded Core Security:** Optimized Group 3 gates with built-in trailer activation, 135m range, and 140-degree orientation tolerance.
 * **Regional DLC Framework:** Maintained active mapping support across AR, IA, IL, KS, LA, MO, MT, and NE.
-
-### v4.0 (Midnight Train)
+### v4.0-8726(Midnight Train)
 * **Regional Audit:** Split DLC hookups into dedicated `animated_gate.dlc_*.sii` files to cut down log spam.
 * **Behavioral Tuning:** Transitioned from uniform triggers to precise, environment-specific profiles (125m E-tolls, 20m cash lanes, 15m secure borders).
 
-### v3.x Series Legacy Milestones
-* **v3.2.1:** Injected missing baseline assets (OK Turnpike, NE Farms, AR Timber Mills).
+### v3.x Series Legacy Milestones (7/26/26-8/5/26) (Code barely worked till 3.2.2 when moved it unit/hookup code all went to 4.0)
+* **v3.2.1:** Injected missing baseline assets (OK Turnpike, NE Farms, AR Timber Mills).(Internal beta turned into 4.0)
 * **v3.2.0:** Stripped unverified "ghost code", optimized orientation tolerances, integrated state DLC coverage, and complete sound integration.
 * **v3.1.0:** Moved deployment path to `unit/hookup/animated_gate.sii`. Reorganized into 25 clean function-based groups. Set logistics gates to 125m for 53ft trailer clearance.
 * **v3.0.0 (PROJECT HEAVY FRUIT):** Systematically scaled up trigger distances globally. Expanded master index to incorporate specialized DLC assets (Groups 22-35). Built native compatibility layers for map mods like ProMods Canada and Reforma (Groups 36-50).
 
-### v2.x & v1.x Series Legacy Milestones
+### v1.x & v2.x Series Legacy Milestones (6/1/26-7/26/26) (These barely worked)
 * **v2.1.0:** Shifted toll plaza orientation to better clear high-speed approaches. Added missing pneumatic audio hooks.
 * **v2.0.0 (Evolution):** Engine-native cleanse. Optimized logistics master triggers to 55m and 60° angle tolerances.
 * **v1.7.0 (The House That Code Built):** Fully integrated native 1.60+ automatic rest distance mechanics. Fixed left-hand toll offset geometry for long-nose trucks.
 * **v1.6.0 (Fight Fire with Code):** Fine-tuned EZ-Pass lanes to 23m triggers. Standardized borders to 25m.
 * **v1.5.0 (For Whom the Code Tolls):** Added `trailer_activation: true` to every gate block to protect 53ft, double, and triple setups from early closure.
 * **v1.1.0:** Expanded trigger distance baseline.
-
+* **v1.0
 ---
