@@ -33,6 +33,7 @@ For long-haul truckers across American Truck Simulator, immersion is everything.
 Smart Gates, Dynamic Parking and Safety Buffers (SGSB) is an environmental and traffic modification for American Truck Simulator designed to enhance the realism of rest stops, loading zones, and world gate interactions.
 
 ## 🚦Smart Gate & Infrastructure Overhaul
+Gate logic is key here. I have scanned every dlc for gate and gate properties. Unless it's a dumb prefab gates (see bottomfor examples). A guard house or toll gate to enter a yard or drop off those bad boys should already be open. From 17-25m on guard gates, border checks to 125-135m on every other gate.
    * Extended Trigger Ranges: Increased activation distances (125m for panoramas, custom industrial ranges) so gates open smoothly as you roll up, protecting your momentum.
    * Collider Fixes: Re-pointed broken base-game geometry files to proper colliders so multi-axle setups and heavy loads pass through without clipping.
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
