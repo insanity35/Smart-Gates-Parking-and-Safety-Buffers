@@ -68,7 +68,7 @@ To ensure the custom safety buffer parameters take priority over world geometry 
 * **— BOTTOM —**
 
 ### Prefab Limitations (The "Hardcoded" Gates)
-I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". 
+I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". Ex:
 * The following remain vanilla(so far):
 * Army Gate next to O'Hare Airport (IL)
 * Union Pacific Gate
