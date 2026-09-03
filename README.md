@@ -5,7 +5,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.1-09226 (Stable)
+* **Current Version:** v4.2.2-09326 (Stable)
 * **Development Name:** Midnight Train (4.0 - 4.2.1)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
@@ -30,7 +30,7 @@ This is our first mod ever, so please extend us some grace!
 For long-haul truckers across American Truck Simulator, immersion is everything. Nothing shatters the flow of a meticulous delivery faster than "gate lag"—that frustrating hitch at the yard threshold where you wait for a sluggish barrier to crawl open while your multi-ton rig idles out. Couple that with sterile, ghost-town truck stops, parking lots and getting flagged down at 60% of weigh stations. With that long-haul pacing takes a heavy hit.
 
 ## ✅ The Solution: Smart Gates & Safety Buffers
-Smart Gates, Dynamic Parking and Safety Buffers (SGSB) is an environmental and traffic modification for American Truck Simulator designed to enhance the realism of rest stops, loading zones, and world gate interactions.
+Smart Gates, Dynamic Parking and Safety Buffers (SGSB) is an environmental and traffic modification for American Truck Simulator designed to enhance the realism of rest stops, parking lots, loading zones, and world gate interactions.
 
 ## 🚦Smart Gate & Infrastructure Overhaul
 Gate logic is key here. I have scanned every dlc for gate and gate properties. Unless it's a dumb prefab gates (see bottomfor examples). A guard house or toll gate to enter a yard or drop off those bad boys should already be open. From 17-25m on guard gates, border checks to 125-135m on every other gate.
@@ -99,15 +99,15 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ---
 
-## 📜 Complete Mod Genesis & Release History
+## 📜 Complete Mod Release History
 
-### The Early Development Phase (June/July 2026)
-* **June 2026 [Alpha Phase: Extraction & Mapping]:** Natively developed on Ubuntu 26.04. Utilized the sk-zk Extractor tool to dissect def.scs and base.scs. Performed a deep-dive code analysis to map game logic specifically within animated_gate blocks and identify critical trigger/reset dependencies.
-* **July 10–11, 2026 [Beta Testing: Stress Testing the Framework]:** Field-tested across high-density industrial hubs in Phoenix and Stockton. Confirmed 100% Convoy-ready multiplayer compatibility with zero "mod-mismatch" errors.
-* **July 11–14, 2026 [Release Candidate 1.0: Real-World Discoveries]:** Implemented a standardized 47m trigger distance for all industrial yard gates to ensure full clearance for double and triple trailer combinations. Discovered during a vacation road trip that the engine handles rest distances automatically now; native reset code remains commented out until v1.7.
-* **July 14, 2026 [Version 1.0.0: Public Launch]:** Initial public release. Successfully moved gate trigger zones significantly further away from the physical frames.
+### v4.2.2-09326 (Comprehensive Depot, Fleet & Lighting Audit Release) ###
+* Comprehensive Depot & Fleet Audit: Re-evaluated and mapped vehicle-to-trailer allocations across all 48 specialized operational sections, aligning spawn logic with realistic logistics hubs (including agricultural co-ops, oilfield extraction, marine port authorities, and inter modal container yards).
+* Lighting & Night-State Standardization: Implemented uniform forced_flare_low_beam parameters and auxiliary hooter flags (forced_flare_hooter) across night-time municipal, emergency, and commercial parked profiles to prevent unlit vehicle spawns during dark cycles.
+* Probability & Performance Tuning: Adjusted day/night spawn weightings (probability_day and probability_night) and optimized low_poly_only / always_visible tags across high-density zones like truck stops, rest areas, and dealership lots to balance visual immersion and game performance.
+* Expanded Specialized Fleets: Integrated fine-grained support for regional service vehicles, including updated Department of Transportation (DOT) utility arrays, Maintenance of Way (MoW) railroad trucks, federal forest service patrols, and multi-axle heavy dumper/lowboy configurations.
+* AI Fallback & Driver Flag Refinements: Streamlined individual AI fallback blocks (ai.*) to ensure robust compatibility with base game and traffic pack expansions, while validating correct driver: true and rear_align assignments for delivery and recovery units.
 
----
 
 ### v4.2.1-09226 (Comprehensive Depot, Fleet & Lighting Audit Release) ###
 * Section 1 (Delivery & Courier Expansion): Added traffic.pv_frosty and traffic.city_exp to package_van definitions to diversify small local freight hubs.
@@ -198,5 +198,5 @@ Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat
 * **v1.6.0 (Fight Fire with Code):** Fine-tuned EZ-Pass lanes to 23m triggers. Standardized borders to 25m.
 * **v1.5.0 (For Whom the Code Tolls):** Added `trailer_activation: true` to every gate block to protect 53ft, double, and triple setups from early closure.
 * **v1.1.0:** Expanded trigger distance baseline.
-* **v1.0
+* **v1.0 (Development started middle of June)
 ---
