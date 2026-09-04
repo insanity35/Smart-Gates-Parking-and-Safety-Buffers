@@ -5,8 +5,8 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.2-09326 (Stable)
-* **Development Name:** Midnight Train (4.0 - 4.2.1)
+* **Current Version:** v4.2.3-09426 (Stable)
+* **Development Name:** Midnight Train (4.0 - 4.2.3)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
 * Extracted by terminal by sk-zk Extractor tool
@@ -101,8 +101,29 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### v4.2.2-09326 (Comprehensive Depot, Fleet & Lighting Audit Release) ###
-* Comprehensive Depot & Fleet Audit: Re-evaluated and mapped vehicle-to-trailer allocations across all 48 specialized operational sections, aligning spawn logic with realistic logistics hubs (including agricultural co-ops, oilfield extraction, marine port authorities, and inter modal container yards).
+### v4.2.3-09426 (Complete Fleet & Micro-Zone Release 1-85) ###
+**Notes for users with missing state dlc**
+Log Warnings: Operating without specific map or vehicle expansions will trigger non-fatal [parked_vehicle] warning entries in your game.log.txt as the engine encounters unowned tokens like regional state police or state-specific ambulance variants. These warnings are entirely harmless and will not cause crashes to desktop or corrupt saves. However, players who prefer a pristine compilation log can easily comment out or strip regional arrays (such as Sections 24 - 85)  if they lack the corresponding map expansions.** 
+**Core Architectural Updates**
+* Complete 1-85 Micro-Zone Integration: Fully standardizes all 85 distinct operational sectors—ranging from urban retail strips and highway rest stops to remote sawmill staging yards and international border queue lines.
+* Unified Day/Night Probability Balancing: Re-calibrated day and night spawn multipliers (such as higher nighttime probabilities for rest stops and truck terminals, alongside reduced day multipliers for closed commercial yards) to ensure realistic temporal vehicle distribution.
+**Specialized Facility Expansions**
+* Industrial & Energy Hubs: Expanded distinct configurations for bulk fuel rack staging, oilfield extraction services, grain elevator uncoupled loading bins, and quarry aggregate operations.
+* Emergency & Municipal Infrastructure: Integrated physics parameters for state patrol outposts, wildfire/forest incident command staging, municipal street sweepers, and regional medical center visitor lots. EX specific state name to police etc.
+**Emergency & Municipal Fleet Updates**
+* Populated state-specific emergency arrays (traffic.amb2.ca through traffic.amb2.ar) across regional medical, state patrol, and border inspection profiles.
+* Integrated dedicated municipal equipment including traffic.fire_eng and traffic.ladder_trk into fire station and wildfire incident command staging.
+* Modern Fleet & EV Integration: Added dedicated spawn logic for modern ATS truck expansions, electric vehicle (EV) charging stalls paired with appropriate passenger and hybrid units, and turnpike multi-trailer staging spurs.
+**Physics, Lighting & Behavior Refinements**
+* Granular Flare Control: Standardized forced_flare_low_beam, forced_flare_hooter, and forced_flare_blinker assignments to ensure parked emergency, service, and nighttime commercial units correctly display active lighting arrays.
+* Driver & Alignment Toggles: Expanded the application of driver: true and rear_align: true tags across tow trucks, yard hostlers, and uncoupled yard trailers to fix backing alignments and visibility logic.
+* Trailer Association Integrity: Refined strict filtering via allowed_trailer[] and exclude_vehicle[] arrays, eliminating cargo mismatch errors between flatbeds, lowboys, chipvans, livestock haulers, and specialized superload dollies.
+**Performance & Asset Optimization**
+Adaptive Low-Poly LOD Management: Fine-tuned low_poly_only parameters across all day, night, and stationary spawn definitions—retaining high-poly models strictly for close-range "always visible" zones while dynamically offloading distant, ambient, or daytime slots to low-poly assets to protect frame rates in dense terminal and city areas.
+
+
+### v4.2.2-09326(Comprehensive Depot, Fleet & Lighting Audit Release) ###
+* Comprehensive Depot & Fleet Audit: Re-evaluated and mapped vehicle-to-trailer allocations across all 48 specialized operational sections, aligning spawn logic with realistic logistics hubs (including agricultural co-ops, oilfield extraction, marine port authorities, and intermodal container yards).
 * Lighting & Night-State Standardization: Implemented uniform forced_flare_low_beam parameters and auxiliary hooter flags (forced_flare_hooter) across night-time municipal, emergency, and commercial parked profiles to prevent unlit vehicle spawns during dark cycles.
 * Probability & Performance Tuning: Adjusted day/night spawn weightings (probability_day and probability_night) and optimized low_poly_only / always_visible tags across high-density zones like truck stops, rest areas, and dealership lots to balance visual immersion and game performance.
 * Expanded Specialized Fleets: Integrated fine-grained support for regional service vehicles, including updated Department of Transportation (DOT) utility arrays, Maintenance of Way (MoW) railroad trucks, federal forest service patrols, and multi-axle heavy dumper/lowboy configurations.
@@ -198,5 +219,5 @@ Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat
 * **v1.6.0 (Fight Fire with Code):** Fine-tuned EZ-Pass lanes to 23m triggers. Standardized borders to 25m.
 * **v1.5.0 (For Whom the Code Tolls):** Added `trailer_activation: true` to every gate block to protect 53ft, double, and triple setups from early closure.
 * **v1.1.0:** Expanded trigger distance baseline.
-* **v1.0 (Development started middle of June)
+* **v1.0
 ---
