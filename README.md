@@ -101,6 +101,10 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
+### v4.2.3.1-09426 (Hotfix)###
+**Back to 48 categories**
+* I got to fancy with car and truck calls reverted alot. State specific calls to ambulance police and fire still there.
+
 ### v4.2.3-09426 (Complete Fleet & Micro-Zone Release 1-85) ###
 **Notes for users with missing state dlc**
 Log Warnings: Operating without specific map or vehicle expansions will trigger non-fatal [parked_vehicle] warning entries in your game.log.txt as the engine encounters unowned tokens like regional state police or state-specific ambulance variants. These warnings are entirely harmless and will not cause crashes to desktop or corrupt saves. However, players who prefer a pristine compilation log can easily comment out or strip regional arrays (such as Sections 24 - 85)  if they lack the corresponding map expansions.** 
