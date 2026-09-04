@@ -5,7 +5,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.3-09426 (Stable)
+* **Current Version:** v4.2.3.1-09426 (Hotfix)
 * **Development Name:** Midnight Train (4.0 - 4.2.3)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
