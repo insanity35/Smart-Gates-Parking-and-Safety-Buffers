@@ -1,66 +1,51 @@
-Smart Gates, Dynamic Parking and Safety Buffers (SGSB) v4.2
-Quick Reference Guide — "Major Fleet & Physics Optimization Release"
+Target & Compatibility
 
-Target Environment: American Truck Simulator (ATS) v1.60+
+    Operating environment requires American Truck Simulator (ATS) v1.60+ or v1.61.
 
-Target Master File Paths:
+    Master file paths encompass /unit/hookup/animated_gate.sii, /unit/hookup/animated_gate.dlc_*.sii, and /unit/hookup/parked_vehicle.sii.
 
-    /unit/hookup/animated_gate.sii
+    Cross-compatibility is verified for the ATS Base Map, all official State DLCs, ProMods Canada, and Reforma Map Combos.
 
-    /unit/hookup/animated_gate.dlc_*.sii (State DLC Overrides)
+Core Parameter Standards
 
-    /unit/hookup/parked_vehicle.sii (Fleet & Parking Density)
+    Universal high-speed approach range is locked at 125.0m for Illinois (dlc_il), New Mexico (dlc_nm), and Texas (dlc_tx) assets.
 
-Compatibility: ATS Base Map, All State DLCs, & Major Map Combos (ProMods / Reforma)
+    Extended trailer clearance range increases to 135.0m on Oregon heavy metal storage doors (metal_01) to eliminate trailer tail-swing clipping.
 
-[1] Core Parameter Standards — Gates & Colliders
+    Pneumatic and short-range industrial parameters are set to 17.0m across Kansas, Montana, Oklahoma, and Wyoming.
 
-    Universal High-Speed Approach Range: Locked to 125.0m across Illinois (dlc_il), New Mexico (dlc_nm), and Texas (dlc_tx) panorama, underground, and construction fence gates.
+    Guard-check and security zones utilize a 20.0m range for borders, ports, and mines.
 
-    Extended Trailer Clearance Range (Oregon): 135.0m (metal_01 heavy metal storage door) to prevent late-opening trailer tail-swing clipping.
+    Stop-and-go configurations run at 25.0m for river locks and floodgates, keeping toll booths and scale actions at stock values to protect native functionality.
 
-    Pneumatic & Short-Range Industrial Range: Increased to 17.0m across Kansas (ag_ks_salt, ag_ks_air), Montana (ag_mt_gfll), Oklahoma (ag_pf_busf), and Wyoming (ag_wy_mine, ag_wy_ref).
+    Collider geometry requires explicit .pmc physical files for custom assets such as ag_nv_wstg and ag_suncrops.
 
-    Guard-Check / Security Range: 20.0m (Borders, Ports, Mines).
+Fleet & Parking Density Architecture
+    
+    48 Categories
+    
+    Namespace de-duplication renames base units in parked_vehicle.sii to prevent fatal runtime collisions with base_vehicle.scs and major map mods.
 
-    Stop-and-Go Range: 25.0m (River Locks, Floodgates). Note: Toll booths and scale actions have been reverted to stock/vanilla parameters to prevent native gate and toll-exit operational breakage.
+    Deterministic shift weights enforce strict ratios, utilizing 1.5 for active shifts and 0.0 or reduced values for nocturnal periods.
 
-    Collider Geometry Enforcement: Explicit .pmc physical collider file verification (ag_nv_wstg and ag_suncrops).
+    Yard trailer positioning under Section 38 specifies a daytime weight of 1.6, a night weight of 0.6, and mandatory rear_align: true tags.
 
-[2] Massive Industry & Prefab Expansion (Sections 10–48 — v4.2 New Addition)
+    Performance and VRAM optimization applies low_poly_only: true and always_visible: false on background variants, paired with uset g_lod_factor_parked "1.1".
 
-    Industrial & Supply Chains: Granular, sector-specific configuration blocks deployed for agriculture depots, construction yards, energy logistics, chemical transport, refrigerated cold chains, intermodal containers, and timber operations.
+    Lighting rules enforce forced_flare_low_beam: true across all night-shift profiles.
 
-    Municipal & Emergency: Dedicated spawn categories for fire and rescue, military defense, Department of Transportation (DOT) maintenance, border patrol, school buses, and heavy wreckers.
+Group Structure Index
 
-    Roadside & Regional Outposts: Populated truck stop diners, scenic lookouts, boat ramps, RV campgrounds, scale houses, and farm co-op lots with matching local traffic profiles.
+    Groups 1 & 2: Maintain stock engine parameters for toll booths with 25m guarded yard arms.
 
-[3] Dynamic Parking & Fleet Density Optimizations (v4.2 Enhancements)
+    Group 3: Covers the Base Map and Western/Mountain expansions using 125.0m standard or 17.0m pneumatic ranges.
 
-    Deterministic Shift Weights: Cleaned up to strict separation (active shift 1.5, inactive shift 0.0 or reduced nocturnal ratios).
+    Group 4: Manages directional rotary/swing gates and heavy doors between 125.0m and 135.0m.
 
-    Yard Trailers (Section 38): Tuned daytime weight to 1.6 and night to 0.6 with mandatory rear_align: true to ensure assets lock securely onto pads without floating.
+    Groups 5 & 6: Handle Midwest (dlc_il, dlc_mo, dlc_ia) and Southern DLC expansions.
 
-    Lighting Flares: Standardized forced_flare_low_beam: true across all operational night-shift variants.
+    Group 7: Controls special dynamic movers and bridge gates using a 25.0m range, 100° orientation, and /sound/world/gate_iron.soundref.
 
-    Low-Poly Architecture: Overhauled background and shift-based vehicle variants across all core sections by switching low_poly_only from false to true alongside always_visible: false to eliminate VRAM spikes and stutter during heavy map mod loading.
+    Group 8: Governs secure industrial sites, mines, refineries, and ports with a 20.0m range and 90° orientation.
 
-    Render Distance Optimization: Integrated engine parameter uset g_lod_factor_parked "1.1" to pull background culling distances out just far enough to catch assets before entering the immediate field of view.
-
-[4] Group Structure Index & Category Standards
-
-    Group 1 & 2 (Toll Booths): Maintained at stock engine configuration to preserve toll gate functionality.
-        *minus guarded toll arms at yards 25m*
-    Group 3: Base Map & Western/Mountain Expansions (125.0m standard / 17.0m pneumatic).
-
-    Group 4: Directional Rotary / Swing Gates & Heavy Doors (125.0m rotary / 135.0m Oregon metal_01).
-
-    Group 5: Midwest & Illinois DLC Expansions (125.0m IL/MO/IA/NE / 17.0m KS).
-
-    Group 6: Southern DLC Expansions & Depots (17.0m depot / 125.0m TX Panoramas).
-
-    Group 7: Special Dynamic Movers & Bridge Gates (25.0m range / 100° orientation / /sound/world/gate_iron.soundref).
-
-    Group 8: Secure Industrial Sites, Mines, Refineries & Ports (20.0m range / 90° orientation).
-
-    Group 9: Future State Frameworks (North Dakota, Indiana, South Dakota integration).
+    Group 9: Establishes framework settings for future states including North Dakota, Indiana, and South Dakota.
