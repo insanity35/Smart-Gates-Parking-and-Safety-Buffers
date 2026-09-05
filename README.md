@@ -1,11 +1,10 @@
 ![Project Header](sgsbblue.jpeg)
 
 # Smart Gates, Dynamic Parking and Safety Buffers (SGSB)
-
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.4-09526 (Stable)
+* **Current Version:** v4.2.5-09526 (Stable)
 * **Development Name:** Midnight Train (4.0 - 4.2.3)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
@@ -101,7 +100,15 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### v4.2.4-09526 (Complete Fleet Release 1-85)
+### v4.2.5-09526 (Vanilla-Cleaned Parking Definitions) ###
+**Stripped parking_trailer.sii I cannot get it to work**
+* Vanilla Traffic Compliance: Stripped all obsolete, modded, or non-native vehicle strings from all 85 parking and gate sections, ensuring the package exclusively utilizes standard American Truck Simulator base assets.
+* Category Structure Preservation: Maintained all 85 functional distribution zones—including commercial depots, agricultural lots, industrial facilities, and roadside rest areas—without altering underlying hierarchy arrays or category bindings.
+* Optimized Day/Night Spawn Weight Balance: Adjusted operational probability weights between daylight hours and nighttime intervals (such as peak night multipliers of 2.0 for rest stops and 1.8 for rural entries) to accurately simulate real-world logistics parking behavior.
+* Lighting and Flare Standards: Enforced consistent forced_flare_low_beam: true properties across all night-specific spawn definitions and preserved functional warning light flags (forced_flare_hooter: true) for emergency and enforcement fleets.
+* Engine Performance Optimization: Maintained clean low-poly and high-poly separation across independent day and night profile loops to eliminate transition-hour calculation overlaps and safeguard frame rates around dense asset prefabs.
+
+### v4.2.4-09526 (Complete Fleet Release 1-85) ###
 **Bug Fixes & Stability**
 * parked_vehicle.sii, parked_trailer.sii and animated_gate.sii
 * Removed legacy Featan parked_vehicle module to resolve fatal SCS namespace collisions and outdated base-game stub conflicts. It will still throw an error in game.log its an scs issue!
@@ -115,7 +122,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 * Low-Poly LOD Enforcement: Strict low_poly_only: true rules applied across parked trailer and vehicle configurations to improve rendering performance at a distance.
 * Dynamic Spawn Curves: Implemented realistic day and night probability curves across all logistical hubs, rest stops, and service garages to dynamically clear lots and prevent memory bloat during off-peak hours.
 
-### v4.2.3.1-09426 (Hotfix)###
+### v4.2.3.1-09426 (Hotfix) ###
 **Back to 48 categories**
 * I got to fancy with car and truck calls reverted alot. State specific calls to ambulance police and fire still there.
 
