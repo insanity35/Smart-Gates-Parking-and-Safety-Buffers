@@ -1,6 +1,40 @@
 SGSB v4.2.4 Master Release Notes & Technical Reference
 
 Target Environment & Compatibility
+* Requires ATS v1.60+ or v1.61.
+* Master files modified include /unit/hookup/animated_gate.sii, /unit/hookup/animated_gate.dlc_*.sii, and /unit/hookup/parked_vehicle.sii.
+* Cross-compatibility verified for the ATS Base Map, all official State DLCs, ProMods Canada, and Reforma Map Combos.
+
+Smart Gate Clearance & Distance Standards
+* 135.0m Extended Tail-Swing Clearance: Applied to Oregon heavy metal storage doors (metal_01) to prevent long trailer clipping.
+* 125.0m Universal High-Speed Approach: Applied to high-traffic entry points in Illinois (dlc_il), New Mexico (dlc_nm), and Texas (dlc_tx).
+* 25.0m Stop-and-Go: Applied to river locks and floodgates, keeping toll booths and scale actions at stock values to protect native functionality.
+* 20.0m Security & Guard Inspection: Applied to international borders, maritime ports, and mining facilities using a 90° orientation.
+* 17.0m Pneumatic & Short-Range: Applied to industrial yards across Kansas, Montana, Oklahoma, and Wyoming.
+* Custom Asset Colliders: Explicit physical .pmc files assigned to custom assets including ag_nv_wstg and ag_suncrops.
+
+Animated Gate Group Structure Index
+* Groups 1 & 2: Standard toll booths retaining stock engine mechanics paired with 25m guarded yard arms.
+* Group 3: Base Map and Western/Mountain expansions configured with 125.0m standard or 17.0m pneumatic triggers.
+* Group 4: Directional rotary/swing gates and heavy access doors tuned between 125.0m and 135.0m.
+* Groups 5 & 6: Midwest (dlc_il, dlc_mo, dlc_ia) and Southern DLC regional gate networks.
+* Group 7: Dynamic movers and bridge gates running 25.0m ranges, 100° orientation, and /sound/world/gate_iron.soundref audio.
+* Group 8: Secure industrial perimeters, refineries, mines, and ports utilizing a 20.0m range and 90° orientation.
+* Group 9: Framework preparations establishing rules for upcoming state expansions like North Dakota, Indiana, and South Dakota.
+
+Parked Fleet & Parking Density Architecture
+* 48 Integrated Categories: Complete fleet rebalance handling all vehicle profiles.
+* Namespace De-duplication: Base unit names in parked_vehicle.sii rewritten to eliminate fatal runtime parser collisions with base_vehicle.scs and major map mods.
+* Deterministic Shift Ratios: Enforces 1.5 probability multipliers for active daytime shifts, reducing or zeroing out values for night periods.
+* Yard Trailer Rules (Section 38): Set to 1.6 daytime weight, 0.6 night weight, with mandatory rear_align: true tags.
+* Night Light Rules: Enforces forced_flare_low_beam: true across all night-shift fleet profiles.
+* VRAM Optimization: Background variants use low_poly_only: true and always_visible: false. The recommended console setting is uset g_lod_factor_parked "1.1".
+
+Bug Fixes & Stability Cleanups
+* Parser Crash Resolution: Eliminated duplicate unit errors caused by legacy suv.always.parked.physics registrations.
+* Trailer Conflict Removal: Removed the conflicting trailer.parked.groceries block to allow clean base game fallbacks.SGSB v4.2.4 Master Release Notes & Technical Reference
+
+Target Environment & Compatibility
 * Requires ATS v1.60+ or v1.61[cite: 6].
 * Master files modified include /unit/hookup/animated_gate.sii, /unit/hookup/animated_gate.dlc_*.sii, and /unit/hookup/parked_vehicle.sii[cite: 6].
 * Cross-compatibility verified for the ATS Base Map, all official State DLCs, ProMods Canada, and Reforma Map Combos[cite: 6].
