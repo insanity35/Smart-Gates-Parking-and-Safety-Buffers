@@ -5,7 +5,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.3.1-09426 (Hotfix)
+* **Current Version:** v4.2.4-09526 (Stable)
 * **Development Name:** Midnight Train (4.0 - 4.2.3)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
@@ -100,6 +100,20 @@ A massive shout-out to our three-person team for pulling this together, and spec
 ---
 
 ## 📜 Complete Mod Release History
+
+### v4.2.4-09526 (Complete Fleet Release 1-85)
+**Bug Fixes & Stability**
+* parked_vehicle.sii, parked_trailer.sii and animated_gate.sii
+* Removed legacy Featan parked_vehicle module to resolve fatal SCS namespace collisions and outdated base-game stub conflicts. It will still throw an error in game.log its an scs issue!
+* Fixed the SiiNunit parser crash caused by duplicate suv.always.parked.physics unit registrations.
+* Deleted the conflicting trailer.parked.groceries block to prevent game engine halts and allow clean vanilla fallbacks.
+**Fleet & Traffic Integration**
+* Complete Fleet Release (1-85): SUV, Pickup, and F-150 spawn pools are now handled entirely within the core SGSB architecture.
+* Rebalanced base SUV physics spawns to a 1.5 day / 0.8 night probability weight for better lot density.
+* Separated and stripped trailer configurations into a modular parked_trailer.sii file to ensure clean load orders without overwriting truck behaviors.
+**Performance Optimizations**
+* Low-Poly LOD Enforcement: Strict low_poly_only: true rules applied across parked trailer and vehicle configurations to improve rendering performance at a distance.
+* Dynamic Spawn Curves: Implemented realistic day and night probability curves across all logistical hubs, rest stops, and service garages to dynamically clear lots and prevent memory bloat during off-peak hours.
 
 ### v4.2.3.1-09426 (Hotfix)###
 **Back to 48 categories**
