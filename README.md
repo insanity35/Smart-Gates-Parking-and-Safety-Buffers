@@ -5,7 +5,7 @@
 
 ## 📊 Official Release Information
 * **Current Version:** v4.2.5-09526 (Stable)
-* **Development Name:** Midnight Train (4.0 - 4.2.3)
+* **Development Name:** Midnight Train (4.0 - 4.2.5)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
 * Extracted by terminal by sk-zk Extractor tool
