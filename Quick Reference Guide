@@ -2,7 +2,7 @@ Target Environment & Compatibility
 
     Requires ATS v1.60+ or v1.61.
 
-    Modified master files: /unit/hookup/animated_gate.sii, /unit/hookup/animated_gate.dlc_*.sii, and /unit/hookup/parked_vehicle.sii.
+    Modified master files: /unit/hookup/animated_gate.sii, /unit/hookup/animated_gate.dlc_*.sii, and /unit/hookup/parked_vehicle.sii and def/world/trigger_action.sii.
 
     Verified cross-compatibility for the ATS Base Map, all official State DLCs, ProMods Canada, and Reforma Map Combos.
 
