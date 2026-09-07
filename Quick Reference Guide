@@ -48,7 +48,7 @@ Parked Fleet & Parking Density Architecture
 
     Night Light Rules: Enforces forced_flare_low_beam: true and active warning flares (forced_flare_hooter: true) across emergency, enforcement, and night-shift fleet profiles.
 
-    VRAM Optimization: Background variants use low_poly_only: true and always_visible: false. Recommended console setting: uset g_lod_factor_parked "1.1".
+    VRAM Optimization: Background variants use low_poly_only: true and always_visible: false.
     
 Weight Stations
 
