@@ -43,7 +43,4 @@
 * **VRAM Efficiency:** Background variants utilize `low_poly_only: true` and `always_visible: false`.
 
 
-* **Recommended Console Setting:** `uset g_lod_factor_parked "1.1"`.
-
-
 * **Stability:** Eliminated legacy parser crashes and duplicate unit errors tied to third-party truck clashes.
