@@ -105,8 +105,8 @@ A massive shout-out to our three-person team for pulling this together, and spec
 * Fine-tuned active daytime probability ranges up to 2.0 – 2.5 across standard transport, commercial units, rest stops, and scenic pull-offs.
 **Nighttime Multipliers** 
 * Adjusted overnight rest slots, queues, and industrial night rates to range between 0.4 and 2.4.
-* 
-**Starting with 1.61/South Dakota rebase, all versions will follow year.month.ats version-hotfix**
+
+* **Starting with 1.61/South Dakota rebase, all versions will follow year.month.ats version-hotfix**
 
 ### v4.2.5-09526 (Vanilla-Cleaned Parking Definitions) ###
 **Stripped parking_trailer.sii I cannot get it to work**
