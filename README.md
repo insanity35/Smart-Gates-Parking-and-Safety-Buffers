@@ -4,8 +4,8 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.5-09526 (Stable)
-* **Development Name:** Midnight Train (4.0 - 4.2.5)
+* **Current Version:** v4.2.6-091126 (Stable)
+* **Development Name:** Midnight Train (4.0 - 4.2.6)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
 * Extracted by terminal by sk-zk Extractor tool
@@ -38,7 +38,7 @@ Gate logic is key here. I have scanned every dlc for gate and gate properties. U
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
 
 ## 🚛 Advanced Dynamic Parking System
-Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. 4.2 introduces a massive expansion across 39 granular industrial, commercial, and rural sectors:
+Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. 4.2 introduces a massive expansion across 85 granular industrial, commercial, and rural sectors:
  *  Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
  *   Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
  *   Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
@@ -99,6 +99,13 @@ A massive shout-out to our three-person team for pulling this together, and spec
 ---
 
 ## 📜 Complete Mod Release History
+
+### v4.2.6-091126(Spawn Tweaks)
+**Daytime Multipliers** 
+* Fine-tuned active daytime probability ranges up to 2.0 – 2.5 across standard transport, commercial units, rest stops, and scenic pull-offs.
+**Nighttime Multipliers** 
+* Adjusted overnight rest slots, queues, and industrial night rates to range between 0.4 and 2.4.
+**Starting with 1.61/South Dakota rebase, all versions will follow year.month.ats version-hotfix**
 
 ### v4.2.5-09526 (Vanilla-Cleaned Parking Definitions) ###
 **Stripped parking_trailer.sii I cannot get it to work**
