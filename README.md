@@ -4,8 +4,8 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.6-091126 (Stable)
-* **Development Name:** Midnight Train (4.0 - 4.2.6)
+* **Current Version:** v4.2.7-091426 (Stable)
+* **Development Name:** Midnight Train (4.0 - 4.2.7)
 * **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04 LTS
 * Extracted by terminal by sk-zk Extractor tool
@@ -100,13 +100,29 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### v4.2.6-091126(Spawn Tweaks)
+### v4.2.7-091426 (Hybrid Pools & Parking Variety Tweak) ###
+**Global Spawn Density Tuning**
+* 10% Parking Bump: Applied an upward density adjustment to `probability_day` and `probability_night` values across core parked vehicle physics profiles to ensure lots populate more naturally during peak midday hours without feeling unnaturally oversaturated.
+* Ratio Integrity: Preserved individual behavioral flags (such as low-beam lighting, driver toggles, and rear-align parameters) while elevating overall vehicle appearance frequency.
+**Hybrid Retail & Convenience Store Pools (`retail_mix` & `conv_store`)**
+* Clone Elimination:** Replaced single-vehicle definition blocks in retail zones with broad, multi-class hybrid pools. Parking stalls now dynamically roll between compacts, sedans, SUVs, and pickup trucks.
+* Jeep Wrangler Integration:** Officially added the vanilla Jeep Wrangler (`traffic.jeep_w`) into both the convenience store (`conv_store`) and the broader retail mix (`retail_mix`) arrays for added variety.
+**Expanded Auto Repair & Service Garages (`repair_trk` — Section 43)**
+* Authentic Customer Traffic:** Upgraded Section 43 with a comprehensive hybrid vehicle array to simulate real-world customer drop-offs and shop activity.
+* Expanded Roster:** Blended daily drivers, classic models (like the Oldsmobile), service vans, heavy-duty pickups (RAM, F-150, Sierra HD), SUVs, and the Jeep Wrangler into the garage bay pool.
+**Specialized Environment Pools**
+* Motel & Highway Lodges (`motel_lodge`):** Grouped out-of-town vehicle profiles, full-size SUVs, campers, and transit vans to simulate overnight guests parked outside their rooms.
+* Fast-Food Drive-Thrus (`fast_food`):** Configured quick-service lots with daily drivers, compacts, and light trucks to accurately mirror lunch rushes and queue areas.
+**Nighttime Lighting & Metadata**
+* Illumination Rules:** Maintained strict `forced_flare_low_beam: true` configurations across all evening and nighttime hybrid blocks for correct lighting behavior after dark.
+* Mod Manager Tracking:** Incremented internal version headers to designate **4.2.7 (Hybrid Pools & Parking Variety Tweak)** for clean version control.
+
+### v4.2.6-091126(Spawn Tweaks) ###
 **Daytime Multipliers** 
 * Fine-tuned active daytime probability ranges up to 2.0 – 2.5 across standard transport, commercial units, rest stops, and scenic pull-offs.
 **Nighttime Multipliers** 
 * Adjusted overnight rest slots, queues, and industrial night rates to range between 0.4 and 2.4.
-
-* **Starting with 1.61/South Dakota rebase, all versions will follow year.month.ats version-hotfix**
+**Starting with 1.61/South Dakota rebase, all versions will follow year.month.ats version-hotfix**
 
 ### v4.2.5-09526 (Vanilla-Cleaned Parking Definitions) ###
 **Stripped parking_trailer.sii I cannot get it to work**
