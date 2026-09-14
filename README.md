@@ -104,7 +104,9 @@ A massive shout-out to our three-person team for pulling this together, and spec
 **Global Spawn Density Tuning**
 * 10% Parking Bump: Applied an upward density adjustment to `probability_day` and `probability_night` values across core parked vehicle physics profiles to ensure lots populate more naturally during peak midday hours without feeling unnaturally oversaturated.
 * Ratio Integrity: Preserved individual behavioral flags (such as low-beam lighting, driver toggles, and rear-align parameters) while elevating overall vehicle appearance frequency.
+
 **Hybrid Retail & Convenience Store Pools (`retail_mix` & `conv_store`)**
+
 * Clone Elimination: Replaced single-vehicle definition blocks in retail zones with broad, multi-class hybrid pools. Parking stalls now dynamically roll between compacts, sedans, SUVs, and pickup trucks.
 * Jeep Wrangler Integration: Officially added the vanilla Jeep Wrangler (`traffic.jeep_w`) into both the convenience store (`conv_store`) and the broader retail mix (`retail_mix`) arrays for added variety.
 **Expanded Auto Repair & Service Garages (`repair_trk` — Section 43)**
