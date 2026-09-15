@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Subtle dark radial gradient for the background -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1F26" />
+      <stop offset="100%" stop-color="#090A0D" />
+    </radialGradient>
+
+    <!-- Cyan Glow -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gold Glow -->
+    <filter id="glow-gold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1920" height="1080" fill="url(#bg-grad)" />
+
+  <!-- ==================== OUTER FRAME ==================== -->
+  <!-- Main Gold Rectangle -->
+  <rect x="90" y="90" width="1740" height="900" fill="none" stroke="#E5B85C" stroke-width="2" filter="url(#glow-gold)" opacity="0.8" />
+
+  <!-- Cyan Corner Crosshairs -->
+  <g stroke="#00E5FF" stroke-width="3" filter="url(#glow-cyan)">
+    <!-- Top Left -->
+    <line x1="60" y1="90" x2="120" y2="90" />
+    <line x1="90" y1="60" x2="90" y2="120" />
+    <!-- Top Right -->
+    <line x1="1800" y1="90" x2="1860" y2="90" />
+    <line x1="1830" y1="60" x2="1830" y2="120" />
+    <!-- Bottom Left -->
+    <line x1="60" y1="990" x2="120" y2="990" />
+    <line x1="90" y1="960" x2="90" y2="1020" />
+    <!-- Bottom Right -->
+    <line x1="1800" y1="990" x2="1860" y2="990" />
+    <line x1="1830" y1="960" x2="1830" y2="1020" />
+  </g>
+
+  <!-- ==================== CENTER HEXAGON ICON ==================== -->
+  <g>
+    <!-- Outer Cyan Hexagon -->
+    <polygon points="960,165 1025,202.5 1025,277.5 960,315 895,277.5 895,202.5" 
+             fill="none" stroke="#00E5FF" stroke-width="3" filter="url(#glow-cyan)" />
+    
+    <!-- Inner Gold Hexagon -->
+    <polygon points="960,185 1008,212.5 1008,267.5 960,295 912,267.5 912,212.5" 
+             fill="none" stroke="#E5B85C" stroke-width="2" filter="url(#glow-gold)" />
+    
+    <!-- Inner Cyan Circle and Dot -->
+    <circle cx="960" cy="240" r="22" fill="none" stroke="#00E5FF" stroke-width="4" filter="url(#glow-cyan)" />
+    <circle cx="960" cy="240" r="8" fill="#00E5FF" filter="url(#glow-cyan)" />
+  </g>
+
+  <!-- ==================== SIDE CIRCUIT ACCENTS ==================== -->
+  <g>
+    <!-- Left Connecting Gold Line -->
+    <polyline points="300,210 420,260 580,260" fill="none" stroke="#E5B85C" stroke-width="2" filter="url(#glow-gold)" />
+    <circle cx="300" cy="210" r="5" fill="#00E5FF" filter="url(#glow-cyan)" />
+    <circle cx="580" cy="260" r="3" fill="#E5B85C" filter="url(#glow-gold)" />
+  </g>
+
+  <g>
+    <!-- Right Connecting Gold Line -->
+    <polyline points="1620,210 1500,260 1340,260" fill="none" stroke="#E5B85C" stroke-width="2" filter="url(#glow-gold)" />
+    <circle cx="1620" cy="210" r="5" fill="#00E5FF" filter="url(#glow-cyan)" />
+    <circle cx="1340" cy="260" r="3" fill="#E5B85C" filter="url(#glow-gold)" />
+  </g>
+
+  <!-- ==================== TYPOGRAPHY SECTION ==================== -->
+  <g text-anchor="middle">
+    
+    <!-- Huge Glowing SGSB Text -->
+    <text x="960" y="550" 
+          font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="140" 
+          fill="#FFFFFF" letter-spacing="25" filter="url(#glow-cyan)">
+      SGSB
+    </text>
+
+    <!-- Main Title: SMART GATES (Gold) -->
+    <text x="960" y="680" 
+          font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="55" 
+          fill="#E5B85C" letter-spacing="15" filter="url(#glow-gold)">
+      SMART GATES
+    </text>
+
+    <!-- Subtitle: DYNAMIC PARKING (Cyan) -->
+    <text x="960" y="760" 
+          font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="28" 
+          fill="#00E5FF" letter-spacing="8" filter="url(#glow-cyan)">
+      DYNAMIC PARKING &amp; SAFETY BUFFERS
+    </text>
+
+  </g>
+</svg>
