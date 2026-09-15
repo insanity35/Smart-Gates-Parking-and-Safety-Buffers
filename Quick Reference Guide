@@ -1,46 +1,45 @@
-**Smart Gates, Dynamic Parking and Safety Buffers (SGSB) v4.2.6 — Quick Reference**
+Good catch! "Golden Age" is a great fit for finally getting this build stable and ready for the new map expansion.
 
-**Compatibility & Architecture**
+Here is the corrected Quick Reference Guide with the updated project code name:
 
-* **Target Version:** Optimized for American Truck Simulator (ATS) v1.60+ environments.
+### Smart Gates, Dynamic Parking and Safety Buffers (SGSB)
 
-* **Modified master files: /unit/hookup/animated_gate.sii, /unit/hookup/animated_gate.dlc_*.sii, and /unit/hookup/parked_vehicle.sii and def/world/trigger_action.sii.
+**Quick Reference Guide | v26.9.161 [Project: Golden Age]**
 
-* **Map Support:** Fully verified for Base Map, all official State DLCs, ProMods Canada, and Reforma Map Combos.
+---
 
+**I. Compatibility & Architecture**
 
-* **Fleet Scale:** Integrates 85 expanded, 100% vanilla-compliant parked vehicle categories with obsolete strings purged.
-
-
-
-**Key Tweaks & Adjustments**
-
-* **Weigh Station Realism:** Lowered the weigh station stop/inspection chance from **80% down to 20%**.
-
-
-* **Spawn Multipliers:** Configured deterministic shift ratios scaling up to **2.0–2.5** for high-density zones (rest stops, rural clusters, and staging queues).
-* **Lighting & Safety Enforcement:** Enforces `forced_flare_low_beam: true`, active warning hooters (`forced_flare_hooter: true`), and mandatory `rear_align: true` tags on applicable trailers and emergency profiles.
+* **Target Version:** Optimized for American Truck Simulator (ATS) v1.61+ environments.
+* **Modified Core Files:**
+* `/unit/hookup/animated_gate.sii`
+* `/unit/hookup/animated_gate.dlc_*.sii`
+* `/unit/hookup/parked_vehicle.sii`
+* `/def/world/trigger_action.sii`
 
 
+* **Map Support:** Fully verified for the Base Map, all official State DLCs, ProMods Canada, and Reforma Map Combos.
+* **Fleet Scale:** Integrates **85** expanded, 100% vanilla-compliant parked vehicle categories, with obsolete strings fully purged.
 
-**Gate Clearance & Trigger Standards**
+**II. Key Tweaks & Adjustments**
+
+* **Weigh Station Realism:** Lowered the weigh station stop/inspection probability from **80% down to 20%**.
+* **Spawn Multipliers:** Configured deterministic shift ratios scaling up to **2.0–2.5** for high-density zones (e.g., rest stops, rural clusters, and staging queues).
+* **Lighting & Safety Enforcement:**
+* Enforces `forced_flare_low_beam: true`
+* Activates warning hooters (`forced_flare_hooter: true`)
+* Applies mandatory `rear_align: true` tags on applicable trailers and emergency profiles.
+
+
+
+**III. Gate Clearance & Trigger Standards**
 
 * **135.0m:** Extended tail-swing clearance for heavy metal doors (`metal_01`).
+* **125.0m:** Universal high-speed approach triggers for high-traffic entry points (e.g., IL, NM, TX).
+* **25.0m:** Native stop-and-go trigger range preserved for state scale houses, weigh stations, and river locks to maintain baseline logic.
+* **20.0m / 17.0m:** Tight security perimeters for international borders and pneumatic short-range industrial yards.
 
+**IV. Performance & Optimization**
 
-* **125.0m:** Universal high-speed approach triggers for high-traffic entry points (IL, NM, TX).
-
-
-* **25.0m:** Native stop-and-go trigger range for state scale houses, weigh stations, and river locks to preserve baseline logic.
-
-
-* **20.0m / 17.0m:** Tight security perimeters, international borders, and pneumatic short-range industrial yards.
-
-
-
-**Performance & Optimization**
-
-* **VRAM Efficiency:** Background variants utilize `low_poly_only: true` and `always_visible: false`.
-
-
+* **VRAM Efficiency:** Background variants utilize `low_poly_only: true` and `always_visible: false` to reduce overhead.
 * **Stability:** Eliminated legacy parser crashes and duplicate unit errors tied to third-party truck clashes.
