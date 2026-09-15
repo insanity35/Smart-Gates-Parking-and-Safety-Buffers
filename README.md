@@ -1,13 +1,13 @@
-![Project Header](sgsbblue.jpeg)
+![Project Header](sgsbfull.jpg)
 
 # Smart Gates, Dynamic Parking and Safety Buffers (SGSB)
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** v4.2.7-091426 (Stable)
-* **Development Name:** Midnight Train (4.0 - 4.2.7)
-* **ATS Compatibility:** v1.60.* branch (Until SCS breaks the core gate code and parked vehicles)
-* **Development Environment:** Ubuntu 26.04 LTS
+* **Current Version:** 26.9.161 (Stable)
+* **Development Name:** Golden Age (26.9.161)
+* **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
+* **Development Environment:** Ubuntu 26.04.1 LTS
 * Extracted by terminal by sk-zk Extractor tool
   * https://github.com/sk-zk/Extractor
 * Official SCS Uploader tool running under Proton 
@@ -38,7 +38,7 @@ Gate logic is key here. I have scanned every dlc for gate and gate properties. U
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
 
 ## 🚛 Advanced Dynamic Parking System
-Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. 4.2 introduces a massive expansion across 85 granular industrial, commercial, and rural sectors:
+Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. SGSB introduces a massive expansion across 87 granular industrial, commercial, and rural sectors:
  *  Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
  *   Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
  *   Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
@@ -99,6 +99,32 @@ A massive shout-out to our three-person team for pulling this together, and spec
 ---
 
 ## 📜 Complete Mod Release History
+
+### 26.9.161 (1.61 Rebase & Pre-South Dakota Release)
+
+**📌 Versioning Update & Rationale**
+
+* Format Shift to 26.9.161: Updated the mod versioning scheme to directly mirror the ATS game patch version (1.61), providing clearer tracking for players and ensuring compatibility alignment.
+* Staging & Expansion Roadmap: Maintained 26.9.161 as the pre-release staging baseline, keeping it clean ahead of the upcoming South Dakota DLC release (where it will transition to 26.9.161SD or 26.9.161-1).
+
+**🚗 New Vehicle Integration & Hybrid Pools**
+
+* Modern Pickups & SUVs: Integrated traffic.featan.pickup.midclass_25, traffic.caliber.suv.premium_23, and traffic.tt_pickup into primary hybrid spawn pools, including Rest Stops (rest_stop), Retail Mix (retail_mix), Motel parking lots, and Marina/Boat ramps.
+* Electric & Hybrid Lineup: Added the traffic.voltison_r and traffic.voltse models into EV Charging stations (ev_charger), Sport Car pools, and Low-Cost/Fast Food parking configurations.
+* Broadcast & News Media: Created dedicated tracking for news network vans (traffic.transit_16.cbn and traffic.transit_16.fox) with specialized day and night weighting rules.
+* Package Vans & Work Cabs: Added the new package van variant (traffic.pv_mw) to courier hubs and integrated vocational work cabs (hoodcabdumpd, traffic.ladder, etc.) into Section 8 work fleets.
+
+**🛡️ Specialized Zone & Agency Fleet Enhancements**
+
+* Section 36 (Border Inspection & Weigh Stations): Added traffic.featan.pickup.midclass_25 into border and customs outpost spawn pools.
+* Section 46 (Scale Master & Weight Enforcement): Integrated traffic.caliber.suv.premium_23 to modernize state agency and inspector vehicle lots alongside existing Crown Vics and Explorers.
+* Section 73 (Wildfire & Incident Command Staging): Added traffic.featan.pickup.midclass_25.maintenance service utility trucks to forestry and emergency response staging clusters.
+
+**🛠️ Structure & Engine Fallback Fixes**
+
+* Section 48 Fallback Additions: Appended all missing single-vehicle AI fallback definitions (ai.voltse22, ai.calsuvpre23, ai.voltison_r.factory, ai.voltse.factory, and ai.featan.pickup.midclass_25) to prevent missing unit errors in game.log.txt.
+* Standalone Profiles: Built dedicated profile blocks for all new 1.61 vehicles complete with independent day/night probabilities, low_poly_only optimizations, and nighttime lighting flares.
+
 
 ### v4.2.7-091426 (Hybrid Pools & Parking Variety Tweak) ###
 **Global Spawn Density Tuning**
