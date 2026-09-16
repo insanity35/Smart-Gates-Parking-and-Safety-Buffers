@@ -5,6 +5,7 @@
 
 ## 📊 Official Release Information
 * **Current Version:** 26.9.161 (Stable)
+* **Build Date: 09/15/26
 * **Development Name:** Golden Age (26.9.161)
 * **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
@@ -100,7 +101,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### 26.9.161 (1.61 Rebase & Pre-South Dakota Release)
+### 26.9.161 (1.61 Rebase & Pre-South Dakota Release) Build Date: 9/15/26
 
 **📌 Versioning Update & Rationale**
 
