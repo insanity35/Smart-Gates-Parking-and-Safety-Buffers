@@ -1,56 +1,36 @@
-Here is the corrected changelog with the structural overhaul (which we just completed today) moved to today's date, and the previous additions properly organized by yesterday and earlier.
-Mod Changelog: Smart Gates, Dynamic Parking & Safety Buffers (SGSB)
-Version: 26.9.161SD ("The Great RAMbase" / South Dakota Ready / 1.61 Rebase)
+Development notes for next update.
 
-September 20, 2026
+# Version: 26.9.161SD ("The Great RAMbase" / South Dakota Ready / 1.61 Rebase)
 
-🗂️ Structural Overhaul & Master Renumbering
- * Complete File Flattening: Renumbered and restructured the entire parked_vehicle.sii file into a strict, linear sequential format.
- * 1 to 91 Sequence: Absorbed all orphaned "B" sections (e.g., the old 40B, 44B) and previously unnumbered fallback/commercial vehicle pools into the main timeline.
- * Fixed Sequence Gaps: Restored skipped section numbers (such as the previously missing Section 54) to ensure a perfect chronological numbering flow from [SECTION 1] through [SECTION 91]. (Note: Section references in the patch notes below have been updated to reflect their new final locations in this master layout).
+### September 20, 2026
+* **[GROUP 9] FUTURE STATE EXPANSIONS (South Dakota, North Dakota, etc.)**
+  * **Wyoming Hookup Cleanup:** Removed the legacy Wyoming gate definitions (`ag_wy_indep`, `ag_wy_riv`, `ag_wy_jack`, `ag_wy_ref`) from the master file. Because version 1.61 now bakes these specific native definitions directly into the core game archives, removing them prevents fatal duplicate unit crash errors while still allowing the game engine to call them natively.
+* **🗂️ Structural Overhaul & Master Renumbering**
+  * **Complete File Flattening:** Renumbered and restructured the entire `parked_vehicle.sii` file into a strict, linear sequential format.
+  * **1 to 91 Sequence:** Absorbed all orphaned "B" sections (e.g., old 40B, 44B) and previously unnumbered fallback/commercial vehicle pools into the main timeline.
+  * **Fixed Sequence Gaps:** Restored skipped section numbers (such as Section 54) to ensure a perfect chronological numbering flow from Section 1 through Section 91.
 
-September 19, 2026
 
-🚀 DLC Prep & Framework
- * South Dakota Map Support: Laid the file structure and modular framework required for the upcoming South Dakota DLC standalone definition patches.
- * Emergency Vehicles & Incident Command Staging (Sec 25, 76): Added South Dakota emergency vehicle spawn calls (traffic.amb2.sd) and heavy-duty utility pickups (traffic.dodge.ram) to staging, physics, and disaster relief pools to properly populate active fire response bases and command camps.
- * Header & Versioning: Bumped internal file timestamps to September 19, 2026, to reflect the latest compiled staging build under The Great RAMbase release tag.
-🚗 Spawn Pool Overhauls & Rebalancing
- * Industrial & Utility Fleet Expansions (Sec 32, 40, 79, 80, 87):
-   * Railroad & Maintenance of Way: Expanded rail yard pools to include Dodge Rams (traffic.dodge.ram), Featan midclass maintenance pickups (traffic.featan.pickup.midclass_25.maintenance), and low-cab flatbed trucks (traffic.lowcab_fbed, traffic.lowcab_fbeds) alongside heavy utility rigs.
-   * Oilfield & Energy Extraction: Added standard Featan midclass pickups (traffic.featan.pickup.midclass_25) to rural oil staging lots.
-   * Road Construction: Integrated low-cab flatbed variants into heavy plant and asphalt yard pools.
-   * Timber Outskirts: Added low-cab flatbed trucks to regional timber harvest staging areas.
- * Advanced Environmental Prop & Service Injections (Sec 41, 42, 44, 45, 49, 50, 64, 65, 73, 75, 82, 83):
-   * Rural Fire Stations & VFD Backups (Sec 64): Expanded fire station apparatus pools to include rugged work/brush trucks (traffic.dodge.ram, traffic.chevy_pickup), utility rigs (traffic.f350_ge), and classic vintage heavy backup rigs (traffic.kw_w900_a) alongside modern apparatus, accurately simulating authentic small-town volunteer station aesthetics.
-   * Automotive Recyclers & Salvage Yards (Sec 73): Populated scrap yards with classic project cars and beaters (traffic.oldsmobile, traffic.capr, traffic.c_deville) alongside uncoupled trailers to simulate active vehicle stripping and crushing operations.
-   * Rural Residential Work Sites & Barn Finds (Sec 41): Added commercial glass and ladder vans (traffic.transit_16.ladder, .glass), heavy-duty service rigs (traffic.sierra_hd), and legacy Step-Vans (traffic.step_van) to simulate active on-site remodeling crews and weathered farm utilities.
-   * Rural Farmhouse Driveways & Outbuildings (Sec 42): Populated standalone country farmsteads and rural barn outbuildings with weathered pickups (traffic.chevy_pickup), classic sedans (traffic.oldsmobile, traffic.capr), and transit vans (traffic.transit_16) to replace out-of-place modern commuter traffic.
-   * Auto Repair & Service Garages (Sec 45): Populated shop perimeters with beater/project cars (traffic.c_deville, traffic.mercury, traffic.magnum) and dedicated tow/recovery units (traffic.tow_truck, truck_light tow_small).
-   * Road-Trip Motels & Highway Lodges (Sec 82): Integrated light campers (traffic.camper) into overnight motel and lodge parking pools alongside legacy crossovers to capture authentic cross-country tourist aesthetics.
-   * Night-Shift City Services & Morning Vendors (Sec 83): Created isolated .night_srv profile blocks for convenience stores and retail centers enforcing strict night-only spawn rules (prob_night: 1.5, prob_day: 0.0) for street sweepers (traffic.sweeper) and garbage trucks (traffic.garbage_trck), alongside early morning delivery vans (traffic.city_exp).
-   * Travel Plaza Giants (Sec 44 & 65): Expanded perimeter slots at rest areas and fast-food lanes to accommodate Class-C motorhomes (traffic.f_r_solera_e, _w) and tour buses (traffic.greyhound_p, traffic.bus_w).
-   * Weigh Station & Scale Outposts (Sec 49, 50, 75): Staged state police cruisers (police), commercial utility pickups (traffic.dodge.ram), and heavy wreckers (traffic.tow_truck) near scale offices, inspection aprons, and queue lines to simulate weigh station enforcement and breakdown recovery.
-   * Underutilized Vanilla Imports (Sec 17 & 82): Integrated legacy crossover assets (traffic.ford_smax, traffic.mercedes_ce) into used car lots and overnight motels for added zero-dependency variety.
- * Motorcycle Spawn Rebalancing (Sec 56): Increased the overall presence of motorcycles in designated lots (Day probability bumped to 3.0; Night bumped to 0.8) to better reflect real-world parking density.
- * Rural Residential Overhaul (Sec 41): Added classic sedans (traffic.mercury, traffic.capr) and SUVs (traffic.jeep_w, traffic.f_explorer) to break up the pickup-heavy spawn logic and simulate lived-in rural properties.
- * Marina Expansion (Sec 48 & 71): Introduced luxury and heavy-duty family haulers (traffic.c_escalade, traffic.lincoln_nav, traffic.f_explorer, traffic.jeep_w) alongside trucks to better reflect weekend boat-towing demographics.
- * Farm Co-Op Variety (Sec 51): Added heavy-duty service rigs (traffic.sierra_hd) and standard front-office commuter cars (traffic.ford_taurus) to grain elevator and co-op lots.
- * Fast Food Drive-Thrus (Sec 65): Diversified the standard commuter car pool by injecting work vans (traffic.transit_16) and muscle cars (traffic.mustang, traffic.camaro) for a busier lunch-rush aesthetic.
- * Car Wash Staging (Sec 66): Added luxury and sports variants (traffic.audi_a6, traffic.c_escalade, traffic.charger) to represent demographics that frequent wash bays.
- * Convenience Store Storytelling (Sec 83): Integrated urban police cruisers (police urban), contractor vans (traffic.chevy_van), and performance cars (traffic.charger) into the 24-hour convenience store pool to enhance night-time environmental immersion. (Note: Commercial/utility rigs were intentionally excluded from this pool to maintain realism).
-🛠️ Bug Fixes & Maintenance
- * Core Def Cleanup: Resolved lingering "missing parsed car" console errors by strictly auditing expected vehicle definition strings across all triggers.
- * Zero-Dependency Guarantee: Verified all newly injected vehicle spawn strings remain 100% vanilla SCS definitions to ensure zero log warnings or third-party traffic pack dependencies.
+### September 19, 2026
+* **🚀 DLC Prep & Framework**
+  * **South Dakota Map Support:** Laid the file structure and modular framework required for upcoming South Dakota DLC standalone definition patches.
+  * **Emergency Vehicles & Incident Command Staging (Sec 25, 76):** Added South Dakota emergency vehicle spawn calls (`traffic.amb2.sd`) and heavy-duty utility pickups (`traffic.dodge.ram`) to staging and disaster relief pools.
+  * **Header & Versioning:** Bumped internal file timestamps to September 19, 2026, under *The Great RAMbase* release tag.
+* **🚗 Spawn Pool Overhauls & Rebalancing**
+  * **Industrial & Utility Fleet Expansions (Sec 32, 40, 79, 80, 87):** Expanded rail yards, oilfield staging lots, and road construction pools with Dodge Rams, Featan maintenance pickups (`traffic.featan.pickup.midclass_25.maintenance`), and low-cab flatbed trucks.
+  * **Environmental Prop & Service Injections (Sec 41, 42, 44, 45, 49, 50, 64, 65, 73, 75, 82, 83):** Populated rural fire stations with brush trucks and legacy backup rigs (`traffic.kw_w900_a`), salvage yards with project cars (`traffic.oldsmobile`, `traffic.capr`), convenience stores with night-shift street sweepers (`traffic.sweeper`), and highway motels with light campers (`traffic.camper`).
+  * **Motorcycle Spawn Rebalancing (Sec 56):** Increased overall motorcycle presence in designated lots (Day probability bumped to 3.0; Night to 0.8).
+* **🛠️ Bug Fixes & Maintenance**
+  * **Core Def Cleanup:** Audited and resolved missing parsed vehicle definition strings across triggers.
+  * **Zero-Dependency Guarantee:** Verified all injected vehicle spawn strings use 100% vanilla SCS definitions for zero log warnings.
 
-September 16, 2026
 
-🚀 Compatibility & Staging
- * 1.61 Rebase Alignment: Updated internal structures and mapping declarations to maintain full compatibility with the ATS 1.61 update branch.
- * South Dakota Release Prep: Bundled and validated as the official staging build accompanying the upcoming South Dakota map expansion.
-🚗 Parking Pool Optimizations
- * lowcost Stalls: Refined the budget and economy spawn pools to cleanly utilize standard vehicles like the Prius, Verano, and Volts without depending on missing external car packs.
- * ev_charger Stalls: Streamlined electric and hybrid vehicle parking lots to restrict spawning strictly to verified electric/hybrid definitions (Prius, Volts, Voltse, and Voltison-R).
-🛠️ Bug Fixes & Log Cleanup
- * Removed Missing Vehicle References: Completely stripped out all references to traffic.xc90 across the entire parked_vehicle.sii definition file.
- * Eliminated Game Log Warnings: Resolved the non-crashing "Unable to find vehicle data 'traffic.xc90'" error previously triggered in restricted spawn zones.
+### September 16, 2026
+* **🚀 Compatibility & Staging**
+  * **1.61 Rebase Alignment:** Updated internal structures and mapping declarations for full compatibility with the ATS 1.61 update branch.
+  * **South Dakota Release Prep:** Bundled and validated as the official staging build accompanying the upcoming map expansion.
+* **🚗 Parking Pool Optimizations**
+  * **lowcost & ev_charger Stalls:** Streamlined budget and electric/hybrid parking pools to cleanly use verified vanilla definitions (Prius, Volts, Voltse, Voltison-R).
+* **🛠️ Bug Fixes & Log Cleanup**
+  * **Removed Missing References:** Stripped out all invalid references to `traffic.xc90` to eliminate non-crashing console warnings in restricted spawn zones.
+
