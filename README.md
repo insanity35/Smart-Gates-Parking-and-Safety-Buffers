@@ -100,7 +100,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### v26.9.161-1 (92126) (The Great RAMbase) ###
+### v26.9.161-1 (9/21/26) (The Great RAMbase) ###
 * In preparation for South Dakota im pushing a massive fix for trucks and trailers sticking out of fences at dealships and repair shops.
 * Ram Ram Rams!! Added Rams and Featan to more categories
 * Wyoming Hookup Cleanup:** Removed the legacy Wyoming gate definitions (`ag_wy_indep`, `ag_wy_riv`, `ag_wy_jack`, `ag_wy_ref`) from the master file. Because version 1.61 now bakes these specific native definitions directly into the core game archives, removing them prevents fatal duplicate unit crash errors while still allowing the game engine to call them naively.
@@ -108,7 +108,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 * Core Def Cleanup:** Audited and resolved missing parsed vehicle definition strings across triggers.
 * Zero-Dependency Guarantee:** Verified all injected vehicle spawn strings use 100% vanilla SCS definitions for zero log warnings.
 
-### v26.9.161 (1.61 Rebase & Pre-South Dakota Release)
+### v26.9.161 (9/15/26) (1.61 Rebase & Pre-South Dakota Release)
 
 **📌 Versioning Update & Rationale**
 
