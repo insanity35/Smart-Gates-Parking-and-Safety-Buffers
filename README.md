@@ -4,8 +4,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** 26.9.161 (Stable)
-* **Build Date: 09/15/26
+* **Current Version:** 26.9.161-1 (The Great RAMbase) (Stable)
 * **Development Name:** Golden Age (26.9.161)
 * **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
@@ -39,7 +38,7 @@ Gate logic is key here. I have scanned every dlc for gate and gate properties. U
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
 
 ## 🚛 Advanced Dynamic Parking System
-Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. SGSB introduces a massive expansion across 87 granular industrial, commercial, and rural sectors:
+Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. SGSB introduces a massive expansion across 89 granular industrial, commercial, and rural sectors:
  *  Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
  *   Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
  *   Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
@@ -101,7 +100,15 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### 26.9.161 (1.61 Rebase & Pre-South Dakota Release) Build Date: 9/15/26
+### v26.9.161-1 (92126) (The Great RAMbase) ###
+* In preparation for South Dakota im pushing a massive fix for trucks and trailers sticking out of fences at dealships and repair shops.
+* Ram Ram Rams!! Added Rams and Featan to more categories
+* Wyoming Hookup Cleanup:** Removed the legacy Wyoming gate definitions (`ag_wy_indep`, `ag_wy_riv`, `ag_wy_jack`, `ag_wy_ref`) from the master file. Because version 1.61 now bakes these specific native definitions directly into the core game archives, removing them prevents fatal duplicate unit crash errors while still allowing the game engine to call them naively.
+* *Motorcycle Spawn Rebalancing (Sec 56):** Increased overall motorcycle presence in designated lots (Day probability bumped to 3.0; Night to 0.8).
+* Core Def Cleanup:** Audited and resolved missing parsed vehicle definition strings across triggers.
+* Zero-Dependency Guarantee:** Verified all injected vehicle spawn strings use 100% vanilla SCS definitions for zero log warnings.
+
+### v26.9.161 (1.61 Rebase & Pre-South Dakota Release)
 
 **📌 Versioning Update & Rationale**
 
