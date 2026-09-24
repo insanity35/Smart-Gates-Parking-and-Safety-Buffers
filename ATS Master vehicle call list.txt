@@ -1,0 +1,251 @@
+Here is the master list of vehicle calls extracted from your provided snippet (`parked_vehicle.sii`), clearly distinguishing between standard/base game calls and the **non-vanilla or custom modded calls**.
+
+---
+
+### 🚨 Non-Vanilla / Custom / Modded Calls Found in Snippet
+
+These entries are custom modifications, pseudo-tags, or non-standard asset calls included in your snippet that do not appear in the standard vanilla master list:
+
+* **`traffic.xc90`** – Volvo XC90 (Present in the snippet, but absent from standard vanilla lists)
+
+* **`traffic.voltison_r.factory`** & **`traffic.voltse.factory`** – Special factory variant calls
+
+* **`traffic.kw_t680_2`** & **`traffic.volvo_vnl_2`** – Custom low-poly/cheap numerical variants used for optimization blocks
+
+* **`car pickup empty`** – Custom pseudo-tag used in the snippet for empty pickup spawns
+
+* **`truck_light tow_small`** – Custom vehicle class grouping tag
+
+* **`truck_semi basic`** – Custom trailer/truck assignment tag
+
+
+---
+
+### 🚗 Standard Vanilla Vehicle Calls Found in Snippet
+
+These are the standard vanilla and official ATS traffic vehicle calls present in your file:
+
+#### Cars & Sports Cars
+
+* **`traffic.accord`** – Honda Accord
+
+
+* **`traffic.audi_a6`** – Audi A6
+
+
+* **`traffic.c_deville`** – Cadillac DeVille Classic
+
+
+* **`traffic.camaro`** – Chevrolet Camaro
+
+
+* **`traffic.capr`** – Chevrolet Caprice Classic
+
+
+* **`traffic.charger`** – Dodge Charger
+
+
+* **`traffic.chevy_imp_p`** – Chevrolet Impala Police/Civilian
+
+
+* **`traffic.civic`** – Honda Civic
+
+
+* **`traffic.crown_v`** – Ford Crown Victoria
+
+
+* **`traffic.ford_smax`** – Ford S-Max
+
+
+* **`traffic.ford_taurus`** – Ford Taurus
+
+
+* **`traffic.impreza`** – Subaru Impreza
+
+
+* **`traffic.l_lincoln`** & **`traffic.l_lincoln_b`** – Lincoln Town Car Limousine
+
+
+* **`traffic.magnum`** – Dodge Magnum
+
+
+* **`traffic.mercedes_ce`** – Mercedes-Benz E-Class
+
+
+* **`traffic.mercury`** – Mercury Classic Wagon
+
+
+* **`traffic.mustang`** & **`traffic.mustang_2015`** – Ford Mustang
+
+
+* **`traffic.oldsmobile`** – 1951 Oldsmobile 88
+
+
+* **`traffic.toyota_prius`** – Toyota Prius
+
+
+* **`traffic.verano`** – Buick Verano
+
+
+* **`traffic.volt`**, **`traffic.voltse`**, **`traffic.voltse22`** – Chevrolet Volt
+
+
+* **`traffic.voltison_r`** – Electric Sports Car
+
+
+
+#### SUVs & Pickup Trucks
+
+* **`traffic.c_escalade`** – Cadillac Escalade
+
+
+* **`traffic.caliber.suv.premium_23`** – Premium Modern SUV
+
+
+* **`traffic.chevy_pickup`** – Chevrolet C/K Pickup
+
+
+* **`traffic.dodge.ram`** – RAM Pickup
+
+
+* **`traffic.enclave`** – Buick Enclave
+
+
+* **`traffic.f_150`** – Ford F-150
+
+
+* **`traffic.f350_ge`** & **`traffic.f350_hd`** – Ford F-350 Utility/Heavy-Duty
+
+
+* **`traffic.f350_box.usbb`** – Ford F-350 Box Truck
+
+
+* **`traffic.f_explorer`** – Ford Explorer
+
+
+* **`traffic.f_expl_bp`** – Ford Explorer (Border Patrol)
+
+
+* **`traffic.featan.pickup.midclass_25`** – Featan Midclass Heavy Pickup
+
+* **`traffic.featan.pickup.midclass_25.maintenance`** – Custom service/maintenance variant of the Featan heavy-duty pickup
+
+
+* **`traffic.hummer`** – Hummer SUV
+
+
+* **`traffic.jeep_cher`** – Jeep Grand Cherokee
+
+
+* **`traffic.jeep_w`** – Jeep Wrangler
+
+
+* **`traffic.lincoln_mkt`** – Lincoln MKT
+
+
+* **`traffic.lincoln_nav`** – Lincoln Navigator
+
+
+* **`traffic.range_rover`** – Land Rover Range Rover
+
+
+* **`traffic.santafe`** – Hyundai Santa Fe
+
+
+* **`traffic.sierra_hd`** – GMC Sierra HD
+
+
+* **`traffic.tt_pickup`** – Utility Pickup
+
+
+* **`traffic.wolverine`** – Off-Road ATV/UTV
+
+
+
+#### Vans, Buses & RVs
+
+* **`traffic.box`** & **`traffic.hool`** – Box Trucks / Delivery Vans
+
+
+* **`traffic.bus_w`** & **`traffic.bus_s`** – City & School Buses
+
+
+* **`traffic.camper`** – Class A Motorhome
+
+
+* **`traffic.chevy_van`** – Chevrolet Express Van
+
+
+* **`traffic.city_exp`** – City Express Van
+
+
+* **`traffic.f_r_solera_e`** & **`traffic.f_r_solera_w`** – Forest River Solera RV
+
+
+* **`traffic.greyhound_p`** & **`traffic.greyhound_p.yellowstone`** – Greyhound Coach (and Yellowstone variant)
+
+
+* **`traffic.pv_frosty`**, **`traffic.pv_mw`**, **`traffic.pv_posted`** – Package Delivery Vans
+
+
+* **`traffic.transit_16`** (plus variants like `.cargo`, `.fr`, `.glass`, `.ladder`, `.ladder_2`, `.cbn`, `.fox`, `.dhl`, `.fedex`) – Ford Transit Platform
+
+
+
+#### Medium-Duty & Vocational Trucks
+
+* **`traffic.garbage_trck`** – Garbage Truck
+
+
+* **`traffic.hoodcabdumpd`**, **`traffic.hoodcabdumpt`**, **`traffic.hoodcabfbed`** – Conventional Dump/Flatbed Trucks
+
+
+* **`traffic.ladder`** – Ladder Utility Truck
+
+
+* **`traffic.lowcab`**, **`traffic.lowcab_dumpd`**, **`traffic.lowcab_dvan`**, **`traffic.lowcab_fbed`** (plus food/fruit variants `.lowcab_r_*`) – Low Cab Forward Fleet
+
+
+* **`traffic.mack_rd.dump`**, **`traffic.mack_rd.garb`** (plus `.alb`, `.phx`, `.sf`), **`traffic.mack_rd.pump`**, **`traffic.mack_rd.ccistern`** – Mack RD Vocational Series
+
+
+* **`traffic.sweeper`** – Street Sweeper
+
+
+* **`traffic.tow_truck`** – Wrecker Tow Truck
+
+
+* **`traffic.ws_plant_car`** – Industrial Plant Service Car
+
+
+* **`traffic.yard_truck`** – Yard Hostler / Terminal Tractor
+
+
+
+#### Emergency Vehicles
+
+* **`traffic.amb2.co`** – Ambulance (Colorado Livery)
+
+
+* **`traffic.arrow_xt`** – Pierce Arrow XT Fire Engine
+
+
+* **`police`**, **`police urban`**, **`police highway`** – Dynamic Police Cruisers
+
+
+
+#### AI Semi-Truck Cabs
+
+* **`traffic.kw_t680_a`**, **`_b`**, **`_c`** – Kenworth T680 Cabs
+
+
+* **`traffic.kw_w900_a`**, **`_b`**, **`_c`** – Kenworth W900 Cabs
+
+
+* **`traffic.pet389_a`** – Peterbilt 389 Cab
+
+
+* **`traffic.pet579_a`**, **`_b`**, **`_c`** – Peterbilt 579 Cabs
+
+
+* **`traffic.volvo_vnl_a`** – Volvo VNL Cab
