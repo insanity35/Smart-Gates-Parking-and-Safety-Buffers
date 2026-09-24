@@ -4,7 +4,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** 26.9.161-1 (The Great RAMbase) (Stable)
+* **Current Version:** 26.9.161SD (The Great RAMbase) (Stable)
 * **Development Name:** Golden Age (26.9.161)
 * **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
@@ -38,7 +38,7 @@ Gate logic is key here. I have scanned every dlc for gate and gate properties. U
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
 
 ## 🚛 Advanced Dynamic Parking System
-Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. SGSB introduces a massive expansion across 89 granular industrial, commercial, and rural sectors:
+Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. SGSB introduces a massive expansion across 90 granular industrial, commercial, and rural sectors:
  *  Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
  *   Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
  *   Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
@@ -92,13 +92,37 @@ If you encounter a specific yard, toll plaza, or logistics depot anywhere on the
 * **Tester:** mrh368
 
 A massive shout-out to our three-person team for pulling this together, and special thanks to the entire trucking community for the incredible passion and feedback.
-* Developed natively on Ubuntu 26.04 LTS
+* Developed natively on Ubuntu 26.04.1 LTS
 * Thank you to SCS Software for letting us nod
 * **Soli Deo Gloria**
 
 ---
 
 ## 📜 Complete Mod Release History
+
+### v26.9.161SD (The Great Rambase)
+**Date:** 9/23/26 | **Time:** 15:24
+*Rams, Rams, Rams!!! This update significantly boosts the presence of Ram trucks and other modern pickups across multiple sections, alongside a major expansion of regional van fleets and classic car spawns. The backend has also been scrubbed for duplicate entries, parser warnings, and ghost code.*
+
+## 🚛 New Vehicle Spawns & World Balances
+
+* **Modern Pickups (Rivian, F-150, Sierra HD, Ram):** Balanced and evenly populated across Scenic Overlooks, Marinas, Dealerships, and Rural zones. Ensures a natural, realistic baseline presence of modern utility and lifestyle trucks across outdoor and commercial areas.
+* **News Vans (CBN, FOX):** Deployed to Disaster Relief and Wildfire Staging areas, Motels, Fast Food, Rest Stops, and Convenience Stores. Adds immediate context to emergency zones and overnight press coverage at motels.
+* **Delivery Vans (FedEx, DHL, Amazon/pv_posted):** Added to Rural Residential/Farmhouse driveways, Motels, Fast Food, and Repair Shops. Enhances immersion by simulating parcel delivery right at rural doorsteps and fleet maintenance turnover.
+* **Work & Contractor Vans (Ladder, Glass):** Sited at Motels, Rest Stops, Fast Food joints, and Car Washes. Reflects traveling tradesmen stopping for meals, rest, or washing job-site grime off their rigs.
+* **Vintage Cars (Oldsmobile, C-Deville, Mercury):** Now spawning at Scenic Lookouts/Trailheads, Rest Stops, Motels, Fast Food, Car Washes, and Repair Garages to simulate weekend classic car cruises and enthusiast meets.
+
+## 🔧 Fixes, Integrations & Code Cleanup
+
+* **Featan Pickup ID Corrections:** Replaced incorrect legacy `tt_pickup` entity calls inside the dedicated Featan parking definitions with the correct native call (`traffic.featan.pickup.midclass_25`).
+* **General World-Spawn Integration:** Injected `traffic.featan.pickup.midclass_25` into the general spawn pools (`suv`, `pickup`, and `car_dealer`) across their `.always`, `.day`, and `.night` physics blocks for natural population in random lots.
+* **Missing Variant & Fallback Profiles Added:** Appended the missing highway service variant block targeting `traffic.featan.pickup.midclass_25.maintenance` to the end of Section 89. Registered the individual unit fallback profile (`ai.featan.pickup.midclass_25`) under Section 50 to ensure clean engine integration.
+* **Duplicate Spawns Removed:** Cleaned up redundant array entries for `traffic.transit_16.cargo` (Section 1) and `traffic.city_exp` (Sections 63 and 81) to balance RNG spawn weighting.
+* **Probability Syntax Fixed:** Corrected the night spawn multiplier in Section 43 (`rest_stop`) from an irregular `3.08` down to a standardized `3.0`.
+* **Engine Parser Warnings Prevented:** Removed blank whitespace lines inside the Section 80 (`motel_lodge`) active arrays to keep the SCS engine log clean.
+* **Ghost Code Purged:** Scrubbed all obsolete, commented-out `#allowed_vehicle[]: "traffic.civic"` lines globally to reduce file size and visual clutter.
+* **Heavy Transport Preserved:** Deliberately bypassed Sections 6 and 79 to protect your established `truck_long` logistics yard spawn parameters.
+* **Header Correction:** Fixed the "AUTOMOTIVE DEALERSHIPSS" spelling typo in the Section 16 banner.
 
 ### v26.9.161-1 (9/21/26) (The Great RAMbase) ###
 * In preparation for South Dakota im pushing a massive fix for trucks and trailers sticking out of fences at dealships and repair shops.
