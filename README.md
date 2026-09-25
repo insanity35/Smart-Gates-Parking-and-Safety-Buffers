@@ -66,15 +66,13 @@ To ensure the custom safety buffer parameters take priority over world geometry 
 5. Map Expansion Mods (ProMods, Reforma, etc.)
 * **— BOTTOM —**
 
-### Prefab Limitations (The "Hardcoded" Gates)
-I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". Ex:
-* The following remain vanilla(so far):
+**❌Prefab Limitations (The "Hardcoded" Gates):**
+I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. Ex:
 * Army Gate next to O'Hare Airport (IL)
-* Union Pacific Gate
+* Union Pacific Gate Albuquerque 
 * DOW Gate (IL)
-* Group 1 Guard Gates (e.g., Coca-Cola in Albuquerque, General Mills in Roswell)
-
-**Note on Toll Booths:** Tolls are a part of `tollgate.sii` and `gate_trigger.sii`. When I edit these, gated tolls fail to open. So as of now, Toll booths are stock.
+* Newmont (Houma, Louisiana)
+* Most newer dlcs especially Illinois and now South Dakota have gone with prefab gates.
 
 **Conflict Notice:** This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (`animated_gate` blocks).
 
