@@ -66,6 +66,14 @@ Here is the fully corrected and verified master list of vehicle calls extracted 
 * **`traffic.pv_frosty`** – Holiday/Special Event Delivery Van
 * **`traffic.transit_16`** (plus variants like `.cargo`, `.fr`, `.glass`, `.ladder`, `.ladder_2`) & **`traffic.transit_16_b`** – Ford Transit Platform and alternate variants
 
+### **⚡ Low Cab Forward Utility & Reel Variants (`traffic.lowcab_r_*`)**
+
+* **`traffic.lowcab_r_p1` & `traffic.lowcab_r_p2**` – Power Grid & Utility Reel Service Trucks (Pairs 1 & 2)
+* **`traffic.lowcab_r_c1` & `traffic.lowcab_r_c2**` – Construction Site Utility Chassis (Pairs 1 & 2)
+* **`traffic.lowcab_r_d1` & `traffic.lowcab_r_d2**` – Department of Transportation (DOT) & Highway Maintenance Reel Trucks (Pairs 1 & 2)
+* **`traffic.lowcab_r_t1` & `traffic.lowcab_r_t2**` – Transport & Staging Service Units (Pairs 1 & 2)
+* **`traffic.lowcab_r_b1` & `traffic.lowcab_r_b2**` – Body / Box Utility Service Configurations (Pairs 1 & 2)
+
 ---
 
 ### **🏗️ Medium-Duty & Vocational Trucks**
