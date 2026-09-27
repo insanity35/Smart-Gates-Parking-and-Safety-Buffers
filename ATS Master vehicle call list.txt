@@ -1,4 +1,4 @@
-Here is the fully corrected and verified master list of vehicle calls extracted directly from your `parked_vehicle.sii` snippet, with all missing items added and phantom entries removed:
+Here is the fully updated and unified master list of vehicle calls, incorporating all recent additions (`traffic.cadillac_ats`, `traffic.escort_ft`/`rt`, `traffic.log_truck`, and dealership tokens) with corrected Markdown formatting:
 
 ---
 
@@ -6,6 +6,7 @@ Here is the fully corrected and verified master list of vehicle calls extracted 
 
 * **`traffic.accord`** – Honda Accord
 * **`traffic.audi_a6`** – Audi A6
+* **`traffic.cadillac_ats`** – Cadillac ATS Compact Luxury Sedan
 * **`traffic.c_deville`** – Cadillac DeVille Classic
 * **`traffic.camaro`** – Chevrolet Camaro
 * **`traffic.capr`** – Chevrolet Caprice Classic
@@ -66,13 +67,15 @@ Here is the fully corrected and verified master list of vehicle calls extracted 
 * **`traffic.pv_frosty`** – Holiday/Special Event Delivery Van
 * **`traffic.transit_16`** (plus variants like `.cargo`, `.fr`, `.glass`, `.ladder`, `.ladder_2`) & **`traffic.transit_16_b`** – Ford Transit Platform and alternate variants
 
+---
+
 ### **⚡ Low Cab Forward Utility & Reel Variants (`traffic.lowcab_r_*`)**
 
-* **`traffic.lowcab_r_p1` & `traffic.lowcab_r_p2**` – Power Grid & Utility Reel Service Trucks (Pairs 1 & 2)
-* **`traffic.lowcab_r_c1` & `traffic.lowcab_r_c2**` – Construction Site Utility Chassis (Pairs 1 & 2)
-* **`traffic.lowcab_r_d1` & `traffic.lowcab_r_d2**` – Department of Transportation (DOT) & Highway Maintenance Reel Trucks (Pairs 1 & 2)
-* **`traffic.lowcab_r_t1` & `traffic.lowcab_r_t2**` – Transport & Staging Service Units (Pairs 1 & 2)
-* **`traffic.lowcab_r_b1` & `traffic.lowcab_r_b2**` – Body / Box Utility Service Configurations (Pairs 1 & 2)
+* **`traffic.lowcab_r_p1`** & **`traffic.lowcab_r_p2`** – Power Grid & Utility Reel Service Trucks (Pairs 1 & 2)
+* **`traffic.lowcab_r_c1`** & **`traffic.lowcab_r_c2`** – Construction Site Utility Chassis (Pairs 1 & 2)
+* **`traffic.lowcab_r_d1`** & **`traffic.lowcab_r_d2`** – Department of Transportation (DOT) & Highway Maintenance Reel Trucks (Pairs 1 & 2)
+* **`traffic.lowcab_r_t1`** & **`traffic.lowcab_r_t2`** – Transport & Staging Service Units (Pairs 1 & 2)
+* **`traffic.lowcab_r_b1`** & **`traffic.lowcab_r_b2`** – Body / Box Utility Service Configurations (Pairs 1 & 2)
 
 ---
 
@@ -82,6 +85,7 @@ Here is the fully corrected and verified master list of vehicle calls extracted 
 * **`traffic.hoodcabdumpd`**, **`traffic.hoodcabdumpt`**, **`traffic.hoodcabfbed`** – Conventional Dump/Flatbed Trucks
 * **`traffic.lowcab`**, **`traffic.lowcab_dumpd`**, **`traffic.lowcab_dvan`**, **`traffic.lowcab_fbed`**, **`traffic.lowcab_fbed1`**, **`traffic.lowcab_fbeds`** (plus complete utility/reel variants `traffic.lowcab_r_*`) – Low Cab Forward Fleet
 * **`traffic.mack_rd.dump`**, **`traffic.mack_rd.garb`**, **`traffic.mack_rd.pump`**, **`traffic.mack_rd.ccistern`** – Mack RD Vocational Series
+* **`traffic.log_truck`** – Specialized Timber / Log Hauler
 * **`traffic.sweeper`** – Street Sweeper
 * **`traffic.tow_truck`** – Wrecker Tow Truck
 * **`traffic.ws_plant_car`** – Industrial Plant Service Car
@@ -99,12 +103,19 @@ Here is the fully corrected and verified master list of vehicle calls extracted 
 
 ---
 
-### **🚛 AI Semi-Truck Cabs**
+### **🚧 Special Transport Escort Fleet**
+
+* **`traffic.escort_ft`** – Front Oversize Load Escort Vehicle
+* **`traffic.escort_rt`** – Rear Oversize Load Escort Vehicle
+
+---
+
+### **🚛 AI Semi-Truck Cabs & Dealership Tokens**
 
 * **`traffic.kw_t680_a`**, **`_b`**, **`_c`** – Kenworth T680 Cabs
 * **`traffic.pet579_a`**, **`_b`**, **`_c`** – Peterbilt 579 Cabs
 * **`traffic.international_9900i`** – International 9900i Cab
-Here is the dedicated and complete section for **Semi-Trucks, Heavy Tractors & Logistics Units** that captures both the core game engine pool tokens and the specific traffic cab models used across your layout:
+* **`truck dealer`** / **`truck_custom dealer`** – Native brand-matched dealership display tokens
 
 ---
 
