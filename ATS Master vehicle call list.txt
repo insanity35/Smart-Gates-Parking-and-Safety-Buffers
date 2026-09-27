@@ -96,3 +96,25 @@ Here is the fully corrected and verified master list of vehicle calls extracted 
 * **`traffic.kw_t680_a`**, **`_b`**, **`_c`** – Kenworth T680 Cabs
 * **`traffic.pet579_a`**, **`_b`**, **`_c`** – Peterbilt 579 Cabs
 * **`traffic.international_9900i`** – International 9900i Cab
+Here is the dedicated and complete section for **Semi-Trucks, Heavy Tractors & Logistics Units** that captures both the core game engine pool tokens and the specific traffic cab models used across your layout:
+
+---
+
+### **🚛 Semi-Trucks, Heavy Tractors & Logistics Units**
+
+#### **Core Engine Pool Tokens (Generic Class Identifiers)**
+
+* **`truck`** – General commercial truck / rigid baseline pool
+* **`truck_semi`** – Standard semi-tractor classification pool (used across intermodal, reefer, LTL, and heavy transport nodes)
+* **`truck_long`** – Long-nose / heavy-haul semi-tractor classification pool
+
+#### **Specific Branded Traffic Cabs**
+
+* **`traffic.kw_t680_a`**, **`_b`**, **`_c`** – Kenworth T680 Tractor Cabs (Variants A, B, and C)
+* **`traffic.pet579_a`**, **`_b`**, **`_c`** – Peterbilt 579 Tractor Cabs (Variants A, B, and C)
+* **`traffic.international_9900i`** – International 9900i Conventional Tractor Cab
+
+#### **Specialized & Vintage Tractors**
+
+* **`vintage_coe`** / **`truck`** – Legacy Cabover / Vintage COE nodes
+* **`hvy_ballast`** / **`hvy_super`** – Heavy-duty ballast and multi-axle heavy-haul tractors
