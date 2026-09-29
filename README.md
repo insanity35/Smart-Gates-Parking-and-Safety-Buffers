@@ -4,7 +4,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** 26.9.161SD (The Great RAMbase) (Stable)
+* **Current Version:** 26.10.161RT (Road Trippin) (Stable)
 * **Development Name:** Golden Age (26.9.161)
 * **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
@@ -66,13 +66,16 @@ To ensure the custom safety buffer parameters take priority over world geometry 
 5. Map Expansion Mods (ProMods, Reforma, etc.)
 * **— BOTTOM —**
 
-**❌Prefab Limitations (The "Hardcoded" Gates):**
-I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. Ex:
+### Prefab Limitations (The "Hardcoded" Gates)
+I cannot change values on prefab/hardcoded gates unless someone can teach me the ATS Map Editor. I cannot mess with prefab gates or "dumb gates". Ex:
+* The following remain vanilla(so far):
 * Army Gate next to O'Hare Airport (IL)
-* Union Pacific Gate Albuquerque 
+* Union Pacific Gate
 * DOW Gate (IL)
-* Newmont (Houma, Louisiana)
+* Group 1 Guard Gates (e.g., Coca-Cola in Albuquerque, General Mills in Roswell)
 * Most newer dlcs especially Illinois and now South Dakota have gone with prefab gates.
+
+**Note on Toll Booths:** Tolls are a part of `tollgate.sii` and `gate_trigger.sii`. When I edit these, gated tolls fail to open. So as of now, Toll booths are stock.
 
 **Conflict Notice:** This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (`animated_gate` blocks).
 
@@ -98,29 +101,65 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### v26.9.161SD (The Great Rambase)
-**Date:** 9/23/26 | **Time:** 15:24
-*Rams, Rams, Rams!!! This update significantly boosts the presence of Ram trucks and other modern pickups across multiple sections, alongside a major expansion of regional van fleets and classic car spawns. The backend has also been scrubbed for duplicate entries, parser warnings, and ghost code.*
+# Release: Smart Gates, Parking and Safety Buffers (SGSB) – Beta 2
+**Version Tag:** 26.10.161 (9/29-1830 Final - Road Trippin)  
+**Target:** American Truck Simulator (ATS) `/unit/hookup/parked_vehicle.sii` & `parked_trailer.sii`  
+**Compatibility:** ATS Version 1.61 / ProMods Canada 1.6.4 / Project Road Trip & Road Trip: Ford DLC
+---
+## 🏗️ 1. ATS 1.61 Compatibility, Core Features & Road Trip DLC Integration
+* **ATS 1.61 Engine & World Integration:** Full support for the new ATS 1.61 update, including the Proximity Exploration feature for hidden roads and the advanced lighting/material shader system expanded to the International LT and LoneStar trucks.
+* **Project Road Trip & Ford DLC Framework:** Integrated foundational support for the new Road Trip career module and the **Road Trip: Ford DLC**, adding custom spawn compatibility and categorization for the official vehicle fleet:
+  * **1967 Ford Mustang Fastback** (Classic muscle/pony car)
+  * **2023 Ford F-150** (Modern light-duty utility & work truck)
+  * **2023 Ford Bronco Badlands** (Off-road SUV)
+  * **1998–2012 Ford Crown Victoria** (Full-size sedan / municipal veteran)
+* **Official Soda Ash Gate Integration:** Added official ATS 1.61 mining and industrial asset hookups into Company & General Industrial Gates (`[GROUP 5]`):
+  * `anim_gate.soda_ash` (Linked model: `/model/props/street/tollgate_soda_ash_gate_anim.pmd`)
+  * `anim_gate.soda_ash2` (Linked model: `/model/props/street/tollgate_soda_ash_gate_anim2.pmd`)
+* **Gate Logic & Safety Enhancements:** Enabled `trailer_activation: true` across new soda ash gates to prevent premature closing collisions on multi-axle lowboys and heavy-haul trailers, paired with standard iron gate sound references (`/sound/world/gate_iron.soundref`) and tuned trigger orientations.
+* **Strict Vanilla Compliance:** Corrected low-cab flatbed definitions to strictly utilize native 1.61 SCS vehicle tokens (`traffic.lowcab_fbed1`, `traffic.lowcab_fbeds`), ensuring zero reliance on external mods and eliminating missing unit warnings.
+---
+## 🚛 2. Standalone `parked_trailer.sii` Overhaul
+To transform static industrial lots into living, realistic environments, the standalone trailer framework has been fully modernized:
 
-## 🚛 New Vehicle Spawns & World Balances
-
-* **Modern Pickups (Rivian, F-150, Sierra HD, Ram):** Balanced and evenly populated across Scenic Overlooks, Marinas, Dealerships, and Rural zones. Ensures a natural, realistic baseline presence of modern utility and lifestyle trucks across outdoor and commercial areas.
-* **News Vans (CBN, FOX):** Deployed to Disaster Relief and Wildfire Staging areas, Motels, Fast Food, Rest Stops, and Convenience Stores. Adds immediate context to emergency zones and overnight press coverage at motels.
-* **Delivery Vans (FedEx, DHL, Amazon/pv_posted):** Added to Rural Residential/Farmhouse driveways, Motels, Fast Food, and Repair Shops. Enhances immersion by simulating parcel delivery right at rural doorsteps and fleet maintenance turnover.
-* **Work & Contractor Vans (Ladder, Glass):** Sited at Motels, Rest Stops, Fast Food joints, and Car Washes. Reflects traveling tradesmen stopping for meals, rest, or washing job-site grime off their rigs.
-* **Vintage Cars (Oldsmobile, C-Deville, Mercury):** Now spawning at Scenic Lookouts/Trailheads, Rest Stops, Motels, Fast Food, Car Washes, and Repair Garages to simulate weekend classic car cruises and enthusiast meets.
-
-## 🔧 Fixes, Integrations & Code Cleanup
-
-* **Featan Pickup ID Corrections:** Replaced incorrect legacy `tt_pickup` entity calls inside the dedicated Featan parking definitions with the correct native call (`traffic.featan.pickup.midclass_25`).
-* **General World-Spawn Integration:** Injected `traffic.featan.pickup.midclass_25` into the general spawn pools (`suv`, `pickup`, and `car_dealer`) across their `.always`, `.day`, and `.night` physics blocks for natural population in random lots.
-* **Missing Variant & Fallback Profiles Added:** Appended the missing highway service variant block targeting `traffic.featan.pickup.midclass_25.maintenance` to the end of Section 89. Registered the individual unit fallback profile (`ai.featan.pickup.midclass_25`) under Section 50 to ensure clean engine integration.
-* **Duplicate Spawns Removed:** Cleaned up redundant array entries for `traffic.transit_16.cargo` (Section 1) and `traffic.city_exp` (Sections 63 and 81) to balance RNG spawn weighting.
-* **Probability Syntax Fixed:** Corrected the night spawn multiplier in Section 43 (`rest_stop`) from an irregular `3.08` down to a standardized `3.0`.
-* **Engine Parser Warnings Prevented:** Removed blank whitespace lines inside the Section 80 (`motel_lodge`) active arrays to keep the SCS engine log clean.
-* **Ghost Code Purged:** Scrubbed all obsolete, commented-out `#allowed_vehicle[]: "traffic.civic"` lines globally to reduce file size and visual clutter.
-* **Heavy Transport Preserved:** Deliberately bypassed Sections 6 and 79 to protect your established `truck_long` logistics yard spawn parameters.
-* **Header Correction:** Fixed the "AUTOMOTIVE DEALERSHIPSS" spelling typo in the Section 16 banner.
+* **Shift-Based RNG Logic:** Stripped out static `always_visible: true` tags and injected `probability_day` and `probability_night` variables. Yards physically empty out during daytime working hours to simulate dispatches and fill up with staged freight at night.
+* **Purposeful Cargo Filtering:** Removed base-model empty references from heavy industry pools, restricting `allowed_trailer[]` lists exclusively to cargo-suffixed variants (machinery, livestock, and material loads).
+* **Vanilla Overwrite Strategy:** Hijacked hardcoded vanilla identifiers (such as `trailer.parked.construction.always`) so dynamic rules apply globally to every existing map prefab without requiring custom Map Editor placement.
+* **Modular Architecture:** Cleaned arrays and restructured the codebase into 9 distinct industry categories (Groceries, Containers, Farm, Logging, Construction, Logistics, Fuel, Automotive, Generic) with standardized UI header boundaries.
+---
+## 🚚 3. Fleet Additions, Commercial Expansion & Comprehensive World Mapping
+* **Commercial & Delivery Expansion:** Added daytime delivery van spawns (Transit cargo/ladder, City Express, Chevy Van, Box Truck, Lowcab Delivery) to Parcel Courier Hubs (`[Section 14]`), Strip Malls (`[Section 82]`), and Retail Mix (`[Section 81]`).
+* **Construction & Industrial Overhaul:** Integrated missing low-cab variants (dump, dump trailer, flatbed) and transit cargo/ladder configurations to daytime parking at Construction Yards (`[Section 10]`), Material Yards (`[Section 15]`), Quarries (`[Section 17]`), and Road Construction zones (`[Section 77]`).
+* **Vintage & Classic Car Integration:** Injected native vintage vehicle models (1951 Oldsmobile, Cadillac DeVille, Mercury, Chevy Caprice) across all visibility states (Always, Day, Night) for Rural Residential (`[Section 40]`), Rural Properties (`[Section 41]`), Rest Stops (`[Section 43]`), Motels & Lodges (`[Section 80]`), and Retail Lots (`[Section 81]`).
+* **Vocational & Municipal Fleet:** Fully integrated utility reel service variants (`traffic.lowcab_r_p1/p2`, `c1/c2`, `d1/d2`, `t1/t2`, `b1/b2`), concrete pumpers (`traffic.mack_rd.pump`), cistern tankers (`traffic.mack_rd.ccistern`), and street sweepers (`traffic.sweeper`).
+* **Comprehensive Ford & Vehicle Hub Allocation:** Mapped the new Ford vehicle lineup and expanded fleets across targeted environments:
+  * *Gas Stations & Convenience Hubs:* Universal stopover staging for all Fords and daily commuters.
+  * *Retail Shopping Centers & Strip Malls:* F-150, Crown Victoria, Mustang, and Bronco Badlands.
+  * *Rest Stops & Motels / Highway Lodges:* Overnight slots featuring classic cruisers, off-roaders, and traveler pickup trucks.
+  * *Driveways & Residential Clusters:* Lived-in neighborhood and rural driveway layouts.
+  * *Industrial Work Sites & Logistics Yards:* F-150 supervisor and contractor transport.
+  * *Farm Co-Ops & Agricultural Properties:* F-150 utility trucks and Bronco SUVs.
+  * *Trailheads, Scenic Overlooks & Nature Reserves:* Bronco and F-150 off-road/outdoor staging.
+  * *Service Garages & Local Repair Shops:* F-150, Bronco, Mustang, and Crown Victoria filling maintenance bays and project slots.
+  * *Car Dealerships & Showrooms:* Vehicle transfers and display staging.
+---
+## ⚙️ 4. Technical Fixes, Lighting & Physics Refinements
+* **ATS Unit Name Character Limit Enforcement:** Resolved critical game loading crashes by adhering to the hardcoded ATS engine rule stating that **every dot-separated token segment in a unit name cannot exceed 12 characters**:
+  * Shortened Section 86 prefix from `ind_warehouse` (13 characters) to `ind_wrhs`.
+  * Shortened Section 87 prefix from `county_turnout` (14 characters) to `c_turnout`.
+  * Verified clean initialization with 0 unit parsing or syntax errors in `game.log.txt`.
+* **Ghost Headlights Scrubbed:** Removed `forced_flare_low_beam: true` from civilian/parked `.night` blocks (Sections 2, 8, 40, 41, 47, and 80) to stop unlit parked vehicles from projecting active night beams. Retained exclusively on active emergency vehicles, scale queues, and monitored operational stops.
+* **Trailer Mesh Alignment Injected:** Added `rear_align: true` to mixed trailer nodes and heavy transport blocks (Sections 6, 68, 70, and 87) to prevent center-spawning meshes from clipping through adjacent prefabs, docks, or spawn points.
+* **Probability Tuning Maintained:** Preserved mutually exclusive day/night spawn probabilities across all altered sections, ensuring flawless dynamic parking transitions across the simulation clock without over-populating localized environments.
+* **Syntax & Value Adjustments:**
+  * Added missing spacing to `probability_night: 2.0` in Section 10 (`const_truck.parked.physics.night`) for strict parser compatibility.
+  * Renamed Section 8 limo blocks from `limo.always.parked...` to `limo.parked.physics.day` and `limo.parked.physics.night` to accurately reflect their `always_visible: false` state.
+  * Capped `moto.parked.physics.day` in Section 54 down to `3.0` to eliminate double-roll and mesh-overlapping risks in tight parking slots.
+---
+## 📐 5. Technical Mechanics Reference (`parked_trailer` vs. `parked_vehicle`)
+* **Dedicated Trailer Slots:** Standalone trailer spawns pull explicitly from `allowed_trailer[]` definitions rather than `allowed_vehicle[]`, locking them to appropriate industry yards (terminals, silos, container depots).
+* **The `rear_align: true` Rule:** Because trailers spawn uncoupled without a cab, this flag forces the game engine to anchor the kingpin and rear alignment against invisible prefab parking boxes—stopping them from spawning sideways or floating inside fences.
+* **State Control:** Strict syntax parameters ensure low-poly freight variants remain isolated to industrial zones, preventing out-of-place dry vans or flatbeds from appearing in civilian areas.
 
 ### v26.9.161-1 (9/21/26) (The Great RAMbase) ###
 * In preparation for South Dakota im pushing a massive fix for trucks and trailers sticking out of fences at dealships and repair shops.
