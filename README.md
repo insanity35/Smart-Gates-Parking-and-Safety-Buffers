@@ -101,10 +101,8 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-# Release: Smart Gates, Parking and Safety Buffers (SGSB) – Beta 2
-**Version Tag:** 26.10.161 (9/29-1830 Final - Road Trippin)  
-**Target:** American Truck Simulator (ATS) `/unit/hookup/parked_vehicle.sii` & `parked_trailer.sii`  
-**Compatibility:** ATS Version 1.61 / ProMods Canada 1.6.4 / Project Road Trip & Road Trip: Ford DLC
+
+### 26.10.161 (9/29-1830 Final - Road Trippin) ### 
 ---
 ## 🏗️ 1. ATS 1.61 Compatibility, Core Features & Road Trip DLC Integration
 * **ATS 1.61 Engine & World Integration:** Full support for the new ATS 1.61 update, including the Proximity Exploration feature for hidden roads and the advanced lighting/material shader system expanded to the International LT and LoneStar trucks.
