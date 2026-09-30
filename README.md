@@ -38,12 +38,12 @@ Gate logic is key here. I have scanned every dlc for gate and gate properties. U
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
 
 ## 🚛 Advanced Dynamic Parking System
-Immerse yourself in a living roadside ecosystem. Parking lot, Rest stops and yards/drop off parked vehicle code has been completely rewritten. Everything will feel more realistic. As in no empty truck stops with two trucks at night or parking lots with one car in it are gone. SGSB introduces a massive expansion across 90 granular industrial, commercial, and rural sectors:
- *  Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs.
- *   Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
- *   Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
- *  Optimized VRAM Performance: Industrial yards and truck stops are densely populated without frame-rate hits, leveraging forced low-poly background rendering (low_poly_only: true).
- *   Precise Physical Alignment: Unattached yard trailers and heavy wreckers utilize strict rear_align: true protocols, ensuring assets lock securely onto pads without floating.
+Immerse yourself in a living roadside ecosystem. Parking lots, rest stops, yards, and drop-off parked_trailer and vehicle codes have been completely rewritten. Everything will feel more realistic—empty truck stops with two random trucks at night or barren parking lots are a thing of the past. SGSB introduces a massive expansion across 90 granular industrial, commercial, and rural sectors:
+Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs. 
+Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
+Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
+Optimized VRAM Performance: Industrial yards and truck stops are densely populated without frame-rate hits, leveraging forced low-poly background rendering (low_poly_only: true).
+Precise Physical Alignment: Unattached yard trailers, parked trailers, and heavy wreckers utilize strict alignment protocols (rear_align: true, parked_trailer), ensuring assets lock securely onto pads without floating.
 
 ## ⚖️ Weigh Station Flow Control
 Scale house checks have been reduced from the frustrating base-game default (60%) down to a realistic 20% check probability, ensuring smooth, uninterrupted pacing for your long-haul runs.
