@@ -4,7 +4,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** 26.10.161RT1 (Road Trippin) (Stable)
+* **Current Version:** 26.10.161RT2 (Road Trippin) (Stable)
 * **Development Name:** Golden Age (26.9.161)
 * **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
@@ -32,7 +32,7 @@ For long-haul truckers across American Truck Simulator, immersion is everything.
 Smart Gates, Dynamic Parking and Safety Buffers (SGSB) is an environmental and traffic modification for American Truck Simulator designed to enhance the realism of rest stops, parking lots, loading zones, and world gate interactions.
 
 ## 🚦Smart Gate & Infrastructure Overhaul
-Gate logic is key here. I have scanned every dlc for gate and gate properties. Unless it's a dumb prefab gates (see bottomfor examples). A guard house or toll gate to enter a yard or drop off those bad boys should already be open. From 17-25m on guard gates, border checks to 125-135m on every other gate.
+Gate logic is key here. I have scanned every dlc for gate and gate properties. Unless it's a dumb prefab gates (see bottom for examples). From 17-25m on guard gates, border checks to 125-135m on every other gate.
    * Extended Trigger Ranges: Increased activation distances (125m for panoramas, custom industrial ranges) so gates open smoothly as you roll up, protecting your momentum.
    * Collider Fixes: Re-pointed broken base-game geometry files to proper colliders so multi-axle setups and heavy loads pass through without clipping.
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
@@ -54,6 +54,11 @@ Scale house checks have been reduced from the frustrating base-game default (60%
 
 **Convoy-Ready:** Fully optimized file layout ensures seamless synchronization during multiplayer convoy sessions with zero mod-mismatch errors.  
 **Map Compatibility:** Clean, definition-only architecture guarantees absolute stability alongside major map expansions like ProMods Canada, Reforma, and global traffic AI mods.
+**Edits
+unit/hookup/parked_vehicle.sii
+unit/hookup/parked_trailer.sii
+unit/hookup/animated_gate.sii
+def/world/trigger_action.sii
 
 ### Recommended Load Order
 To ensure the custom safety buffer parameters take priority over world geometry data, organize your Mod Manager as follows:
@@ -90,7 +95,6 @@ If you encounter a specific yard, toll plaza, or logistics depot anywhere on the
 * **Development Group:** Smoke Show Studios, Smoke Show Creations & Harambes Children
 * **Lead Developer & Tester:** meanshadows35
 * **Technical Consultant:** Overdrive
-* **Tester:** mrh368
 
 A massive shout-out to our three-person team for pulling this together, and special thanks to the entire trucking community for the incredible passion and feedback.
 * Developed natively on Ubuntu 26.04.1 LTS
@@ -101,7 +105,10 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### v26.10.161RT1 (930-1230-Road Trippin HOTFIX) ###
+### v26.10.161RT2 (930-1750-Road Trip Hotfix 2)
+* Fixed car mode not letting you sleep or even showing rest icons on map.
+
+### v26.10.161RT1 (930-1230-Road Trippin HOTFIX1) ###
 * Removed Ford Road Trip car pack from parked files. Parser error. Ive removed them till i have time to build them into AI vehicles. SCS never included them so my calls do nothing but give an error. Sorry Folks...Ill Work on this if someone knows how to add none AI cars please drop me a message.
 
 
