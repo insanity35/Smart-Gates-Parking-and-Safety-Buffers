@@ -4,7 +4,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** 26.10.161RT (Road Trippin) (Stable)
+* **Current Version:** 26.10.161RT1 (Road Trippin) (Stable)
 * **Development Name:** Golden Age (26.9.161)
 * **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
@@ -101,8 +101,11 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
+### v26.10.161RT1 (930-1230-Road Trippin HOTFIX) ###
+* Removed Ford Road Trip car pack from parked files. Parser error. Ive removed them till i have time to build them into AI vehicles. SCS never included them so my calls do nothing but give an error. Sorry Folks...Ill Work on this if someone knows how to add none AI cars please drop me a message.
 
-### 26.10.161 (9/29-1830 Final - Road Trippin) ### 
+
+### v26.10.161 (9/29-1830 Final - Road Trippin) ### 
 ---
 ## 🏗️ 1. ATS 1.61 Compatibility, Core Features & Road Trip DLC Integration
 * **ATS 1.61 Engine & World Integration:** Full support for the new ATS 1.61 update, including the Proximity Exploration feature for hidden roads and the advanced lighting/material shader system expanded to the International LT and LoneStar trucks.
