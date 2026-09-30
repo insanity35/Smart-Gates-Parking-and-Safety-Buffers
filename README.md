@@ -114,7 +114,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ### v26.10.161 (9/29-1830 Final - Road Trippin) ### 
 ---
-## 🏗️ 1. ATS 1.61 Compatibility, Core Features & Road Trip DLC Integration
+**🏗️ 1. ATS 1.61 Compatibility, Core Features & Road Trip DLC Integration**
 * **ATS 1.61 Engine & World Integration:** Full support for the new ATS 1.61 update, including the Proximity Exploration feature for hidden roads and the advanced lighting/material shader system expanded to the International LT and LoneStar trucks.
 * **Project Road Trip & Ford DLC Framework:** Integrated foundational support for the new Road Trip career module and the **Road Trip: Ford DLC**, adding custom spawn compatibility and categorization for the official vehicle fleet:
   * **1967 Ford Mustang Fastback** (Classic muscle/pony car)
@@ -127,7 +127,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 * **Gate Logic & Safety Enhancements:** Enabled `trailer_activation: true` across new soda ash gates to prevent premature closing collisions on multi-axle lowboys and heavy-haul trailers, paired with standard iron gate sound references (`/sound/world/gate_iron.soundref`) and tuned trigger orientations.
 * **Strict Vanilla Compliance:** Corrected low-cab flatbed definitions to strictly utilize native 1.61 SCS vehicle tokens (`traffic.lowcab_fbed1`, `traffic.lowcab_fbeds`), ensuring zero reliance on external mods and eliminating missing unit warnings.
 ---
-## 🚛 2. Standalone `parked_trailer.sii` Overhaul
+**🚛 2. Standalone `parked_trailer.sii` Overhaul**
 To transform static industrial lots into living, realistic environments, the standalone trailer framework has been fully modernized:
 
 * **Shift-Based RNG Logic:** Stripped out static `always_visible: true` tags and injected `probability_day` and `probability_night` variables. Yards physically empty out during daytime working hours to simulate dispatches and fill up with staged freight at night.
@@ -135,7 +135,7 @@ To transform static industrial lots into living, realistic environments, the sta
 * **Vanilla Overwrite Strategy:** Hijacked hardcoded vanilla identifiers (such as `trailer.parked.construction.always`) so dynamic rules apply globally to every existing map prefab without requiring custom Map Editor placement.
 * **Modular Architecture:** Cleaned arrays and restructured the codebase into 9 distinct industry categories (Groceries, Containers, Farm, Logging, Construction, Logistics, Fuel, Automotive, Generic) with standardized UI header boundaries.
 ---
-## 🚚 3. Fleet Additions, Commercial Expansion & Comprehensive World Mapping
+**🚚 3. Fleet Additions, Commercial Expansion & Comprehensive World Mapping**
 * **Commercial & Delivery Expansion:** Added daytime delivery van spawns (Transit cargo/ladder, City Express, Chevy Van, Box Truck, Lowcab Delivery) to Parcel Courier Hubs (`[Section 14]`), Strip Malls (`[Section 82]`), and Retail Mix (`[Section 81]`).
 * **Construction & Industrial Overhaul:** Integrated missing low-cab variants (dump, dump trailer, flatbed) and transit cargo/ladder configurations to daytime parking at Construction Yards (`[Section 10]`), Material Yards (`[Section 15]`), Quarries (`[Section 17]`), and Road Construction zones (`[Section 77]`).
 * **Vintage & Classic Car Integration:** Injected native vintage vehicle models (1951 Oldsmobile, Cadillac DeVille, Mercury, Chevy Caprice) across all visibility states (Always, Day, Night) for Rural Residential (`[Section 40]`), Rural Properties (`[Section 41]`), Rest Stops (`[Section 43]`), Motels & Lodges (`[Section 80]`), and Retail Lots (`[Section 81]`).
@@ -151,7 +151,7 @@ To transform static industrial lots into living, realistic environments, the sta
   * *Service Garages & Local Repair Shops:* F-150, Bronco, Mustang, and Crown Victoria filling maintenance bays and project slots.
   * *Car Dealerships & Showrooms:* Vehicle transfers and display staging.
 ---
-## ⚙️ 4. Technical Fixes, Lighting & Physics Refinements
+**⚙️ 4. Technical Fixes, Lighting & Physics Refinements**
 * **ATS Unit Name Character Limit Enforcement:** Resolved critical game loading crashes by adhering to the hardcoded ATS engine rule stating that **every dot-separated token segment in a unit name cannot exceed 12 characters**:
   * Shortened Section 86 prefix from `ind_warehouse` (13 characters) to `ind_wrhs`.
   * Shortened Section 87 prefix from `county_turnout` (14 characters) to `c_turnout`.
@@ -164,7 +164,7 @@ To transform static industrial lots into living, realistic environments, the sta
   * Renamed Section 8 limo blocks from `limo.always.parked...` to `limo.parked.physics.day` and `limo.parked.physics.night` to accurately reflect their `always_visible: false` state.
   * Capped `moto.parked.physics.day` in Section 54 down to `3.0` to eliminate double-roll and mesh-overlapping risks in tight parking slots.
 ---
-## 📐 5. Technical Mechanics Reference (`parked_trailer` vs. `parked_vehicle`)
+**📐 5. Technical Mechanics Reference (`parked_trailer` vs. `parked_vehicle`)**
 * **Dedicated Trailer Slots:** Standalone trailer spawns pull explicitly from `allowed_trailer[]` definitions rather than `allowed_vehicle[]`, locking them to appropriate industry yards (terminals, silos, container depots).
 * **The `rear_align: true` Rule:** Because trailers spawn uncoupled without a cab, this flag forces the game engine to anchor the kingpin and rear alignment against invisible prefab parking boxes—stopping them from spawning sideways or floating inside fences.
 * **State Control:** Strict syntax parameters ensure low-poly freight variants remain isolated to industrial zones, preventing out-of-place dry vans or flatbeds from appearing in civilian areas.
