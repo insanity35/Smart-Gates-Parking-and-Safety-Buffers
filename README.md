@@ -1,6 +1,6 @@
 ![Project Header](sgsbfull.jpg)
 
-# Smart Gates, Dynamic Parking and Safety Buffers (SGSB)
+# Smart Gates, Dynamic Parking Lots and Safety Buffers (SGSB)
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
@@ -29,7 +29,7 @@ This is our first mod ever, so please extend us some grace!
 For long-haul truckers across American Truck Simulator, immersion is everything. Nothing shatters the flow of a meticulous delivery faster than "gate lag"—that frustrating hitch at the yard threshold where you wait for a sluggish barrier to crawl open while your multi-ton rig idles out. Couple that with sterile, ghost-town truck stops, parking lots and getting flagged down at 60% of weigh stations. With that long-haul pacing takes a heavy hit.
 
 ## ✅ The Solution: Smart Gates & Safety Buffers
-Smart Gates, Dynamic Parking and Safety Buffers (SGSB) is an environmental and traffic modification for American Truck Simulator designed to enhance the realism of rest stops, parking lots, loading zones, and world gate interactions.
+Smart Gates, Dynamic Parking Lots and Safety Buffers (SGSB) is an environmental and traffic modification for American Truck Simulator designed to enhance the realism of rest stops, parking lots, loading zones, and world gate interactions.
 
 ## 🚦Smart Gate & Infrastructure Overhaul
 Gate logic is key here. I have scanned every dlc for gate and gate properties. Unless it's a dumb prefab gates (see bottom for examples). From 17-25m on guard gates, border checks to 125-135m on every other gate.
