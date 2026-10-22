@@ -4,8 +4,7 @@
 **"The House That Code Built"*
 
 ## 📊 Official Release Information
-* **Current Version:** 26.10.161RT2 (Road Trippin) (Stable)
-* **Development Name:** Golden Age (26.9.161)
+* **Current Version:** 26.11.161 (Road Trippin) (Stable)
 * **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
 * Extracted by terminal by sk-zk Extractor tool
@@ -40,7 +39,7 @@ Gate logic is key here. I have scanned every dlc for gate and gate properties. U
    * Streamlined Logic: Purged legacy references, entirely focusing on automated gate routines, security checkpoints, and border crossings across all map DLCs.
 
 ## 🚛 Advanced Dynamic Parking System
-Immerse yourself in a living roadside ecosystem. Parking lots, rest stops, yards, and drop-off parked_trailer and vehicle codes have been completely rewritten. Everything will feel more realistic—empty truck stops with two random trucks at night or barren parking lots are a thing of the past. SGSB introduces a massive expansion across 90 granular industrial, commercial, and rural sectors:
+Immerse yourself in a living roadside ecosystem. Parking lots, rest stops, yards, and drop-off parked_trailer and vehicle codes have been completely rewritten. Everything will feel more realistic—empty truck stops with two random trucks at night or barren parking lots are a thing of the past. SGSB introduces a massive expansion across 91 granular industrial, commercial, and rural sectors:
 * Context-Aware Spawning: Lots reflect their local environment—populating grain co-ops with farm pickups and classic sedans, marine ramps with trailer-towing haulers, and oilfields with heavy-duty service rigs. 
 * Hybrid Temporal Scheduling: Banishes the "mass-extinction" pop-in effect. Personal vehicles utilize controlled dawn and dusk bleed-over, while commercial and industrial fleets use strict deterministic shift separation.
 * Operational Graveyard Shifts: Municipal fleets—including street sweepers and garbage trucks—truly own the overnight hours before clearing out for daytime traffic.
@@ -109,10 +108,49 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-### V26.11.161
-NOT OUT YET
+### v26.11.161 (Oct22-1324)
+## 🚀 Engine & Core Architecture
+* **Spawn Bottleneck Fixed:** Applied array padding to Section 2 to resolve AI traffic spawn limits and restore full pack variety.
+* **91-Section Framework:** Fully synchronized all map zones, depots, rest areas, and industrial blocks across ATS.
+* **Day/Night Balance:** Recalibrated `probability_day` and `probability_night` cycles across all zones, fixing night-shift overlaps at water plants.
+* ** Like Wyoming Hookup all dlc gate hookups have been removed as to errors with duplicate and workshop upload errors. Because version 1.61 now bakes these specific native definitions directly into the core game archives, removing them prevents fatal duplicate unit crash errors while still allowing the game engine to call them naively.
 
-### v26.10.161RT2 (930-1750-Road Trip Hotfix 2)
+## 🚛 Trailer Visibility & Yard Behavior
+* **Pop-In Elimination:** Added `always_visible: true` to 20+ `.always` trailer groups across farms, logging, and chemical plants.
+* **Dock Alignment:** Standardized `rear_align: true` for dry vans and reefers (`groceries`, `box`, `logisti_shrd`) to snap cleanly to loading bays.
+* **Performance Optimization:** Cleaned low-poly flags on vintage/commercial vehicle models to smooth out urban FPS drops.
+
+## 🚤 Towed Fleet & Vehicle Rules
+* **New Utility Tows:** Enabled static spawn support for `traffic.trailer.boat`, `traffic.trailer.camper`, `traffic.trailer.caravan`, and `traffic.trailer.utility`.
+* **Sedan Guard Policy:** Enforced `allowed_trailer[]` calls exclusively on pickups, light trucks, SUVs, and vans to prevent sedan towing bugs.
+
+## 🌐 World Immersion & Ambient Traffic
+* **Classic Americana:** Added the '50s Chevy Pickup and Cadillac DeVille to Scenic Lookouts **[Sec 45]**, Fast Food **[Sec 63]**, and Motels **[Sec 80]**.
+* **Workplace Realism:** Added commuter sedans (`accord`, `verano`, `impreza`) to daytime industrial lots for plant staff.
+* **Fleet Calls:** Integrated `featan.pickup.midclass_25` and maintenance variants into municipal and retail routes.
+* **Night Lighting:** Forced low beams and emergency flasher states (`forced_flare_low_beam` / `forced_flare_hooter`) at patrol stations, weigh scales, and firehouses.
+* **EV & Executive Routing:** Directed executive SUVs (`c_escalade`, `lincoln_nav`) to rest stops and EVs (`toyota_prius`, `volt`) to lodging/charging stalls.
+---
+## 📂 Key Section Updates
+| Section | Name | Primary Change |
+| :--- | :--- | :--- |
+| **[26]** | `truck_rv` | Integrated camper and caravan trailers across `.always`, `.day`, and `.night` pools. |
+| **[40]** | `rural_res` | Added utility trailers to rural residential driveways. |
+| **[43]** | `rest_stop` | Added camper and caravan tethers to highway rest areas. |
+| **[45]** | `scenic_trk` | Added boat and camper trailers to tourist lookouts. |
+| **[47]** | `marina_trk` | Integrated boat trailers into marina pull-through lanes. |
+| **[69]** | `marina_strg` | Added boat trailers to dedicated storage stalls with `rear_align: true`. |
+| **[80]** | `motel_lodge` | Added camper trailers to motel perimeter parking. |
+| **[81]** | `conv_store` | Added utility and boat trailers to gas station stalls. |
+| **[82]** | `comm_park` | Added utility trailers to strip mall and commercial stalls for service rigs. |
+---
+## 🛠️ Verification Checklist
+- [X] **Boundary Check:** Teleport (`goto`) to pull-through stalls at rest stops **[Sec 43]** and marinas **[Sec 47]** to ensure no trailer overlap into active lanes.
+- [X] **Log Verification:** Confirm `game.log.txt` returns `0` errors or missing unit warnings during sector loads.
+- [X] **Package Verification:** Confirm standard directory layout (`/def/vehicle/parked_vehicles/`) inside `.scs` package.
+
+
+### v26.10.161RT2 (930-1750-Road Trip Hotfix 2) ###
 * Fixed car mode not letting you sleep or even showing rest icons on map.
 
 ### v26.10.161RT1 (930-1230-Road Trippin HOTFIX1) ###
