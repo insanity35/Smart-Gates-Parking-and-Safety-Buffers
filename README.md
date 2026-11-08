@@ -1,11 +1,11 @@
 ![Project Header](sgsbfull.jpg)
 
 # Smart Gates, Dynamic Parking and Safety Buffers (SGSB)
-**"The House That Code Built"*
+"The House That Code Built"
 
 ## 📊 Official Release Information
-* **Current Version:** 26.11.161 (Road Trippin) (Stable)
-* **ATS Compatibility:** v1.61.* branch (Until SCS breaks the core gate code and parked vehicles)
+* **Current Version:** 26.11.162(Stable)
+* **ATS Compatibility:** v1.62.* branch (Until SCS breaks the core gate code and parked vehicles)
 * **Development Environment:** Ubuntu 26.04.1 LTS
 * Extracted by terminal by sk-zk Extractor tool
   * https://github.com/sk-zk/Extractor
@@ -20,9 +20,13 @@ This project is dedicated to the glory of God. Every mile driven and every line 
 This is our first mod ever, so please extend us some grace! 
 *— Built by a driver, for drivers.*
 
-**Full Release Log & Source:** [GitHub Repository](https://github.com/insanity35/Smart-Gates-Parking-and-Safety-Buffers)
-** Check out our other mods:
-*	Color Overhaul for Autos & Trucks(C.O.A.T)(https://steamcommunity.com/sharedfiles/filedetails/?id=3818811907)
+## 🚚 Check Out Our Other Mods
+* **SGSB (Faster Gate Openings & Realistic Yards):
+https://steamcommunity.com/sharedfiles/filedetails/?id=3764824734
+* **C.O.A.T (Color Overhaul for Autos & Trucks):
+https://steamcommunity.com/sharedfiles/filedetails/?id=3820362300
+* **AMP (ATS Map Project)
+https://steamcommunity.com/sharedfiles/filedetails/?id=3833880342
 
 ---
 
@@ -81,10 +85,6 @@ I cannot change values on prefab/hardcoded gates unless someone can teach me the
 * Group 1 Guard Gates (e.g., Coca-Cola in Albuquerque, General Mills in Roswell)
 * Most newer dlcs especially Illinois and now South Dakota have gone with prefab gates.
 
-**Note on Toll Booths:** Tolls are a part of `tollgate.sii` and `gate_trigger.sii`. When I edit these, gated tolls fail to open. So as of now, Toll booths are stock.
-
-**Conflict Notice:** This is a standalone global logic override. It will conflict with other mods that attempt to modify the same global gate animation or trigger definitions (`animated_gate` blocks).
-
 ---
 
 ## 📝 Support & Bug Reporting
@@ -101,12 +101,64 @@ A massive shout-out to our three-person team for pulling this together, and spec
 * Developed natively on Ubuntu 26.04.1 LTS
 * Thank you to SCS Software for letting us nod
 ** Check out our other mods:
-*	Color Overhaul for Autos & Trucks(C.O.A.T)(https://steamcommunity.com/sharedfiles/filedetails/?id=3818811907)
 * **Soli Deo Gloria**
 
 ---
 
 ## 📜 Complete Mod Release History
+
+v26.11.162-Nov3-1944
+ATS 1.62 update
+## 🅿️ Parked Vehicles (`sgsb_parked_vehicle.sgsb.txt`)
+
+* **Commercial & Delivery Fleets:** Added new 1.62 box trucks (`traffic.hool`), package vans (`pv_mw`, `pv_posted`, `pv_frosty`), and branded transit vans (`transit_16.dhl`, `transit_16.fedex`) to courier hubs, industrial warehouses, and strip malls.
+* **Civilian & Dealership AI:** Integrated the new modern ATS 1.62 AI vehicles (`caliber`, `coherily`, `dylamic`, `heimdall`, `hoddlen`, `lukenner`, `mendward`, `tunient`) into automotive dealership lots, rest stops, motels, 24-hour convenience stores, and commercial parking pools.
+* **Specialty & Municipal:** Assigned new 1.62 specific fleet variants to targeted areas, including garbage trucks (`mack_rd.garb.alb`), news vans (`transit_16.cbn`, `transit_16.fox`), plant cars (`ws_plant_car`), and utility box trucks (`f350_box.usbb`) to service convoys, news crews, and warehouses.
+* **State Patrol Outposts:** Added new midclass pickups and SUVs (`featan`, `caliber`) as unmarked fleet/administrative vehicles to State Trooper outposts.
+* **AI Fallbacks:** Expanded Section 50 (Individual AI Fallback Profiles) with all new 1.62 manufacturer-specific fallbacks (e.g., `ai.ford.*`, `ai.chevy.*`, `ai.xc90`) and individual dealership vehicle fallbacks.
+
+## 🚧 Animated Gates & Tolls (`animated_gate.sii`)
+
+* **1.62 Verification:** Scanned against the vanilla ATS 1.62 update. Vanilla introduced no new gate definitions, ensuring all SGSB custom triggers and distances remain fully intact and operational.
+* **Expanded Logic:** Maintained activation of sliding gates that remain commented out/disabled in the base 1.62 game code (`an_slide_f2f`, `an_slide_b2f`, `an_slide_f4f`, `an_slide_b4f`).
+* **Custom Assets:** Retained SGSB-exclusive gate integrations (`ag_nv_wstg`, `hookup.gate_sec`, `ag_suncrops`).
+
+---
+
+## 📋 Appendix: New 1.62 AI Vehicles Added
+
+The new AI vehicles introduced in the 1.62 update file include a mix of modern civilian cars, utility vehicles, commercial vans, and municipal trucks.
+
+### Civilian Cars & SUVs
+* `traffic.caliber.suv.budget_25`
+* `traffic.caliber.suv.premium_23`
+* `traffic.coherily.suv.luxury_25`
+* `traffic.coherily.sedan.luxury_25`
+* `traffic.dylamic.cabrio`
+* `traffic.featan.suv.midclass_25`
+* `traffic.heimdall.suv.premium_24`
+* `traffic.hoddlen.suv.luxury25.highway`
+* `traffic.lukenner.suv.luxury_25`
+* `traffic.mendward.combi.luxury.25`
+* `traffic.tunient.hatchback.premium_26`
+
+### Pickups & Utility Vehicles
+* `traffic.featan.pickup.midclass_25`
+* `traffic.featan.pickup.midclass_25.maintenance`
+* `traffic.f350_box.usbb`
+* `traffic.ws_plant_car`
+
+### Commercial & Media Vans
+* `traffic.pv_mw`, `traffic.pv_posted`, `traffic.pv_frosty`
+* `traffic.transit_16.dhl`, `traffic.transit_16.fedex`
+* `traffic.transit_16.cbn`, `traffic.transit_16.fox`
+
+### Heavy Duty & Municipal Trucks
+* `traffic.hool`
+* `traffic.garbage_trck`
+* `traffic.mack_rd.garb.alb`, `traffic.mack_rd.garb.phx`, `traffic.mack_rd.garb.sf`
+* `traffic.mack_rd.pump`
+* `traffic.mack_rd.ccistern`
 
 ### v26.11.161 (Oct22-1324)
 ## 🚀 Engine & Core Architecture
