@@ -107,8 +107,8 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## 📜 Complete Mod Release History
 
-v26.11.162-Nov3-1944
-ATS 1.62 update
+## v26.11.162-Nov3-1944
+* **ATS 1.62 update
 ## 🅿️ Parked Vehicles (`sgsb_parked_vehicle.sgsb.txt`)
 
 * **Commercial & Delivery Fleets:** Added new 1.62 box trucks (`traffic.hool`), package vans (`pv_mw`, `pv_posted`, `pv_frosty`), and branded transit vans (`transit_16.dhl`, `transit_16.fedex`) to courier hubs, industrial warehouses, and strip malls.
