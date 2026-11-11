@@ -25,10 +25,11 @@ This is our first mod ever, so please extend us some grace!
 https://steamcommunity.com/sharedfiles/filedetails/?id=3764824734
 * **C.O.A.T (Color Overhaul for Autos & Trucks):
 https://steamcommunity.com/sharedfiles/filedetails/?id=3820362300
-* **AMP (ATS Map Project)
+* **AMP (ATS Map Project):
 https://steamcommunity.com/sharedfiles/filedetails/?id=3833880342
-* ** Updated Mod Truck Project(K100 & 9800i)
+* ** Updated Mod Truck Project(K100 & 9800i):
 https://www.mediafire.com/folder/1r3djnxjvdez9/Ats+Truck+Updates
+* All credits to their rightful owners I just patched them up to work better on latest game versions. Patch notes in trucks scs folder. More to be updated as I can.
 ---
 
 ## 🛑 The Problem: "Gate Lag" & Sterile Truck Stops/Yards
@@ -110,7 +111,7 @@ A massive shout-out to our three-person team for pulling this together, and spec
 
 ## v26.11.162-Nov3-1944
 * **ATS 1.62 update
-## 🅿️ Parked Vehicles (`sgsb_parked_vehicle.sgsb.txt`)
+* ** 🅿️ Parked Vehicles (`sgsb_parked_vehicle.sgsb.txt`)
 
 * **Commercial & Delivery Fleets:** Added new 1.62 box trucks (`traffic.hool`), package vans (`pv_mw`, `pv_posted`, `pv_frosty`), and branded transit vans (`transit_16.dhl`, `transit_16.fedex`) to courier hubs, industrial warehouses, and strip malls.
 * **Civilian & Dealership AI:** Integrated the new modern ATS 1.62 AI vehicles (`caliber`, `coherily`, `dylamic`, `heimdall`, `hoddlen`, `lukenner`, `mendward`, `tunient`) into automotive dealership lots, rest stops, motels, 24-hour convenience stores, and commercial parking pools.
